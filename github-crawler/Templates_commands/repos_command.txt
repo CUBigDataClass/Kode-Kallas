@@ -1,0 +1,398 @@
+PUT repos
+{
+  "mappings": {
+    "properties":{
+			"id": {
+				"type": "long"
+			},
+			"node_id": {
+				"type": "keyword"
+			},
+			"name": {
+				"type": "keyword"
+			},
+			"full_name": {
+				"type": "keyword"
+			},
+			"private": {
+				"type": "boolean"
+			},
+			"owner": {
+				"type": "object",
+				"properties": {
+					"login": {
+						"type": "keyword"
+					},
+					"id": {
+						"type": "long"
+					},
+					"node_id": {
+						"type": "keyword"
+					},
+					"avatar_url": {
+						"type": "keyword"
+					},
+					"gravatar_id": {
+						"type": "keyword"
+					},
+					"url": {
+						"type": "keyword"
+					},
+					"html_url": {
+						"type": "keyword"
+					},
+					"followers_url": {
+						"type": "keyword"
+					},
+					"following_url": {
+						"type": "keyword"
+					},
+					"gists_url": {
+						"type": "keyword"
+					},
+					"starred_url": {
+						"type": "keyword"
+					},
+					"subscriptions_url": {
+						"type": "keyword"
+					},
+					"organizations_url": {
+						"type": "keyword"
+					},
+					"repos_url": {
+						"type": "keyword"
+					},
+					"events_url": {
+						"type": "keyword"
+					},
+					"received_events_url": {
+						"type": "keyword"
+					},
+					"type": {
+						"type": "keyword"
+					},
+					"site_admin": {
+						"type": "boolean"
+					}
+				}
+			},
+			"html_url": {
+				"type": "keyword"
+			},
+			"description": {
+				"type": "keyword"
+			},
+			"fork": {
+				"type": "boolean"
+			},
+			"url": {
+				"type": "keyword"
+			},
+			"forks_url": {
+				"type": "keyword"
+			},
+			"keys_url": {
+				"type": "keyword"
+			},
+			"collaborators_url": {
+				"type": "keyword"
+			},
+			"teams_url": {
+				"type": "keyword"
+			},
+			"hooks_url": {
+				"type": "keyword"
+			},
+			"issue_events_url": {
+				"type": "keyword"
+			},
+			"events_url": {
+				"type": "keyword"
+			},
+			"assignees_url": {
+				"type": "keyword"
+			},
+			"branches_url": {
+				"type": "keyword"
+			},
+			"tags_url": {
+				"type": "keyword"
+			},
+			"blobs_url": {
+				"type": "keyword"
+			},
+			"git_tags_url": {
+				"type": "keyword"
+			},
+			"git_refs_url": {
+				"type": "keyword"
+			},
+			"trees_url": {
+				"type": "keyword"
+			},
+			"statuses_url": {
+				"type": "keyword"
+			},
+			"languages_url": {
+				"type": "keyword"
+			},
+			"stargazers_url": {
+				"type": "keyword"
+			},
+			"contributors_url": {
+				"type": "keyword"
+			},
+			"subscribers_url": {
+				"type": "keyword"
+			},
+			"subscription_url": {
+				"type": "keyword"
+			},
+			"commits_url": {
+				"type": "keyword"
+			},
+			"git_commits_url": {
+				"type": "keyword"
+			},
+			"comments_url": {
+				"type": "keyword"
+			},
+			"issue_comment_url": {
+				"type": "keyword"
+			},
+			"contents_url": {
+				"type": "keyword"
+			},
+			"compare_url": {
+				"type": "keyword"
+			},
+			"merges_url": {
+				"type": "keyword"
+			},
+			"archive_url": {
+				"type": "keyword"
+			},
+			"downloads_url": {
+				"type": "keyword"
+			},
+			"issues_url": {
+				"type": "keyword"
+			},
+			"pulls_url": {
+				"type": "keyword"
+			},
+			"milestones_url": {
+				"type": "keyword"
+			},
+			"notifications_url": {
+				"type": "keyword"
+			},
+			"labels_url": {
+				"type": "keyword"
+			},
+			"releases_url": {
+				"type": "keyword"
+			},
+			"deployments_url": {
+				"type": "keyword"
+			},
+			"created_at": {
+				"type": "keyword"
+			},
+			"updated_at": {
+				"type": "keyword"
+			},
+			"pushed_at": {
+				"type": "keyword"
+			},
+			"git_url": {
+				"type": "keyword"
+			},
+			"ssh_url": {
+				"type": "keyword"
+			},
+			"clone_url": {
+				"type": "keyword"
+			},
+			"svn_url": {
+				"type": "keyword"
+			},
+			"homepage": {
+				"type": "keyword"
+			},
+			"size": {
+				"type": "long"
+			},
+			"stargazers_count": {
+				"type": "long"
+			},
+			"watchers_count": {
+				"type": "long"
+			},
+			"language": {
+				"type": "keyword"
+			},
+			"has_issues": {
+				"type": "boolean"
+			},
+			"has_projects": {
+				"type": "boolean"
+			},
+			"has_downloads": {
+				"type": "boolean"
+			},
+			"has_wiki": {
+				"type": "boolean"
+			},
+			"has_pages": {
+				"type": "boolean"
+			},
+			"forks_count": {
+				"type": "long"
+			},
+			"mirror_url": {
+				"type": "keyword"
+			},
+			"archived": {
+				"type": "boolean"
+			},
+			"disabled": {
+				"type": "boolean"
+			},
+			"open_issues_count": {
+				"type": "long"
+			},
+			"license": {
+				"type": "keyword"
+			},
+			"forks": {
+				"type": "long"
+			},
+			"open_issues": {
+				"type": "long"
+			},
+			"watchers": {
+				"type": "long"
+			},
+			"default_branch": {
+				"type": "keyword"
+			},
+			"permissions": {
+				"type": "object",
+				"properties": {
+					"admin": {
+						"type": "boolean"
+					},
+					"push": {
+						"type": "boolean"
+					},
+					"pull": {
+						"type": "boolean"
+					}
+				}
+			}
+		}
+  }
+}
+
+
+POST repos/_doc
+ {
+      "id": 16750294,
+      "node_id": "MDEwOlJlcG9zaXRvcnkxNjc1MDI5NA==",
+      "name": "Twitter-EmotiMap",
+      "full_name": "CUBigDataClass/Twitter-EmotiMap",
+      "private": false,
+      "owner": {
+        "login": "CUBigDataClass",
+        "id": 6345918,
+        "node_id": "MDEyOk9yZ2FuaXphdGlvbjYzNDU5MTg=",
+        "avatar_url": "https://avatars0.githubusercontent.com/u/6345918?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/CUBigDataClass",
+        "html_url": "https://github.com/CUBigDataClass",
+        "followers_url": "https://api.github.com/users/CUBigDataClass/followers",
+        "following_url": "https://api.github.com/users/CUBigDataClass/following{/other_user}",
+        "gists_url": "https://api.github.com/users/CUBigDataClass/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/CUBigDataClass/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/CUBigDataClass/subscriptions",
+        "organizations_url": "https://api.github.com/users/CUBigDataClass/orgs",
+        "repos_url": "https://api.github.com/users/CUBigDataClass/repos",
+        "events_url": "https://api.github.com/users/CUBigDataClass/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/CUBigDataClass/received_events",
+        "type": "Organization",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/CUBigDataClass/Twitter-EmotiMap",
+      "description": "Twitter feed mining with geographical emotional trend analysis.",
+      "fork": false,
+      "url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap",
+      "forks_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/forks",
+      "keys_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/teams",
+      "hooks_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/hooks",
+      "issue_events_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/events",
+      "assignees_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/tags",
+      "blobs_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/languages",
+      "stargazers_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/stargazers",
+      "contributors_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/contributors",
+      "subscribers_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/subscribers",
+      "subscription_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/subscription",
+      "commits_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/merges",
+      "archive_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/downloads",
+      "issues_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/labels{/name}",
+      "releases_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/CUBigDataClass/Twitter-EmotiMap/deployments",
+      "created_at": "2014-02-12T00:05:56Z",
+      "updated_at": "2016-04-04T16:36:01Z",
+      "pushed_at": "2014-05-16T14:32:48Z",
+      "git_url": "git://github.com/CUBigDataClass/Twitter-EmotiMap.git",
+      "ssh_url": "git@github.com:CUBigDataClass/Twitter-EmotiMap.git",
+      "clone_url": "https://github.com/CUBigDataClass/Twitter-EmotiMap.git",
+      "svn_url": "https://github.com/CUBigDataClass/Twitter-EmotiMap",
+      "homepage": "http://www.mattkgross.com/TwitterMap",
+      "size": 99797,
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "Python",
+      "has_issues": true,
+      "has_projects": true,
+      "has_downloads": true,
+      "has_wiki": true,
+      "has_pages": false,
+      "forks_count": 0,
+      "mirror_url": null,
+      "archived": false,
+      "disabled": false,
+      "open_issues_count": 0,
+      "license": null,
+      "forks": 0,
+      "open_issues": 0,
+      "watchers": 0,
+      "default_branch": "master",
+      "permissions": {
+        "admin": false,
+        "push": false,
+        "pull": true
+      }
+    }

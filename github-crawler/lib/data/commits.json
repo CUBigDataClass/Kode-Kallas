@@ -1,0 +1,1385 @@
+[
+    {
+        "sha": "eaf17d8c38b413aa788b4851f965236fc7280506",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZWFmMTdkOGMzOGI0MTNhYTc4OGI0ODUxZjk2NTIzNmZjNzI4MDUwNg==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T17:19:11Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T17:19:11Z"
+            },
+            "message": "update for abtest variable instead of color",
+            "tree": {
+                "sha": "3a7dcdc23fc936bc98e26a57e812b7ae57793d3c",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/3a7dcdc23fc936bc98e26a57e812b7ae57793d3c"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/eaf17d8c38b413aa788b4851f965236fc7280506",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/eaf17d8c38b413aa788b4851f965236fc7280506",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/eaf17d8c38b413aa788b4851f965236fc7280506",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/eaf17d8c38b413aa788b4851f965236fc7280506/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/2c7b86c6112b7f832e42ec4768fe175dd90af62c"
+            }
+        ]
+    },
+    {
+        "sha": "2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6MmM3Yjg2YzYxMTJiN2Y4MzJlNDJlYzQ3NjhmZTE3NWRkOTBhZjYyYw==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:58:28Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:58:28Z"
+            },
+            "message": "add d3 nod",
+            "tree": {
+                "sha": "17a6ee88d2d3a280bd303edf0151593535d826a4",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/17a6ee88d2d3a280bd303edf0151593535d826a4"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/2c7b86c6112b7f832e42ec4768fe175dd90af62c",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/2c7b86c6112b7f832e42ec4768fe175dd90af62c/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "64bc181e4026561a2a12651fce3afc58959545d6",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/64bc181e4026561a2a12651fce3afc58959545d6",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/64bc181e4026561a2a12651fce3afc58959545d6"
+            }
+        ]
+    },
+    {
+        "sha": "64bc181e4026561a2a12651fce3afc58959545d6",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6NjRiYzE4MWU0MDI2NTYxYTJhMTI2NTFmY2UzYWZjNTg5NTk1NDVkNg==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:56:25Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:56:25Z"
+            },
+            "message": "add in color data to bar chart",
+            "tree": {
+                "sha": "6b4639d9fdbf34eba6c38625d00b2f79ed473ec5",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/6b4639d9fdbf34eba6c38625d00b2f79ed473ec5"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/64bc181e4026561a2a12651fce3afc58959545d6",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/64bc181e4026561a2a12651fce3afc58959545d6",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/64bc181e4026561a2a12651fce3afc58959545d6",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/64bc181e4026561a2a12651fce3afc58959545d6/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f"
+            }
+        ]
+    },
+    {
+        "sha": "a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6YTFlZDg5ZjEzMmUzZGNjMzVjYzRiOWFhNTU0NzBmY2VmOGJiNzA4Zg==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:51:12Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:51:12Z"
+            },
+            "message": "clean up and comment",
+            "tree": {
+                "sha": "f94f89d7445cb123496e1ffb9ad0621cf46d7847",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/f94f89d7445cb123496e1ffb9ad0621cf46d7847"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/a1ed89f132e3dcc35cc4b9aa55470fcef8bb708f/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "3158ab9667867914cfb84618dd8060464fde0b15",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3158ab9667867914cfb84618dd8060464fde0b15",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/3158ab9667867914cfb84618dd8060464fde0b15"
+            }
+        ]
+    },
+    {
+        "sha": "3158ab9667867914cfb84618dd8060464fde0b15",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6MzE1OGFiOTY2Nzg2NzkxNGNmYjg0NjE4ZGQ4MDYwNDY0ZmRlMGIxNQ==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:44:27Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-05-04T16:44:27Z"
+            },
+            "message": "responsive with hover to display percent",
+            "tree": {
+                "sha": "48321b342d44ca5a029ae7e991e6d31704ef5b08",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/48321b342d44ca5a029ae7e991e6d31704ef5b08"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/3158ab9667867914cfb84618dd8060464fde0b15",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3158ab9667867914cfb84618dd8060464fde0b15",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/3158ab9667867914cfb84618dd8060464fde0b15",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3158ab9667867914cfb84618dd8060464fde0b15/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d6b90a5fe61bec036c742ab0d413285247733a5",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d6b90a5fe61bec036c742ab0d413285247733a5",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/0d6b90a5fe61bec036c742ab0d413285247733a5"
+            }
+        ]
+    },
+    {
+        "sha": "0d6b90a5fe61bec036c742ab0d413285247733a5",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6MGQ2YjkwYTVmZTYxYmVjMDM2Yzc0MmFiMGQ0MTMyODUyNDc3MzNhNQ==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T03:00:53Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T03:00:53Z"
+            },
+            "message": "Merge branch 'master' of https://github.com/CUBigDataClass/hard-decisions\n\nmerge to update file structure",
+            "tree": {
+                "sha": "d178869d332674ef51b802bc2adc82e029968309",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/d178869d332674ef51b802bc2adc82e029968309"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/0d6b90a5fe61bec036c742ab0d413285247733a5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d6b90a5fe61bec036c742ab0d413285247733a5",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/0d6b90a5fe61bec036c742ab0d413285247733a5",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d6b90a5fe61bec036c742ab0d413285247733a5/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "fd07042f2a153c300752f3aa510bf2a56818678a",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/fd07042f2a153c300752f3aa510bf2a56818678a",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/fd07042f2a153c300752f3aa510bf2a56818678a"
+            },
+            {
+                "sha": "3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794"
+            }
+        ]
+    },
+    {
+        "sha": "fd07042f2a153c300752f3aa510bf2a56818678a",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZmQwNzA0MmYyYTE1M2MzMDA3NTJmM2FhNTEwYmYyYTU2ODE4Njc4YQ==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T02:59:59Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T02:59:59Z"
+            },
+            "message": "remove old files",
+            "tree": {
+                "sha": "d178869d332674ef51b802bc2adc82e029968309",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/d178869d332674ef51b802bc2adc82e029968309"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/fd07042f2a153c300752f3aa510bf2a56818678a",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/fd07042f2a153c300752f3aa510bf2a56818678a",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/fd07042f2a153c300752f3aa510bf2a56818678a",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/fd07042f2a153c300752f3aa510bf2a56818678a/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec"
+            }
+        ]
+    },
+    {
+        "sha": "0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6MGQ2OGIzYTRjYTQ1ZjVlMTFlN2Y0ZjZjN2QyNjNjNGZhNjA0MDllYw==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T02:58:19Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-24T02:58:19Z"
+            },
+            "message": "update with hover percent instead of tooltip",
+            "tree": {
+                "sha": "0d528e6d477e1560cacf528293769582910b5024",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/0d528e6d477e1560cacf528293769582910b5024"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/0d68b3a4ca45f5e11e7f4f6c7d263c4fa60409ec/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "689373d6beb12a591d79bd17ebbf280d0de002c7",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/689373d6beb12a591d79bd17ebbf280d0de002c7",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/689373d6beb12a591d79bd17ebbf280d0de002c7"
+            }
+        ]
+    },
+    {
+        "sha": "689373d6beb12a591d79bd17ebbf280d0de002c7",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6Njg5MzczZDZiZWIxMmE1OTFkNzliZDE3ZWJiZjI4MGQwZGUwMDJjNw==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-22T21:21:58Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-22T21:21:58Z"
+            },
+            "message": "updated d3 with tooltips and background color",
+            "tree": {
+                "sha": "c398885510dc9a85caf898e31c759721904bbec2",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/c398885510dc9a85caf898e31c759721904bbec2"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/689373d6beb12a591d79bd17ebbf280d0de002c7",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/689373d6beb12a591d79bd17ebbf280d0de002c7",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/689373d6beb12a591d79bd17ebbf280d0de002c7",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/689373d6beb12a591d79bd17ebbf280d0de002c7/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4"
+            }
+        ]
+    },
+    {
+        "sha": "3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6M2IwNTRkMGE3MTZkZmZhMmVlYzQzZWJjYzM1ZGE0YjllYWY3ZTc5NA==",
+        "commit": {
+            "author": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:39:08Z"
+            },
+            "committer": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:39:08Z"
+            },
+            "message": "Delete index.html",
+            "tree": {
+                "sha": "241d2e58d03b3bb081f5c4fc2bcafcf3798057e0",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/241d2e58d03b3bb081f5c4fc2bcafcf3798057e0"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/3b054d0a716dffa2eec43ebcc35da4b9eaf7e794/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dce5fcf3e1665e797344104213cc4b415d177c39",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dce5fcf3e1665e797344104213cc4b415d177c39",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/dce5fcf3e1665e797344104213cc4b415d177c39"
+            }
+        ]
+    },
+    {
+        "sha": "dce5fcf3e1665e797344104213cc4b415d177c39",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZGNlNWZjZjNlMTY2NWU3OTczNDQxMDQyMTNjYzRiNDE1ZDE3N2MzOQ==",
+        "commit": {
+            "author": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:39:01Z"
+            },
+            "committer": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:39:01Z"
+            },
+            "message": "Delete data.json",
+            "tree": {
+                "sha": "5746f725a581c17cb837e1be44c5bce5b9fd7def",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/5746f725a581c17cb837e1be44c5bce5b9fd7def"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/dce5fcf3e1665e797344104213cc4b415d177c39",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dce5fcf3e1665e797344104213cc4b415d177c39",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/dce5fcf3e1665e797344104213cc4b415d177c39",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dce5fcf3e1665e797344104213cc4b415d177c39/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5"
+            }
+        ]
+    },
+    {
+        "sha": "f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZjE1Yzc3YjAwOTVkZDBmZmVjNDVkMjJhNTZlYmYwNGM3ZmIxNzVhNQ==",
+        "commit": {
+            "author": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:38:55Z"
+            },
+            "committer": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:38:55Z"
+            },
+            "message": "Delete index.html",
+            "tree": {
+                "sha": "42e5a2377af0d4316f6f34608159109fd74094f7",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/42e5a2377af0d4316f6f34608159109fd74094f7"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/f15c77b0095dd0ffec45d22a56ebf04c7fb175a5/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/b0b4190d03618492764ce43d0a0a2a288ebc9c85"
+            }
+        ]
+    },
+    {
+        "sha": "b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6YjBiNDE5MGQwMzYxODQ5Mjc2NGNlNDNkMGEwYTJhMjg4ZWJjOWM4NQ==",
+        "commit": {
+            "author": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:38:48Z"
+            },
+            "committer": {
+                "name": "robertdenton",
+                "email": "robertdenton@users.noreply.github.com",
+                "date": "2014-04-08T23:38:48Z"
+            },
+            "message": "Delete data.json",
+            "tree": {
+                "sha": "b27de7af274db206115a4091a189c078e2fcc8fa",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/b27de7af274db206115a4091a189c078e2fcc8fa"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/b0b4190d03618492764ce43d0a0a2a288ebc9c85",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/b0b4190d03618492764ce43d0a0a2a288ebc9c85/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4"
+            }
+        ]
+    },
+    {
+        "sha": "937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6OTM3YzA3ZWE1MjI0MmFiMmYyMmU0ZDc4YzVhNzZmNWEyN2IzYzllNA==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-08T23:36:09Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-08T23:36:09Z"
+            },
+            "message": "fix file structure",
+            "tree": {
+                "sha": "6752d16b023a61e04a35468abfce15671d5ce221",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/6752d16b023a61e04a35468abfce15671d5ce221"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/937c07ea52242ab2f22e4d78c5a76f5a27b3c9e4/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "d378617271326e0348d7bab76f86594fd7d23f9b",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/d378617271326e0348d7bab76f86594fd7d23f9b",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/d378617271326e0348d7bab76f86594fd7d23f9b"
+            }
+        ]
+    },
+    {
+        "sha": "d378617271326e0348d7bab76f86594fd7d23f9b",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZDM3ODYxNzI3MTMyNmUwMzQ4ZDdiYWI3NmY4NjU5NGZkN2QyM2Y5Yg==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-08T22:59:47Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-04-08T22:59:47Z"
+            },
+            "message": "d3 with styling for fission",
+            "tree": {
+                "sha": "b1e1d8ef01f8522dcc39f57f54454bf5790f6ebd",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/b1e1d8ef01f8522dcc39f57f54454bf5790f6ebd"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/d378617271326e0348d7bab76f86594fd7d23f9b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/d378617271326e0348d7bab76f86594fd7d23f9b",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/d378617271326e0348d7bab76f86594fd7d23f9b",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/d378617271326e0348d7bab76f86594fd7d23f9b/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "5a352f14f66741dd9078100d166b5bab8755ee69",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/5a352f14f66741dd9078100d166b5bab8755ee69",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/5a352f14f66741dd9078100d166b5bab8755ee69"
+            }
+        ]
+    },
+    {
+        "sha": "5a352f14f66741dd9078100d166b5bab8755ee69",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6NWEzNTJmMTRmNjY3NDFkZDkwNzgxMDBkMTY2YjViYWI4NzU1ZWU2OQ==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-03-05T18:45:08Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-03-05T18:45:08Z"
+            },
+            "message": "updates with hover",
+            "tree": {
+                "sha": "1f88f76abcd2495c6597b94d0eaa6d941dc45f24",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/1f88f76abcd2495c6597b94d0eaa6d941dc45f24"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/5a352f14f66741dd9078100d166b5bab8755ee69",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/5a352f14f66741dd9078100d166b5bab8755ee69",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/5a352f14f66741dd9078100d166b5bab8755ee69",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/5a352f14f66741dd9078100d166b5bab8755ee69/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/dd22dd275cc20b455fe7ef445d7f0e14f050a87e"
+            }
+        ]
+    },
+    {
+        "sha": "dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZGQyMmRkMjc1Y2MyMGI0NTVmZTdlZjQ0NWQ3ZjBlMTRmMDUwYTg3ZQ==",
+        "commit": {
+            "author": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-03-05T16:20:22Z"
+            },
+            "committer": {
+                "name": "Robert Denton",
+                "email": "robert.denton9@gmail.com",
+                "date": "2014-03-05T16:20:22Z"
+            },
+            "message": "rough cut of the initial data viz and stats. - Rob",
+            "tree": {
+                "sha": "419c5925f653e72bd5247878aed814a0004df826",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/419c5925f653e72bd5247878aed814a0004df826"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/dd22dd275cc20b455fe7ef445d7f0e14f050a87e",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/dd22dd275cc20b455fe7ef445d7f0e14f050a87e/comments",
+        "author": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "robertdenton",
+            "id": 4853944,
+            "node_id": "MDQ6VXNlcjQ4NTM5NDQ=",
+            "avatar_url": "https://avatars0.githubusercontent.com/u/4853944?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/robertdenton",
+            "html_url": "https://github.com/robertdenton",
+            "followers_url": "https://api.github.com/users/robertdenton/followers",
+            "following_url": "https://api.github.com/users/robertdenton/following{/other_user}",
+            "gists_url": "https://api.github.com/users/robertdenton/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/robertdenton/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/robertdenton/subscriptions",
+            "organizations_url": "https://api.github.com/users/robertdenton/orgs",
+            "repos_url": "https://api.github.com/users/robertdenton/repos",
+            "events_url": "https://api.github.com/users/robertdenton/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/robertdenton/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "db83f764b8e788e1d42b9d2405db06c36080f64b",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/db83f764b8e788e1d42b9d2405db06c36080f64b",
+                "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/db83f764b8e788e1d42b9d2405db06c36080f64b"
+            }
+        ]
+    },
+    {
+        "sha": "db83f764b8e788e1d42b9d2405db06c36080f64b",
+        "node_id": "MDY6Q29tbWl0MTY3NTE0NDI6ZGI4M2Y3NjRiOGU3ODhlMWQ0MmI5ZDI0MDVkYjA2YzM2MDgwZjY0Yg==",
+        "commit": {
+            "author": {
+                "name": "Devon Tivona",
+                "email": "devon@tivona.me",
+                "date": "2014-02-12T01:06:36Z"
+            },
+            "committer": {
+                "name": "Devon Tivona",
+                "email": "devon@tivona.me",
+                "date": "2014-02-12T01:06:36Z"
+            },
+            "message": "Initial commit",
+            "tree": {
+                "sha": "f93e3a1a1525fb5b91020da86e44810c87a2d7bc",
+                "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/trees/f93e3a1a1525fb5b91020da86e44810c87a2d7bc"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/git/commits/db83f764b8e788e1d42b9d2405db06c36080f64b",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/db83f764b8e788e1d42b9d2405db06c36080f64b",
+        "html_url": "https://github.com/CUBigDataClass/hard-decisions/commit/db83f764b8e788e1d42b9d2405db06c36080f64b",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/hard-decisions/commits/db83f764b8e788e1d42b9d2405db06c36080f64b/comments",
+        "author": null,
+        "committer": null,
+        "parents": []
+    }
+]
