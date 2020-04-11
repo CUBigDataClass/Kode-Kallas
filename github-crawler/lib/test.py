@@ -21,6 +21,14 @@ from datetime import datetime
 import config
 import os
 
+#elasticsearch
+from elasticsearch import Elasticsearch
+
+
+#set config working
+res = requests.get('http://localhost:9200')
+#print (res.content)
+es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
 
 
 # function that converts all object columns to strings, in order to store them efficiently into the database
@@ -80,8 +88,31 @@ def get_repositories(org_name,owner,api):
         i = i + 1
         break
     return repos
+#org repo fetcher
+#orgs = json_normalize(get_repositories('CUBigDataClass', 'vishwakulkarni', github_api))
+#orgs.to_csv('data/org.csv')
 
-orgs = json_normalize(get_repositories('CUBigDataClass', 'vishwakulkarni', github_api))
+def get_org_information(org_name,owner,api):
+    url = api + '/orgs/{}'.format(org_name)
+    org_data = gh_session.get(url = url)
+    org_data=json.loads(org_data.content)
+    return org_data
+
+def send_to_elasticInstance(data):
+    es.index(index='org1', doc_type='_doc', body=data)
 
 
-orgs.to_csv('data/org.csv')
+#getting org info
+#org_data = get_org_information('duckduckgo', 'vishwakulkarni', github_api)
+#send_to_elasticInstance(org_data)
+
+#how to get documents
+'''
+doc = {
+        'size' : 10000,
+        'query': {
+            'match_all' : {}
+       }
+   }
+res = es.search(index='org1', doc_type='_doc', body=doc,scroll='1m')
+print(res)'''
