@@ -46,6 +46,10 @@ github_api = "https://api.github.com"
 gh_session = requests.Session()
 gh_session.auth = (config.GITHUB_USERNAME, config.GITHUB_TOKEN)
 
+def setUp():
+    github_api = "https://api.github.com"
+    gh_session = requests.Session()
+    gh_session.auth = (config.GITHUB_USERNAME, config.GITHUB_TOKEN)
 
 def branches_of_repo(repo, owner, api):
     branches = []
@@ -159,13 +163,22 @@ def commits_of_repo_github(repo, owner, api):
         i = i + 1
     return commits
 
-commits = commits_of_repo_github('hard-decisions','CUBigDataClass',github_api)
+#commits = commits_of_repo_github('hard-decisions','CUBigDataClass',github_api)
 
 def add_commits_to_elasticsearch(commits):
     for commit in commits:
         es.index(index='commits', doc_type='_doc',id=commit['sha'], body=commit)
 
-add_commits_to_elasticsearch(commits)
+#add_commits_to_elasticsearch(commits)
 
-with open("data/commits.json", "w") as outfile: 
-    outfile.write(json.dumps(commits,indent=4)) 
+#with open("data/commits.json", "w") as outfile: 
+#   outfile.write(json.dumps(commits,indent=4)) 
+#
+
+org_repos = get_repositories('CUBigDataClass', 'vishwakulkarni',github_api)
+
+for repo in org_repos:
+    repo['license']="test"
+    #send_to_elasticInstance(repo,'repos',repo['id'])
+    commits = commits_of_repo_github(repo['name'],'CUBigDataClass',github_api)
+    add_commits_to_elasticsearch(commits)
