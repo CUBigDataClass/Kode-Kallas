@@ -30,6 +30,15 @@
 	```
 	docker run -d --name kibana --net somenetwork -p 5601:5601 kibana:tag
 	```
+3) Set-up ElasticSearch (Important)
+   navigate to [http://localhost:5601/app/kibana#/dev_tools/console?_g=()](http://localhost:5601/app/kibana#/dev_tools/console?_g=())
+   copy and past each and every file from **github-crawler/Templates_commands** into above console (list of files is given below)
+
+         * comments_command.txt
+         * repos_cammand.txt
+         * put_org_index.txt
+    
+
 3) Starting github-crawler and usage
 
 		git clone https://github.com/CUBigDataClass/Kode-Kallas.git
