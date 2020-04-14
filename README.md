@@ -48,6 +48,15 @@ navigate to
 -  http://127.0.0.1:5000  -- you will be able to see proper message
 - http://127.0.0.1:5000/org/<!orgname_should be added here>  - Just check server logs  
 
+4) For stopping and starting your docker images
+
+	     $ docker ps -a    
+	     $ docker stop 0d93ff4520e6 ( copy here your Kibana container ID instead of my Container ID)
+	     $ docker stop d7edc0290546 ( copy here your Elasticsearch container ID instead of my Container ID)
+	     $ docker start 0d93ff4520e6 ( copy here your Kibana container ID instead of my Container ID)
+	     $ docker start d7edc0290546 ( copy here your Elasticsearch container ID instead of my Container ID)
+
+
 4) Below some Documentation
 
 		 Work Under progress
@@ -55,3 +64,4 @@ navigate to
 |**Module**  | **Usage** | **Requirements**|
 |--|--|--|
 |Github-Crawler|Used to get Github organization info |Docker and Python3|
+
