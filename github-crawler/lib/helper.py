@@ -48,3 +48,10 @@ class Helper():
         org_repos_data = self.gh_session.get(url = url)
         org_repos_data=json.loads(org_repos_data.content)
         return org_repos_data
+
+
+#testing comment after use
+'''h = Helper()
+github_api = "https://api.github.com"
+h.set_org_name("mozilla")
+print(h.get_org_information("vishwakulkarni",github_api))'''
