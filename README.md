@@ -9,7 +9,7 @@
 |--|--|
 |  Github-Crawler| In-Progress|
 | Github-Analyser|In-Progress|
-|Dashboard-backend||
+|Dashboard-backend| In-progress|
 |Dashboard-Frontend||
 
 
@@ -68,7 +68,17 @@ navigate to
 
 5) Below some Documentation
 
-		 Work Under progress
+		 Cassandra api setup
+
+1) setup dcoker 
+	 ```docker run -e DS_LICENSE=accept --memory 4g -p 7000:7000 -p 7001:7001 -p 7199:7199 -p 9042:9042 -p 9160:9160 -p 9404:9404 --name my-dse -e CASSANDRA_START_RPC=true -d datastax/dse-server:6.8.0```
+	 ```docker start my-dse```
+	 
+2) Prereq: Install flask and cassandra-driver using pip.
+
+3) ```python3 app.py```
+
+4)Postman scripts for api access: TODO include link
 
 |**Module**  | **Usage** | **Requirements**|
 |--|--|--|
