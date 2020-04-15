@@ -28,6 +28,11 @@ def org_parser(orgname):
         repo['license']="test"
         helper.send_to_elasticInstance(repo,'repos',repo['id'])
         print("repo sent "+ repo['name'] )
+    print("Getting Org Members for "+orgname)
+    member_list = helper.get_org_users(OWNER,github_api)
+    print("sending user info to elasticsearch")
+    for member in member_list:
+        helper.send_to_elasticInstance(member,'users',member['id'])
     print("Done!!!!!!!!!")
     return 'We got your org name ' + orgname + ' give us some time to process your request, please check server output for progress'
 
