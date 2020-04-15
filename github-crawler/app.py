@@ -20,6 +20,7 @@ def org_parser(orgname):
     org_data = helper.get_org_information(OWNER,github_api)
     print("Got Org Info!!!")
     print("sending Org Info to elastic search!!!")
+    #print(org_data)
     helper.send_to_elasticInstance(org_data,'org1',org_data['id'])
     print("Getting Repos for "+orgname)
     repo_list = helper.get_repositories(OWNER,github_api)
