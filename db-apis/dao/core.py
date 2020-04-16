@@ -19,3 +19,9 @@ def insert(request):
     obj = eval(content[TABLE]).create(**(content[BODY]))
     return obj
 
+
+def get_data(request):
+    content = request.get_json()
+    connection.setup(CASSANDRA_HOSTS, content[ORG])
+    obj = eval(content[TABLE]).objects.filter(**(content[BODY]))
+    return dict(obj.get())

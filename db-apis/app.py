@@ -41,7 +41,13 @@ def insert():
     # TODO: populate response P0
     # TODO: Catch exceptions P1
     response = core.insert(request)
-    # return response
+    return response
+
+@app.route('/get', methods=['POST'])
+def get_data():
+    # TODO: populate response P0
+    # TODO: Catch exceptions P1
+    return core.get_data(request)
 
 
 # If we're running in stand alone mode, run the application
