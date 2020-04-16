@@ -12,9 +12,9 @@ import os
 from elasticsearch import Elasticsearch
 
 GITEA_APP_URL = 'YOUR_GITEA_API'
-GITEA_TOKEN = 'f75b46df7511241ab8481caf80994d4aab7afb68'
+GITEA_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'
 GITHUB_USERNAME = 'vishwakulkarni'
-GITHUB_TOKEN = 'f75b46df7511241ab8481caf80994d4aab7afb68'
+GITHUB_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'
 SQL_ALCHEMY_STRING = ''
 
 
@@ -44,7 +44,48 @@ class Helper():
         self.es.index(index=index_name, doc_type='_doc',id=id_val, body=data)
     
     def get_repositories(self,owner,api):
-        url = api + '/orgs/{}/repos'.format(self.orgname)
-        org_repos_data = self.gh_session.get(url = url)
-        org_repos_data=json.loads(org_repos_data.content)
-        return org_repos_data
+        repos_list = []
+        next = True
+        i=1
+        while next == True:
+            url = api + '/orgs/{}/repos?page={}&per_page=20'.format(self.orgname,i)
+            original_data = self.gh_session.get(url=url)
+            repos = json.loads(original_data.content)
+            for repo in repos:
+                repos_list.append(repo)
+            if 'Link' in original_data.headers:
+                if 'rel="next"' not in original_data.headers['Link']:
+                    print(i)
+                    next = False
+            i = i + 1
+        return repos_list
+    
+    def get_org_users(self,owner,api):
+        members_list = []
+        next = True
+        i=1
+        while next == True:
+            url = api + '/orgs/{}/members?page={}&per_page=100'.format(self.orgname,i)
+            original_data = self.gh_session.get(url=url)
+            members = json.loads(original_data.content)
+            for member in members:
+                members_list.append(member)
+            if 'Link' in original_data.headers:
+                if 'rel="next"' not in original_data.headers['Link']:
+                    print(i)
+                    next = False
+            i = i + 1
+        
+        return members_list
+
+
+
+#testing comment after use
+h = Helper()
+github_api = "https://api.github.com"
+h.set_org_name("CUBigDataClass")
+#print(h.get_org_information("vishwakulkarni",github_api))
+#k=h.get_repositories('vishwakulkarni',github_api)
+#print(len(k))
+#for mem in k:
+#    print(mem['name'])

@@ -10,6 +10,7 @@ org = g.get_organization("CUBigDataClass")
 print(org.login)
 names = org.get_members()
 repos = org.get_repos()
+members = org.get_members()
 #
 #for name in names:
 #    print(name)
@@ -17,4 +18,7 @@ repos = org.get_repos()
 i=0
 for repo in repos:
     i=i+1
-    print(i,repo)
+    #print(i,repo.name)
+
+for mem in members:
+    print(mem.name)
