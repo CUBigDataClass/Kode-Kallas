@@ -139,6 +139,9 @@ navigate to
     Prereq: Install flask and cassandra-driver using pip.
 
 	    python3 app.py
+	   
+Link to postman apis: https://www.getpostman.com/collections/034caa33048a99cfb99a	   
+	   
 
 
 
