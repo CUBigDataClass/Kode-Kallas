@@ -14,8 +14,7 @@ class Users(Model):
 
 
 class Data(Model):
-    uid = columns.UUID(primary_key=True, default=uuid.uuid4)
     gitid = columns.Text(required=True)
-    name = columns.Text(required=True)
-    repo = columns.Text(required=True)
+    name = columns.Text(primary_key=True,required=True)
+    repo = columns.Text(primary_key=True,required=True)
     commit_num = columns.Integer(required=False, default=0)
