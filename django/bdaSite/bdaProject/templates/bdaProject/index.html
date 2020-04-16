@@ -1,35 +1,85 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
     <style>
-     @font-face
-     { font-family: R; src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %}); }
-
+         ::placeholder {
+            color: black;
+        }
+        
+        @font-face {
+            font-family: R;
+            src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %});
+        }
     </style>
     <title></title>
-  </head>
-  <body id='body' style="font-family:R">
-    <!-- Navbar goes here -->
-    <nav>
-      <div id='nav' style="background:#17365D" class="nav-wrapper">
-        <a href="#" class="brand-logo center">IoT Data Platform</a>
-      </div>
-    </nav>
+</head>
 
-    <!-- Page Layout here -->
-  
-    <script src={% static 'js/jquery-3.1.1.js' %}></script>
-    <script src={% static 'js/materialize.min.js' %}></script>
-    <script src={% static 'js/chart.min.js' %}></script>
-    <script type="text/javascript">
-      navHeight = $('#nav').height();
-      columnHeight = (window.innerHeight - navHeight);
-      $('#col1').height(columnHeight);
-      $('#col2').height(columnHeight);
-    </script>
-  </body>
+<body id='body' style="font-family:R; background-color: #00171F;">
+
+    <!-- Loader -->
+    <div id='loader'></div>
+
+    <div id="con">
+        <div class="container z-depth-3" style="background-color:#E5F3FF;width:60vw;height:60vh;outline:0;border-radius: 90px;">
+            <div class="row">
+                <div class="center">
+                    <br><br><br>
+                    <img src="{% static 'img/github.svg' %}" style="width:100px;height:100px">
+                    <h4 style="font-weight:bold;margin:10px;padding:0px;font-size:220%;letter-spacing:3pt;line-height:30px">
+                        Welcome to GitHub Analyser
+                    </h4>
+                    <h4 id='error' style="font-weight:bold;margin:10px;padding:0px;font-size:150%;line-height:30px">
+                        Enter an Organization Name to continue:
+                    </h4>
+                    <h4 style="font-weight:bold;margin-top:10px;padding:0px;font-size:150%;line-height:30px">
+                        <input id='org_input' type="text" placeholder="Type to search" class="center" style="width:40%; color: black; placeholder: black; margin: 10px;">
+                        <br>
+                        <btn id='search' type="submit" class="btn-floating btn-large waves-effect waves-light" style="background-color: #00171F;"><i class="material-icons">search</i></btn>
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+
+        <script src={% static 'js/jquery-3.1.1.js' %}></script>
+        <script src={% static 'js/materialize.min.js' %}></script>
+        <script src={% static 'js/chart.min.js' %}></script>
+        <script type=" text/javascript ">
+            navHeight = $('#nav').height();
+            columnHeight = (window.innerHeight - navHeight);
+            $('#col1').height(columnHeight);
+            $('#col2').height(columnHeight);
+
+            $(window).on('load', function() {
+                $('#loader').fadeOut();
+            });
+
+            $('#search').click( function() {
+                $.term = $('#org_input').val()
+                if($.term == '' || $.term == null || $.term == undefined)
+                {
+                    $('#error').text("Please Enter an Organization Name to continue:").css("color", "red");
+                }
+                else
+                {
+                    location.assign('org/'+$.term);
+                }
+            });
+
+            $("#org_input").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#search").click();
+                }
+            });
+        </script>
+</body>
+
+</html>
+
 </html>
