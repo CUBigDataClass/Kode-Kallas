@@ -1,21 +1,13 @@
 PUT /org1
 {
-    "settings" : {
-        "number_of_shards" : 1
-    },
     "mappings": {
-    "_source": {
-      "enabled": false
-    },
     "properties": {
-      "host_name": {
-        "type": "keyword"
-      },
     "login": {
         "type": "keyword"
       },
     "id": {
-      "type":"long"},
+      "type":"long"
+      },
     "node_id": {
         "type": "keyword"
       },
