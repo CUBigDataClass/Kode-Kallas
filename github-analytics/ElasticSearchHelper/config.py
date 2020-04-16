@@ -1,0 +1,2 @@
+ELASTIC_HOST = 'localhost'
+ELASTIC_PORT = 9200
