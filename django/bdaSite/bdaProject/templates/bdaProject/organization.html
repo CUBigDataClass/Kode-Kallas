@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <title>{{ org_name }} - GitHub Analyser</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
@@ -12,31 +13,27 @@
             font-family: R;
             src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %});
         }
-        
-        #loader {
-            width: 100%;
-            height: 100vh;
-            background: #f5f5f5 url({% static 'img/loader.gif' %}) no-repeat center;
-            z-index: 99999
-        }
     </style>
-    <title></title>
 </head>
 
-<body id='body' style="font-family:R; background-color: #2C3747;">
+<body id='body' style="font-family:R; background-color: #08163F;">
 
-    <div id='loader'>
-
-    </div>
+    <!-- Loader  -->
+    <div id='loader2'></div>
 
     <!-- Navbar goes here -->
     <nav>
-        <div id='nav' style="background:#17365D" class="nav-wrapper">
+        <div id='nav' style="background:#050E28" class="nav-wrapper">
             <a href="#" class="brand-logo center">GitHub Analyser</a>
         </div>
     </nav>
 
     <!-- Page Layout here -->
+    <div class="row">
+        <div class="col s12 m6 offset-m3 center white-text">
+            <h3>Organization: {{ org_name }}</h3>
+        </div>
+    </div>
 
     <script src={% static 'js/jquery-3.1.1.js' %}></script>
     <script src={% static 'js/materialize.min.js' %}></script>
@@ -48,7 +45,7 @@
         $('#col2').height(columnHeight);
 
         $(window).on('load', function() {
-            $('#loader').fadeOut();
+            $('#loader2').fadeOut();
         });
     </script>
 </body>

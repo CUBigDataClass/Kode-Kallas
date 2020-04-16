@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <title>Welcome - GitHub Analyser</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
@@ -17,7 +18,6 @@
             src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %});
         }
     </style>
-    <title></title>
 </head>
 
 <body id='body' style="font-family:R; background-color: #00171F;">
@@ -60,15 +60,12 @@
                 $('#loader').fadeOut();
             });
 
-            $('#search').click( function() {
+            $('#search').click(function() {
                 $.term = $('#org_input').val()
-                if($.term == '' || $.term == null || $.term == undefined)
-                {
+                if ($.term == '' || $.term == null || $.term == undefined) {
                     $('#error').text("Please Enter an Organization Name to continue:").css("color", "red");
-                }
-                else
-                {
-                    location.assign('org/'+$.term);
+                } else {
+                    location.assign('org/' + $.term);
                 }
             });
 
