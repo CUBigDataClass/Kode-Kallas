@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style>
+     @font-face
+     { font-family: R; src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %}); }
+
+    </style>
+    <title></title>
+  </head>
+  <body id='body' style="font-family:R">
+    <!-- Navbar goes here -->
+    <nav>
+      <div id='nav' style="background:#17365D" class="nav-wrapper">
+        <a href="#" class="brand-logo center">IoT Data Platform</a>
+      </div>
+    </nav>
+
+    <!-- Page Layout here -->
+  
+    <script src={% static 'js/jquery-3.1.1.js' %}></script>
+    <script src={% static 'js/materialize.min.js' %}></script>
+    <script src={% static 'js/chart.min.js' %}></script>
+    <script type="text/javascript">
+      navHeight = $('#nav').height();
+      columnHeight = (window.innerHeight - navHeight);
+      $('#col1').height(columnHeight);
+      $('#col2').height(columnHeight);
+    </script>
+  </body>
+</html>
