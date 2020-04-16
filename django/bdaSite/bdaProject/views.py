@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the bdaProject index.")
-
-def trial(request):
-    return HttpResponse("Trial")
+    context = {}
+    return render(request, 'bdaProject/index.html', context)
