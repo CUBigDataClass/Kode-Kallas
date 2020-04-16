@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection"/>
+    <style>
+     @font-face
+     { font-family: R; src: url({% static 'fonts/Roboto/Roboto-Regular.ttf' %}); }
+
+    </style>
+    <title></title>
+  </head>
+  <body id='body' style="font-family:R">
+    <!-- Navbar goes here -->
+    <nav>
+      <div id='nav' style="background:#17365D" class="nav-wrapper">
+        <a href="#" class="brand-logo center">IoT Data Platform</a>
+      </div>
+    </nav>
+
+    <!-- Page Layout here -->
+    <div class="row">
+
+      <div id='col1' class="col s3" style="background:#336699;">
+        <a href="/iotdp/{{ user }}">
+          <div class="col s12 m12 l12" style="color:#17365D;display:flex; justify-content:center; align-items:center; width:100%; height:10vh; font-size:150%; margin:0px; background:#F1BA65; padding:0px">
+            OVERALL VIEW
+          </div>
+        </a>
+        <a href="/iotdp/{{ user }}/graph">
+          <div class="col s12 m12 l12 white-text" style="display:flex; justify-content:center; align-items:center; width:100%; height:10vh; font-size:150%; margin:0px; padding:0px">
+            GRAPH
+          </div>
+        </a>
+        <a href="/iotdp/{{ user }}/logs">
+          <div class="col s12 m12 l12" style="color:white;display:flex; justify-content:center; align-items:center; width:100%; height:10vh; font-size:150%; margin:0px;; padding:0px">
+            LOGS
+          </div>
+        </a>
+      </div>
+
+      <div id='col2' class="col s9 center" style="background: #EBEBD3;">
+        <div style="width:100%; overflow-x:scroll">
+          <table style="">
+            <thead id='tableHead'>
+              <th>Timestamp</th>
+              <th>Use</th>
+              <th>General</th>
+              <th>House Overall</th>
+              <th>Dishwasher</th>
+              <th>Furnace1</th>
+              <th>Furnace2</th>
+              <th>Home Office</th>
+              <th>Fridge</th>
+              <th>Wine Cellar</th>
+              <th>Garage Door</th>
+              <th>Kitchen 12</th>
+              <th>Kitchen 14</th>
+              <th>Kitchen 38</th>
+              <th>Barn</th>
+              <th>Well</th>
+              <th>Microwave</th>
+              <th>Living Room</th>
+              <th>Solar</th>
+              <th>Temperature</th>
+              <th>Icon</th>
+              <th>Humidity</th>
+              <th>Visibility</th>
+              <th>Summary</th>
+              <th>Apparent Temperature</th>
+              <th>Pressure</th>
+              <th>Wind Speed</th>
+              <th>Cloud Cover</th>
+              <th>Wind Bearing</th>
+              <th>Precipitation Intensity</th>
+              <th>Dew Point</th>
+              <th>Precipitation Porbab</th>
+            </thead>
+            <tbody id='tableBody'>
+
+            </tbody>
+          </table>
+          <a id='prev' class="btn-floating" style="background: #17365D"><i class="material-icons">keyboard_arrow_left</i></a>
+          <a id='next' class="btn-floating" style="background: #17365D"><i class="material-icons">keyboard_arrow_right</i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <script src={% static 'js/jquery-3.1.1.js' %}></script>
+    <script src={% static 'js/materialize.min.js' %}></script>
+    <script src={% static 'js/chart.min.js' %}></script>
+    <script type="text/javascript">
+      navHeight = $('#nav').height();
+      columnHeight = (window.innerHeight - navHeight);
+      $('#col1').height(columnHeight);
+      $('#col2').height(columnHeight);
+    </script>
+    <script type="text/javascript">
+        current_index = 0;
+        size = {{ size }};
+        function dataUpdate(current_index)
+        {
+          $.get('http://35.230.40.217:5000/get_data/{{ user }}/'+current_index, function(data, status) {
+            for(i=0; i<data['result'].length; i++)
+            {
+              row = "<tr>";
+              date = new Date(parseInt(data['result'][i]['time'])*1000).toLocaleString();
+              row += "<td>"+date+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['use1']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['gen']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['house_overall']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['dishwasher']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['furnace1']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['furnace2']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['home_office']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['fridge']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['wine_cellar']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['garage_door']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['kitchen12']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['kitchen14']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['kitchen38']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['barn']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['well']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['microwave']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['living_room']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['solar']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['temperature']* 10000)) / 10000)+"</td>";
+              row += "<td>"+data['result'][i]['icon']+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['humidity']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['visibility']* 10000)) / 10000)+"</td>";
+              row += "<td>"+data['result'][i]['summary']+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['apparent_temp']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['pressure']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['wind_speed']* 10000)) / 10000)+"</td>";
+              row += "<td>"+data['result'][i]['cloud_cover']+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['wind_bearing']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['precip_intensity']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['dew_point']* 10000)) / 10000)+"</td>";
+              row += "<td>"+(Math.round((data['result'][i]['precip_probability']* 10000)) / 10000)+"</td>";
+              row += "</tr>";
+              $('#tableBody').append(row);
+            }
+          });
+        }
+
+        dataUpdate(0);
+        // alert(size);
+        $('#prev').click(function(){
+            if(current_index > 0)
+            {
+              $('#tableBody').empty();
+              current_index = current_index - 7;
+              dataUpdate(current_index);
+            }
+        });
+        $('#next').click(function(){
+            if (current_index <= size-7)
+            {
+              $('#tableBody').empty();
+              current_index = current_index + 7;
+              dataUpdate(current_index);
+            }
+        });
+
+    </script>
+  </body>
+</html>
