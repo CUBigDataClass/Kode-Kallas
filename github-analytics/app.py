@@ -13,18 +13,17 @@ cassandraHelper = ch.CassandraHelper()
 def home():
     return 'Github Analytics - Use APIs to process data'
 
-
 @app.route('/org/<orgname>')
 def org_retrive(orgname):
-    return elasticSearchHelper.getOrgName(orgname)
+    return elasticSearchHelper.getOrgData(orgname)
 
 @app.route('/repo/<reponame>')
 def repo_retrive(reponame):
-    return reponame
+    return elasticSearchHelper.getRepoData(reponame)
 
 @app.route('/user/<username>')
 def user_retrive(username):
-    return username
+    return elasticSearchHelper.getUserData(username)
 
 
 if __name__ == '__main__':
