@@ -1,0 +1,61 @@
+PUT /users
+{
+    "mappings": {
+    "properties": {
+    "login": {
+        "type": "keyword"
+      },
+    "id": {
+        "type": "long"
+      },
+    "node_id": {
+        "type": "keyword"
+      },
+    "avatar_url": {
+        "type": "keyword"
+      },
+    "gravatar_id": {
+        "type": "keyword"
+      },
+    "url": {
+        "type": "keyword"
+      },
+    "html_url": {
+        "type": "keyword"
+      },
+    "followers_url": {
+        "type": "keyword"
+      },
+    "following_url": {
+        "type": "keyword"
+      },
+    "gists_url":{
+        "type": "keyword"
+      },
+    "starred_url": {
+        "type": "keyword"
+      },
+    "subscriptions_url": {
+        "type": "keyword"
+      },
+    "organizations_url": {
+        "type": "keyword"
+      },
+    "repos_url": {
+        "type": "keyword"
+      },
+    "events_url": {
+        "type": "keyword"
+      },
+    "received_events_url": {
+        "type": "keyword"
+      },
+    "type": {
+        "type": "keyword"
+      },
+    "site_admin": {
+        "type": "boolean"
+      }
+  }
+    }
+}
