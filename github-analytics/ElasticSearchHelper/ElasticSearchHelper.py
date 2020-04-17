@@ -12,14 +12,14 @@ class ElasticSearchHelper():
     def getOrgData(self,orgname):
         res = es.search(index=orgname, body={"query": {"match_all": {}}})
         print(res)
-        return json.dumps(res)
+        return res
 
     def getUserData(self,username):
         res = es.search(index=username, body={"query": {"match_all": {}}})
         print(res)
-        return json.dumps(res)
+        return res
 
     def getRepoData(self,reponame):
         res = es.search(index=reponame, body={"query": {"match_all": {}}})
         print(res)
-        return json.dumps(res)
+        return res
