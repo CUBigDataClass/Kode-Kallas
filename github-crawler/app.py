@@ -34,6 +34,12 @@ def org_parser(orgname):
     print("sending user info to elasticsearch")
     for member in member_list:
         helper.send_to_elasticInstance(member,'users',member['id'])
+    print("Getting Commits from each repository")
+    for repo in repo_list:
+        commits = helper.commits_of_repo_github(repo['name'],orgname,github_api)
+        print("sending to ES commits of",repo['name'])
+        for commit in commits:
+            helper.send_to_elasticInstance(commit,'commit',commit['sha'])
     print("Done!!!!!!!!!")
     return 'We got your org name ' + orgname + ' give us some time to process your request, please check server output for progress'
 
