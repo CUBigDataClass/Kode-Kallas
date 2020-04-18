@@ -1,0 +1,25 @@
+Metadata-Version: 1.1
+Name: Flask-Cassandra
+Version: 0.14
+Summary: Provides a connection to a Cassandra cluster in a Flask app
+Home-page: http://terbiumlabs.com/flask-cassandra/
+Author: Michael Moore
+Author-email: michael@terbiumlabs.com
+License: BSD
+Description: 
+        Flask-Cassandra
+        -------------
+        
+        Flask-Cassandra provides an application-level connection
+        to an Apache Cassandra database. This connection can be
+        used to interact with a Cassandra cluster.
+        
+        
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
