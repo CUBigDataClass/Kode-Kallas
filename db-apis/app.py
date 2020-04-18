@@ -54,7 +54,6 @@ def get_data():
 def get_all_data():
     # TODO: populate response P0
     # TODO: Catch exceptions P1
-    haha = core.get_all_data(request)
     return core.get_all_data(request)
 
 

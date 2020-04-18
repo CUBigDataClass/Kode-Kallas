@@ -21,8 +21,10 @@ def insert(request):
     # if isinstance(body, Model):
     # TODO: Avoid using eval() because
     # TODO: this requires me to import all models
-    obj = eval(content[TABLE]).create(**(content[BODY]))
-    return obj
+    obj_list = content[BODY]
+    for obj in obj_list:
+        eval(content[TABLE]).create(**(obj))
+    return True
 
 
 def get_data(request):
@@ -42,6 +44,7 @@ def get_all_data(request):
     obj_list = []
     for o in obj:
         obj_list.append(dict(o))
-    if content[START_ID]:
+    if START_ID in content:
         return jsonify(obj_list[int(content[START_ID]):int(content[END_ID])])
-    return jsonify(obj_list)
+    else:
+        return jsonify(obj_list)
