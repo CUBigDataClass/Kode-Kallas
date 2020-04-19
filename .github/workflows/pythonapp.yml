@@ -47,4 +47,4 @@ jobs:
     - name: Testing with pytest
       run: |
         pip install pytest
-        py.test
+        py.test github-analytics/test_analytics.py
