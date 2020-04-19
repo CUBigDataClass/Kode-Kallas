@@ -153,3 +153,6 @@ Link to postman apis: https://www.getpostman.com/collections/034caa33048a99cfb99
 |--|--|--|
 |Github-Crawler|Used to get Github organization info |Docker and Python3|
 
+7)Elassandra setup
+
+	docker-compose up
