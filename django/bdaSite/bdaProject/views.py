@@ -96,6 +96,63 @@ def org(request, org):
     }
     return render(request, 'bdaProject/organization.html', context)
 
+def repo(request, org, repoName):
+    url = staticfiles_storage.path('sampleJson.json')
+    org_data = None
+    with open(url) as f:
+        org_data = json.load(f)
+    
+    for repo in org_data:
+        if repo['name'] == 'zelda':
+            current_repo = repo
+            break
+
+    commits_time = []
+
+    for commit in current_repo['commits']:
+        c = {}
+        c['sha'] = commit['sha']
+        c['date'] = datetime.datetime.strptime(commit['date'],"%Y-%m-%dT%H:%M:%SZ").strftime('%Y-%m-%d')
+
+        if len(c) != 0:
+            commits_time.append(c)
+
+    commits_time = sorted(commits_time, key = lambda i:i['date'])
+    starting_year = datetime.datetime.strptime(commits_time[0]['date'], "%Y-%m-%d").year
+    ending_year = datetime.datetime.strptime(commits_time[-1]['date'], "%Y-%m-%d").year
+
+    quarters = {}
+    for i in range(starting_year, ending_year+1):
+        for j in range(4):
+            quarters[str(i)+"-Q"+str(j+1)] = 0
+
+    for date in commits_time:
+        year = datetime.datetime.strptime(date['date'], "%Y-%m-%d").year
+        month = datetime.datetime.strptime(date['date'], "%Y-%m-%d").month
+        if month == 1 or month == 2 or month == 3:
+            quarters[str(year)+"-Q1"] += 1
+        elif month == 4 or month == 5 or month == 6:
+            quarters[str(year)+"-Q2"] += 1
+        elif month == 7 or month == 8 or month == 9:
+            quarters[str(year)+"-Q3"] += 1
+        elif month == 10 or month == 11 or month == 12:
+            quarters[str(year)+"-Q4"] += 1
+
+    commit_graph_labels = []
+    commit_graph_values = []
+
+    for k,v in quarters.items():
+        commit_graph_labels.append(k)
+        commit_graph_values.append(v)
+    
+    context = {
+        'org_name' : org,
+        'repo_name' : repoName,
+        'commit_graph_labels': commit_graph_labels,
+        'commit_graph_values': commit_graph_values,
+    }
+    return render(request, 'bdaProject/repo.html', context)
+
 def user(request, userId):
     pp = pprint.PrettyPrinter(indent=4)        
     req_sesh = requests.Session()

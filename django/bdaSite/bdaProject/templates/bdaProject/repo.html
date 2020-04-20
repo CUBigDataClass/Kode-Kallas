@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>{{ user.user_id }} - GitHub Analyser</title>
+    <title>{{ repo_name }} - GitHub Analyser</title>
     <meta charset="utf-8">
     <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
     <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" />
@@ -44,72 +44,32 @@
     <!-- Page Layout here -->
     <div class="row" style="margin: 0px; padding:0px">
         <div class="col s12 m6 offset-m3 center theme-text">
-            <h4 style="margin: 5px; padding:0px">User: {{ user.user_id }}</h4>
+            <h4 style="margin: 5px; padding:0px">Repo: {{ repo_name }}</h4>
         </div>
     </div>
 
     <div class="row">
         <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
-            <div class="row" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; padding: 15px;'>
-                <div id="user_pic" class="col m5 ">
-                    <img src="{{ user.user_img }} " style="height: 100%; width: 100%; ">
-                </div>
-                <div id="user_dets" class="m7 theme-text">
-                    {% if user.user_name %}
-                        <h5>{{ user.user_name }}</h5>
-                    {% else %}
-                        <h5>{{ user.user_id }}</h5>
-                    {% endif %}
-                    <span style="font-size:130%">Public Repos: {{ user.user_pub_repos }}</span>
-                </div>
-                <div class="m12 center theme-text" style='font-size:130%'>
-                    {% if user.user_company %}
-                        <span><i class="fas fa-building"></i> {{ user.user_company }}</span> <br>
-                    {% endif %} 
-                    
-                    {% if user.user_location %}
-                        <span><i class="fas fa-map-pin"></i> {{ user.user_location }}</span> <br>
-                    {% endif %} 
-                    
-                    {% if user.user_link %}
-                        <span><a href='{{ user.user_link }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
-                    {% endif %}
-                    
-                    <span>Joined GitHub on {{ user.user_join_date }}</span>
-                </div>
+            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
             </div>
         </div>
-        <div id='' class="col s12 m6 aniR " style="margin: 0px; padding: 0px; ">
+        <div id='' class="col s12 m6 aniR" style="margin: 0px; padding: 0px; ">
             <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
                 <h5 style='padding: 10px; margin: 0px'> Commits per Quarter </h5>
                 <canvas class='cjchart' id="chart1" style="max-width:98%"></canvas>
             </div>
         </div>
         <div id='' class="col s12 m3 aniL " style="margin: 0px; padding: 0px; ">
-            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <h5 style='margin: 0px; padding: 10px'> Languages Used </h5>
-                {% for lang in languages %}
-                    {% autoescape off %} {{ lang }} {% endautoescape %}
-                {% endfor %}
-            </div>
+            
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ rpl_graph_title }} </h5>
-                <canvas class='cjchart' id="chart2" style="max-width:98%"></canvas>
-            </div>
+            
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ cpr_graph_title }} </h5>
-                <canvas class='cjchart' id="chart3" style="max-width:98%"></canvas>
-            </div>
+            
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ cpl_graph_title }} </h5>
-                <canvas class='cjchart' id="chart4" style="max-width:98%"></canvas>
-            </div>
+            
         </div>
     </div>
 
@@ -120,6 +80,11 @@
     <script src={% static 'js/charts.js' %}></script>
     <script src={% static 'js/themes/animated.js' %}></script>
     <script type="text/javascript ">
+        navHeight = $('#nav').height();
+        columnHeight = (window.innerHeight - navHeight);
+        $('#col1').height(columnHeight);
+        $('#col2').height(columnHeight);
+
         $(window).on('load', function() {
             $('#loader3').fadeOut();
             $('.aniL').addClass('animated slideInLeft')
@@ -203,7 +168,7 @@
             "rgba(48, 51, 107, 1)",
             "rgba(149, 175, 192, 1)",
         ];
-    
+        
         var ctx1 = document.getElementById("chart1");
         var myChart1 = new Chart(ctx1, {
             type: "line",
@@ -211,8 +176,8 @@
                 labels: {% autoescape off %} {{ commit_graph_labels }} {% endautoescape %},
                 datasets: [{
                     data: {% autoescape off %} {{ commit_graph_values }} {% endautoescape %},
-                    backgroundColor: "rgba(253, 180, 75, 0.2)",
-                    borderColor: "rgba(253, 180, 75, 1)",
+                    backgroundColor: "rgba(202, 71, 97, 0.2)",
+                    borderColor: "rgba(202, 71, 97, 1)",
                     lineTension: 0
                 }]
             },
@@ -261,74 +226,6 @@
             }
         });
         
-        var ctx2 = document.getElementById("chart2");
-        var myChart2 = new Chart(ctx2, {
-            type: 'pie',
-            data: {
-                datasets: [{
-                    data: {% autoescape off %} {{ rpl_graph_values }} {% endautoescape %},
-                    backgroundColor: bgColors1,
-                    borderColor: boColors1
-                }],
-                labels: {% autoescape off %} {{ rpl_graph_labels }} {% endautoescape %},
-            },
-            options: {
-                maintainAspectRatio: false,
-                animation: false,
-                legend: {
-                    position: 'right',   
-                    labels: {
-                        fontColor: '#E5F3FF'
-                    }
-                }
-            }
-        });
-        
-        var ctx3 = document.getElementById("chart3");
-        var myChart3 = new Chart(ctx3, {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    data: {% autoescape off %} {{ cpr_graph_values }} {% endautoescape %},
-                    backgroundColor: bgColors2,
-                    borderColor: boColors2
-                }],
-                labels: {% autoescape off %} {{ cpr_graph_labels }} {% endautoescape %},
-            },
-            options: {
-                maintainAspectRatio: false,
-                animation: false,
-                legend: {
-                    position: 'left', 
-                    labels: {
-                        fontColor: '#E5F3FF'
-                    }
-                }
-            }
-        });
-        
-        var ctx4 = document.getElementById("chart4");
-        var myChart4 = new Chart(ctx4, {
-            type: 'doughnut',
-            data: {
-                datasets: [{
-                    data: {% autoescape off %} {{ cpl_graph_values }} {% endautoescape %},
-                    backgroundColor: bgColors3,
-                    borderColor: boColors3
-                }],
-                labels: {% autoescape off %} {{ cpl_graph_labels }} {% endautoescape %},
-            },
-            options: {
-                maintainAspectRatio: false,
-                animation: false,
-                legend: {
-                    position: 'left', 
-                    labels: {
-                        fontColor: '#E5F3FF'
-                    }
-                }
-            }
-        });
     </script>
 </body>
 
