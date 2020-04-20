@@ -4,7 +4,7 @@ from cassandra.cqlengine.management import sync_table
 from cassandra.query import SimpleStatement
 
 from dao.config import CASSANDRA_HOSTS
-from dao.models import Users, Data
+from dao.models import Users, Data, Repos
 
 
 def get_session(keyspace=None):
@@ -39,6 +39,7 @@ def create_tables(orgname):
     # session = get_session(orgname)
     sync_table(Users)
     sync_table(Data)
+    sync_table(Repos)
     connection.unregister_connection('default')
 
 
