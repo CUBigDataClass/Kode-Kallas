@@ -1,19 +1,23 @@
 from CassandraHelper import Utils as utils
 from CassandraHelper import config
 from multiprocessing import Pool
+from ElasticSearchHelper import ElasticSearchHelper as esh
 
 class CassandraRepoData():
     def __init__(self, elasticOrgData):
         dataList = elasticOrgData['hits']['hits']
-        threadPool = Pool(config.THREAD_COUNT)
-        self.data = threadPool.map(self.processDataList, dataList)
+        # threadPool = Pool(config.THREAD_COUNT)
+        # self.data = threadPool.map(self.processDataList, dataList)
+        for i in range(len(dataList)):
+            self.processDataList(dataList[i])
 
     def processDataList(self, repoDataItem):
+        elasticSearchHelper = esh.ElasticSearchHelper()
         repoDataItem = repoDataItem['_source']
         repoData = {
             "contributors": utils.get(utils.getContributorsList, repoDataItem['contributors_url']),
             "name": repoDataItem['name'],
-            "commits": utils.get(utils.getCommitsList, repoDataItem['commits_url'][:-6]),
+            "commits": utils.processCommitData(elasticSearchHelper.getCommitData(repoDataItem['owner']['login'], repoDataItem['name'])),#utils.get(utils.getCommitsList, repoDataItem['commits_url'][:-6]),
             "created_at": repoDataItem['created_at'],
             "issues": utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]),
             "id": repoDataItem['id'],

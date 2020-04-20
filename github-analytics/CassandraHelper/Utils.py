@@ -35,8 +35,8 @@ def getCommitsList(data):
         commit['sha'] = data[i]['sha']
         commit['message'] = data[i]['commit']['message']
         commit['date'] = data[i]['commit']['committer']['date']
-        commit['commiter-name'] = data[i]['committer']['login']
-        commit['commiter-id'] = data[i]['committer']['id']
+        commit['commiter_name'] = data[i]['committer']['login']
+        commit['commiter_id'] = data[i]['committer']['id']
         commitsList.append(commit)
     return commitsList
 
@@ -55,3 +55,24 @@ def getIssuesList(data):
         issue['labels'] = data[i]['labels']
         issuesList.append(issue)
     return issuesList
+
+def processCommitData(data):
+    data = data['hits']['hits']
+    commitsList = list()
+    for i in range(len(data)):
+        commitData = data[i]['_source']
+        commit = dict()
+        commit['message'] = commitData['commit']['message']
+        commit['date'] = commitData['commit']['committer']['date']
+        commit['commiter_name'] = commitData['committer']['login']
+        commit['stats'] = {
+            "additions": commitData['stats']['additions'],
+            "deletions": commitData['stats']['deletions'],
+            "total": commitData['stats']['total']
+        }
+        try:
+            commit['commiter_id'] = commitData['committer']['id']
+        except:
+            commit['commiter_id'] = None
+        commitsList.append(commit)
+    return commitsList

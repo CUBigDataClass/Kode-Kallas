@@ -21,3 +21,21 @@ class ElasticSearchHelper():
         res = es.search(index='repos', body={"query": {"match": {"owner.login": orgname}}, "_source": config.ELASTIC_REPO_DATA_FIELDS, 'size': 1000})
         return res
 
+    def getCommitData(self, orgname, reponame):
+        print(orgname,reponame)
+        # res = es.search(index='commit', body={"query": {"match": {"comments_url": "*/" + orgname + "/" + reponame +"*" }}, "_source": config.ELASTIC_COMMIT_DATA_FIELDS, 'size': 1000})
+        res = es.search(index='commit', body={"query": { "bool": {
+            "must": [
+                        {
+                          "match": {
+                            "comments_url": orgname
+                          }
+                        },
+                        {
+                          "match": {
+                            "comments_url": reponame
+                          }
+                        }
+                      ]
+        }}, "_source": config.ELASTIC_COMMIT_DATA_FIELDS, 'size': 1000})
+        return res
