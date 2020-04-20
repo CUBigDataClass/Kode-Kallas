@@ -5,7 +5,6 @@ from cassandra.cqlengine import connection
 from cassandra.query import SimpleStatement
 
 from .config import CASSANDRA_HOSTS
-from .models import own, Repo, perm
 from flask import jsonify
 
 
@@ -51,7 +50,7 @@ def insert_commit(request):
         #obj["permissions"] = json.loads(perm(admin=obj["permissions"]["admin"], push=obj["permissions"]["push"], pull=obj["permissions"]["pull"]))
         #obj["permissions"] = jsonify(**obj["permissions"])
         cluster = Cluster()
-        session = cluster.connect('org')
+        session = cluster.connect(content[ORG])
         ans = json.dumps(obj)
         query = SimpleStatement("INSERT INTO " + content[TABLE] + " JSON \'" + ans + "\';")
         session.execute(query)
