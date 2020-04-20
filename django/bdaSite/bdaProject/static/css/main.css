@@ -26,3 +26,13 @@
     width: 100vw;
     height: 100vh;
 }
+
+.theme-text {
+    color: #E5F3FF
+}
+
+.cell-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

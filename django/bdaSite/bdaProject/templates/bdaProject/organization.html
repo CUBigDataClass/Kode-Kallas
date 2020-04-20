@@ -5,18 +5,25 @@
 <head>
     <title>{{ org_name }} - GitHub Analyser</title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" />
+    <link href={% static 'fonts/fa/css/all.css' %} rel="stylesheet" />
+    <link href={% static 'css/animate.css' %} rel="stylesheet" />
+
     <style>
         @font-face {
             font-family: R;
             src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %});
         }
+        
+        #chartdiv {
+            max-height: 600px;
+            height: 100vh;
+        }
     </style>
 </head>
 
-<body id='body' style="font-family:R; background-color: #08163F;">
+<body id='body' style="font-family:R; background-color: #1E1E2D;">
 
     <!-- Loader  -->
     <div id='loader2'></div>
@@ -24,20 +31,101 @@
     <!-- Navbar goes here -->
     <nav>
         <div id='nav' style="background:#050E28" class="nav-wrapper">
-            <a href="#" class="brand-logo center">GitHub Analyser</a>
+            <a href="#" class="brand-logo center theme-text">GitHub Analyser</a>
         </div>
     </nav>
 
     <!-- Page Layout here -->
     <div class="row">
-        <div class="col s12 m6 offset-m3 center white-text">
-            <h3>Organization: {{ org_name }}</h3>
+        <div class="col s12 m6 offset-m3 center theme-text">
+            <h4>Organization: {{ org_name }}</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 aniR" style="margin: 0px; padding: 0px;">
+            <div id='chartdiv' style="background-color: #272A3C; margin: 7px; border-radius: 10px;">
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
+            <div class="row" style='background-color: #272A3C; margin: 7px; height: 293px; color: white; text-align: center; border-radius: 10px;'>
+                <div class='col s12 m12 l12 center' style="height: 50%; padding: 3px;">
+                    <div class="col s4 m4 l4 theme-text">
+                        <i class="fa fa-code-branch" style="padding: 15px; font-size:110px; height:100%"></i>
+                    </div>
+                    <div class="col s8 m8 l8 cell-center theme-text" style="padding: 15px; font-size:60px; height:100%">
+                        88888
+                    </div>
+                </div>
+                <div class='col s12 m12 l12 center' style="height: 50%; padding: 3px;">
+                    <div class="col s4 m4 l4 theme-text" style="height:100%">
+                        <i class="fa fa-user" style="padding: 15px; font-size:110px; height:100%"></i>
+                    </div>
+                    <div class="col s8 m8 l8 cell-center theme-text" style="padding: 15px; font-size:60px; height:100%">
+                        88888
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
+            <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <div class="col s12 m12 l12 theme-text center">
+                    <h4>Top Languages</h4>
+                    <div class="chip">
+                        <i class="fa fa-circle red-text"></i> Python
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle yellow-text"></i> C++
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle green-text"></i> Java
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle blue-text"></i> HTML
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle orange-text"></i> Go
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle cyan-text"></i> C
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle purple-text"></i> JavaScript
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle indigo-text"></i> Jupyter Notebook
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle wheat-text"></i> Node
+                    </div>
+                    <div class="chip">
+                        <i class="fa fa-circle pink-text"></i> Angular
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
+            <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <div class="col s12 m12 l12 theme-text center">
+                    <h4>Top Repositories</h4>
+                </div>
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
+            <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <div class="col s12 m12 l12 theme-text center">
+                    <h4>Top Users</h4>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src={% static 'js/jquery-3.1.1.js' %}></script>
     <script src={% static 'js/materialize.min.js' %}></script>
     <script src={% static 'js/chart.min.js' %}></script>
+    <script src={% static 'js/core.js' %}></script>
+    <script src={% static 'js/charts.js' %}></script>
+    <script src={% static 'js/themes/animated.js' %}></script>
     <script type="text/javascript">
         navHeight = $('#nav').height();
         columnHeight = (window.innerHeight - navHeight);
@@ -46,6 +134,205 @@
 
         $(window).on('load', function() {
             $('#loader2').fadeOut();
+            $('.aniL').addClass('animated slideInLeft')
+            $('.aniR').addClass('animated slideInRight')
+        });
+    </script>
+    <script>
+        am4core.ready(function() {
+
+            am4core.useTheme(am4themes_animated);
+            var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+
+            chart.data = [{
+                from: "A",
+                to: "D",
+                value: 10
+            }, {
+                from: "B",
+                to: "D",
+                value: 8
+            }, {
+                from: "B",
+                to: "E",
+                value: 4
+            }, {
+                from: "B",
+                to: "C",
+                value: 2
+            }, {
+                from: "C",
+                to: "E",
+                value: 14
+            }, {
+                from: "E",
+                to: "D",
+                value: 8
+            }, {
+                from: "C",
+                to: "A",
+                value: 4
+            }, {
+                from: "G",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "F",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "H",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "J",
+                to: "A",
+                value: 7
+            }, {
+                from: "I",
+                to: "B",
+                value: 1
+            }, {
+                from: "K",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "G",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "G",
+                to: "A",
+                value: 7
+            }, {
+                from: "D",
+                to: "B",
+                value: 1
+            }, {
+                from: "L",
+                to: "A",
+                value: 7
+            }, {
+                from: "M",
+                to: "B",
+                value: 1
+            }, {
+                from: "O",
+                to: "C",
+                value: 2
+            }, {
+                from: "N",
+                to: "E",
+                value: 14
+            }, {
+                from: "Q",
+                to: "C",
+                value: 2
+            }, {
+                from: "P",
+                to: "E",
+                value: 14
+            }, {
+                from: "R",
+                to: "C",
+                value: 2
+            }, {
+                from: "S",
+                to: "E",
+                value: 14
+            }, {
+                from: "U",
+                to: "C",
+                value: 2
+            }, {
+                from: "T",
+                to: "E",
+                value: 14
+            }, {
+                from: "V",
+                to: "G",
+                value: 2
+            }, {
+                from: "W",
+                to: "H",
+                value: 14
+            }, {
+                from: "X",
+                to: "Z",
+                value: 2
+            }, {
+                from: "Y",
+                to: "P",
+                value: 14
+            }, {
+                from: "Z",
+                to: "A",
+                value: 2
+            }, {
+                from: "AA",
+                to: "K",
+                value: 14
+            }];
+
+            chart.dataFields.fromName = "from";
+            chart.dataFields.toName = "to";
+            chart.dataFields.value = "value";
+            chart.dataFields.color = "nodeColor";
+
+            var nodeTemplate = chart.nodes.template;
+            nodeTemplate.readerTitle = "Click to show/hide or drag to rearrange";
+            nodeTemplate.showSystemTooltip = true;
+
+            var nodeLink = chart.links.template;
+            var bullet = nodeLink.bullets.push(new am4charts.CircleBullet());
+            bullet.fillOpacity = 1;
+            bullet.circle.radius = 5;
+            bullet.locationX = 0.5;
+
+            var label = chart.nodes.template.label;
+            label.fill = am4core.color("#FFF");
+
+            // Bullet Animations
+            chart.events.on("ready", function() {
+                for (var i = 0; i < chart.links.length; i++) {
+                    var link = chart.links.getIndex(i);
+                    var bullet = link.bullets.getIndex(0);
+                    animateBullet(bullet);
+                }
+            })
+
+            function animateBullet(bullet) {
+                var duration = 3000 * Math.random() + 2000;
+                var animation = bullet.animate([{
+                    property: "locationX",
+                    from: 0,
+                    to: 1
+                }], duration)
+                animation.events.on("animationended", function(event) {
+                    animateBullet(event.target.object);
+                })
+            }
+
         });
     </script>
 </body>
