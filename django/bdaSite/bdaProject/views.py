@@ -99,8 +99,7 @@ def org(request, org):
 def user(request, userId):
     pp = pprint.PrettyPrinter(indent=4)        
     req_sesh = requests.Session()
-    # req_sesh.auth = ('Pkanugov', '21a196f1b4849ffceaa070c7012b1baa422f54e6')
-    req_sesh.auth = ('sish2654', '49c65cbb443823a163de714b8d47b3170698c89e')
+    req_sesh.auth = ('', '')
     
     
     req = req_sesh.get("https://api.github.com/users/"+str(userId))
