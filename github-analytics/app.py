@@ -6,6 +6,7 @@ from ElasticSearchHelper import ElasticSearchHelper as esh
 from CassandraHelper import CassandraHelper as ch
 from CassandraHelper import CassandraOrgData as cod
 from CassandraHelper import CassandraRepoData as crd
+from CassandraHelper import Utils as utils
 import json
 
 app = Flask(__name__)
@@ -36,6 +37,13 @@ def repoRetrieve(orgname):
     print("Done Done!")
     return jsonify(cassandraRepoData.data)
 
+@app.route('/repo/<orgname>/<reponame>')
+def repoRetrieveTry(orgname, reponame):
+    elasticRepoData = elasticSearchHelper.getCommitData(orgname,reponame)
+    return jsonify(utils.processCommitData(elasticRepoData))
+    cassandraRepoData = crd.CassandraRepoData(elasticRepoData)
+    print("Done Done!")
+    return jsonify(cassandraRepoData.data)
 
 @app.route('/user/<username>')
 def userRetrieve(username):
