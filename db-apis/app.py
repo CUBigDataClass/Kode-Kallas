@@ -24,18 +24,6 @@ def org_delete(orgname):
     return setup.delete_keyspace(orgname)
 
 
-# TODO: Delete once done
-@app.route('/tp')
-def timepass():
-    return setup.insert_users()
-
-
-# TODO: Delete once done
-@app.route('/tp2')
-def timepass2():
-    return setup.another_insert_users()
-
-
 @app.route('/insert', methods=['POST'])
 def insert():
     # TODO: populate response P0
@@ -54,7 +42,6 @@ def get_data():
 def get_all_data():
     # TODO: populate response P0
     # TODO: Catch exceptions P1
-    haha = core.get_all_data(request)
     return core.get_all_data(request)
 
 
