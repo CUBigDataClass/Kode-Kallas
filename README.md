@@ -158,6 +158,7 @@ Link to postman apis: https://www.getpostman.com/collections/034caa33048a99cfb99
 	docker-compose up
 	
 8) Setting up index for elasticsearch in elassandra
+	```
 	
 	```curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/repo -d'{"mappings":{"repo":{"discover":".*"}}}'
 	
