@@ -129,11 +129,6 @@
     <script src={% static 'js/charts.js' %}></script>
     <script src={% static 'js/themes/animated.js' %}></script>
     <script type="text/javascript">
-        navHeight = $('#nav').height();
-        columnHeight = (window.innerHeight - navHeight);
-        $('#col1').height(columnHeight);
-        $('#col2').height(columnHeight);
-
         $(window).on('load', function() {
             $('#loader2').fadeOut();
             $('.aniL').addClass('animated slideInLeft')
