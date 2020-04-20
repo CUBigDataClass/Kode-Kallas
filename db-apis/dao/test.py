@@ -27,7 +27,7 @@ class users2(Model):
 
 class users3(Model):
     name = Text(primary_key=True)
-    addr = List(value_type=Map(key_type=Text(), value_type=Text()))
+    addr = List(UserDefinedType(Contrib))
 
 
 def create(session):
@@ -41,18 +41,20 @@ def create(session):
 
 connection.setup(CASSANDRA_HOSTS, "org1", protocol_version=3)
 #sync_table(users2)
-sync_table(users3)
+#sync_table(users3)
+x='{"name":"Hehe7", "addr": [{ "contributions": 1, "html_url": "https://github.com/dmalan", "contrib_id": "788678", "name": "dmalan"}]}'
+d = json.loads(x)
+c = Contrib(**(d["addr"][0]))
+users2.create(**(json.loads(x)))
 connection.unregister_connection('default')
 
-cluster = Cluster()
-session = cluster.connect('org1')
-x='{"name":"Hehe7", "addr": [{ "contributions": 1, "html_url": "https://github.com/dmalan", "contrib_id": "788678", "name": "dmalan"}]}'
+#cluster = Cluster()
+#session = cluster.connect('org1')
 
 #rows = session.execute('INSERT INTO users2 JSON\'{"name":"Haha", "addr": [{"street":"Easy St.", "zipcode":"99999"},
 # {"street":"Difficult St.", "zipcode":"99999"}]}\'')
-query = SimpleStatement(
-        "INSERT INTO users2 JSON \'"+str(x)+"\';")
-session.execute(query)
-session.shutdown()
+#query = SimpleStatement("INSERT INTO users2 JSON \'"+str(x)+"\';")
+#session.execute(query)
+#session.shutdown()
 #rows = session.execute('INSERT INTO users2 JSON %s;'% (x,))
 
