@@ -20,6 +20,17 @@
             max-height: 600px;
             height: 100vh;
         }
+        
+        div.scroll { 
+            margin:4px, 4px; 
+            padding:4px; 
+            width: 95%; 
+            height: 70%; 
+            overflow-x: hidden; 
+            overflow-y: auto; 
+            text-align:justify; 
+            color: white
+        }
     </style>
 </head>
 
@@ -54,7 +65,7 @@
                         <i class="fa fa-code-branch" style="padding: 15px; font-size:110px; height:100%"></i>
                     </div>
                     <div class="col s8 m8 l8 cell-center theme-text" style="padding: 15px; font-size:60px; height:100%">
-                        88888
+                        {{ num_org_repos }}
                     </div>
                 </div>
                 <div class='col s12 m12 l12 center' style="height: 50%; padding: 3px;">
@@ -62,7 +73,7 @@
                         <i class="fa fa-user" style="padding: 15px; font-size:110px; height:100%"></i>
                     </div>
                     <div class="col s8 m8 l8 cell-center theme-text" style="padding: 15px; font-size:60px; height:100%">
-                        88888
+                        {{ num_org_contributors }}
                     </div>
                 </div>
             </div>
@@ -71,43 +82,25 @@
             <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
                 <div class="col s12 m12 l12 theme-text center">
                     <h4>Top Languages</h4>
-                    <div class="chip">
-                        <i class="fa fa-circle red-text"></i> Python
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle yellow-text"></i> C++
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle green-text"></i> Java
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle blue-text"></i> HTML
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle orange-text"></i> Go
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle cyan-text"></i> C
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle purple-text"></i> JavaScript
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle indigo-text"></i> Jupyter Notebook
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle wheat-text"></i> Node
-                    </div>
-                    <div class="chip">
-                        <i class="fa fa-circle pink-text"></i> Angular
-                    </div>
+                    {% for lang in languages %}
+                        {% autoescape off %} {{ lang }} {% endautoescape %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
             <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
                 <div class="col s12 m12 l12 theme-text center">
-                    <h4>Top Repositories</h4>
+                    <h4>Repositories</h4>
+                </div>
+                <div class='scroll' style="text-align: center">
+                    {% if top_repos %}
+                        {% for repo in top_repos %}
+                           <a href="https://www.github.com/{{ org_name }}/{{ repo }}" target="_blank"> 
+                                <h6 style='margin-bottom: 4px;'> {% autoescape off %} {{ repo }} {% endautoescape %} </h6>
+                           </a>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -115,6 +108,15 @@
             <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
                 <div class="col s12 m12 l12 theme-text center">
                     <h4>Top Users</h4>
+                </div>
+                <div class='scroll' style="text-align: center">
+                    {% if top_users %}
+                        {% for user in top_users %}
+                           <a class='loaderIn' href="../../user/{{ user }}"> 
+                                <h6 style='margin-bottom: 4px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
+                           </a>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -137,6 +139,10 @@
             $('.aniL').addClass('animated slideInLeft')
             $('.aniR').addClass('animated slideInRight')
         });
+        
+        $('.loaderIn').click(function () {
+            $('#loader2').fadeIn();
+        });
     </script>
     <script>
         am4core.ready(function() {
@@ -144,155 +150,7 @@
             am4core.useTheme(am4themes_animated);
             var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
 
-            chart.data = [{
-                from: "A",
-                to: "D",
-                value: 10
-            }, {
-                from: "B",
-                to: "D",
-                value: 8
-            }, {
-                from: "B",
-                to: "E",
-                value: 4
-            }, {
-                from: "B",
-                to: "C",
-                value: 2
-            }, {
-                from: "C",
-                to: "E",
-                value: 14
-            }, {
-                from: "E",
-                to: "D",
-                value: 8
-            }, {
-                from: "C",
-                to: "A",
-                value: 4
-            }, {
-                from: "G",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "F",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "H",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "J",
-                to: "A",
-                value: 7
-            }, {
-                from: "I",
-                to: "B",
-                value: 1
-            }, {
-                from: "K",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "G",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "G",
-                to: "A",
-                value: 7
-            }, {
-                from: "D",
-                to: "B",
-                value: 1
-            }, {
-                from: "L",
-                to: "A",
-                value: 7
-            }, {
-                from: "M",
-                to: "B",
-                value: 1
-            }, {
-                from: "O",
-                to: "C",
-                value: 2
-            }, {
-                from: "N",
-                to: "E",
-                value: 14
-            }, {
-                from: "Q",
-                to: "C",
-                value: 2
-            }, {
-                from: "P",
-                to: "E",
-                value: 14
-            }, {
-                from: "R",
-                to: "C",
-                value: 2
-            }, {
-                from: "S",
-                to: "E",
-                value: 14
-            }, {
-                from: "U",
-                to: "C",
-                value: 2
-            }, {
-                from: "T",
-                to: "E",
-                value: 14
-            }, {
-                from: "V",
-                to: "G",
-                value: 2
-            }, {
-                from: "W",
-                to: "H",
-                value: 14
-            }, {
-                from: "X",
-                to: "Z",
-                value: 2
-            }, {
-                from: "Y",
-                to: "P",
-                value: 14
-            }, {
-                from: "Z",
-                to: "A",
-                value: 2
-            }, {
-                from: "AA",
-                to: "K",
-                value: 14
-            }];
+            chart.data = {% autoescape off %} {{ repo_lang_graph_data }} {% endautoescape %};
 
             chart.dataFields.fromName = "from";
             chart.dataFields.toName = "to";
