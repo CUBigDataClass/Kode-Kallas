@@ -1,0 +1,404 @@
+PUT commit
+{
+	"mappings": {
+		"properties": {
+			"sha": {
+				"type": "keyword"
+			},
+			"node_id": {
+				"type": "keyword"
+			},
+			"commit": {
+				"type": "object",
+				"properties": {
+					"author": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "keyword"
+							},
+							"email": {
+								"type": "keyword"
+							},
+							"date": {
+								"type": "keyword"
+							}
+						}
+					},
+					"committer": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "keyword"
+							},
+							"email": {
+								"type": "keyword"
+							},
+							"date": {
+								"type": "keyword"
+							}
+						}
+					},
+					"message": {
+						"type": "keyword"
+					},
+					"tree": {
+						"type": "object",
+						"properties": {
+							"sha": {
+								"type": "keyword"
+							},
+							"url": {
+								"type": "keyword"
+							}
+						}
+					},
+					"url": {
+						"type": "keyword"
+					},
+					"comment_count": {
+						"type": "long"
+					},
+					"verification": {
+						"type": "object",
+						"properties": {
+							"verified": {
+								"type": "boolean"
+							},
+							"reason": {
+								"type": "keyword"
+							},
+							"signature": {
+								"type": "keyword"
+							},
+							"payload": {
+								"type": "keyword"
+							}
+						}
+					}
+				}
+			},
+			"url": {
+				"type": "keyword"
+			},
+			"html_url": {
+				"type": "keyword"
+			},
+			"comments_url": {
+				"type": "keyword"
+			},
+			"author": {
+				"type": "object",
+				"properties": {
+					"login": {
+						"type": "keyword"
+					},
+					"id": {
+						"type": "long"
+					},
+					"node_id": {
+						"type": "keyword"
+					},
+					"avatar_url": {
+						"type": "keyword"
+					},
+					"gravatar_id": {
+						"type": "keyword"
+					},
+					"url": {
+						"type": "keyword"
+					},
+					"html_url": {
+						"type": "keyword"
+					},
+					"followers_url": {
+						"type": "keyword"
+					},
+					"following_url": {
+						"type": "keyword"
+					},
+					"gists_url": {
+						"type": "keyword"
+					},
+					"starred_url": {
+						"type": "keyword"
+					},
+					"subscriptions_url": {
+						"type": "keyword"
+					},
+					"organizations_url": {
+						"type": "keyword"
+					},
+					"repos_url": {
+						"type": "keyword"
+					},
+					"events_url": {
+						"type": "keyword"
+					},
+					"received_events_url": {
+						"type": "keyword"
+					},
+					"type": {
+						"type": "keyword"
+					},
+					"site_admin": {
+						"type": "boolean"
+					}
+				}
+			},
+			"committer": {
+				"type": "object",
+				"properties": {
+					"login": {
+						"type": "keyword"
+					},
+					"id": {
+						"type": "long"
+					},
+					"node_id": {
+						"type": "keyword"
+					},
+					"avatar_url": {
+						"type": "keyword"
+					},
+					"gravatar_id": {
+						"type": "keyword"
+					},
+					"url": {
+						"type": "keyword"
+					},
+					"html_url": {
+						"type": "keyword"
+					},
+					"followers_url": {
+						"type": "keyword"
+					},
+					"following_url": {
+						"type": "keyword"
+					},
+					"gists_url": {
+						"type": "keyword"
+					},
+					"starred_url": {
+						"type": "keyword"
+					},
+					"subscriptions_url": {
+						"type": "keyword"
+					},
+					"organizations_url": {
+						"type": "keyword"
+					},
+					"repos_url": {
+						"type": "keyword"
+					},
+					"events_url": {
+						"type": "keyword"
+					},
+					"received_events_url": {
+						"type": "keyword"
+					},
+					"type": {
+						"type": "keyword"
+					},
+					"site_admin": {
+						"type": "boolean"
+					}
+				}
+			},
+			"parents": {
+				"type": "object",
+				"properties": {
+					"sha": {
+						"type": "keyword"
+					},
+					"url": {
+						"type": "keyword"
+					},
+					"html_url": {
+						"type": "keyword"
+					}
+				}
+			},
+				"stat": {
+						"type": "object",
+						"properties": {
+							"total": {
+								"type": "long"
+							},
+							"additions": {
+								"type": "long"
+							},
+							"deletions": {
+								"type": "long"
+							}
+						}
+					},
+					"files": {
+				"type": "object",
+				"properties": {
+					"sha": {
+						"type": "keyword"
+					},
+          "filename": {
+						"type": "keyword"
+					},
+                "status":{
+						"type": "keyword"
+					},
+                "additions":{
+						"type": "long"
+					},
+                "deletions": {
+						"type": "long"
+					},
+                "changes": {
+						"type": "long"
+					},
+                "blob_url": {
+						"type": "keyword"
+					},
+                "raw_url": {
+						"type": "keyword"
+					},
+                "contents_url": {
+						"type": "keyword"
+					}
+				}
+			}
+		}
+	}
+}
+
+POST commit/_doc/1
+{
+        "sha": "8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+        "node_id": "MDY6Q29tbWl0MjM5MzczNzkxOjhkNDZmMzUxNzViMGRlYWM3NmNmYzk0MGQwZjM3YzJkMDI2NmZlYjk=",
+        "commit": {
+            "author": {
+                "name": "vishwakulkarni",
+                "email": "vishwa.kulkarni@gmail.com",
+                "date": "2020-04-17T23:43:05Z"
+            },
+            "committer": {
+                "name": "vishwakulkarni",
+                "email": "vishwa.kulkarni@gmail.com",
+                "date": "2020-04-17T23:43:52Z"
+            },
+            "message": "sending each commit to commit elastic search",
+            "tree": {
+                "sha": "d63d8d00bddbeeeb34c68395dee3e2a8b3b9fe2e",
+                "url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/git/trees/d63d8d00bddbeeeb34c68395dee3e2a8b3b9fe2e"
+            },
+            "url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/git/commits/8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+            "comment_count": 0,
+            "verification": {
+                "verified": false,
+                "reason": "unsigned",
+                "signature": null,
+                "payload": null
+            }
+        },
+        "url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/commits/8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+        "html_url": "https://github.com/CUBigDataClass/Kode-Kallas/commit/8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+        "comments_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/commits/8d46f35175b0deac76cfc940d0f37c2d0266feb9/comments",
+        "author": {
+            "login": "vishwakulkarni",
+            "id": 5782419,
+            "node_id": "MDQ6VXNlcjU3ODI0MTk=",
+            "avatar_url": "https://avatars2.githubusercontent.com/u/5782419?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/vishwakulkarni",
+            "html_url": "https://github.com/vishwakulkarni",
+            "followers_url": "https://api.github.com/users/vishwakulkarni/followers",
+            "following_url": "https://api.github.com/users/vishwakulkarni/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vishwakulkarni/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/vishwakulkarni/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vishwakulkarni/subscriptions",
+            "organizations_url": "https://api.github.com/users/vishwakulkarni/orgs",
+            "repos_url": "https://api.github.com/users/vishwakulkarni/repos",
+            "events_url": "https://api.github.com/users/vishwakulkarni/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/vishwakulkarni/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "committer": {
+            "login": "vishwakulkarni",
+            "id": 5782419,
+            "node_id": "MDQ6VXNlcjU3ODI0MTk=",
+            "avatar_url": "https://avatars2.githubusercontent.com/u/5782419?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/vishwakulkarni",
+            "html_url": "https://github.com/vishwakulkarni",
+            "followers_url": "https://api.github.com/users/vishwakulkarni/followers",
+            "following_url": "https://api.github.com/users/vishwakulkarni/following{/other_user}",
+            "gists_url": "https://api.github.com/users/vishwakulkarni/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/vishwakulkarni/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/vishwakulkarni/subscriptions",
+            "organizations_url": "https://api.github.com/users/vishwakulkarni/orgs",
+            "repos_url": "https://api.github.com/users/vishwakulkarni/repos",
+            "events_url": "https://api.github.com/users/vishwakulkarni/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/vishwakulkarni/received_events",
+            "type": "User",
+            "site_admin": false
+        },
+        "parents": [
+            {
+                "sha": "7e0ce0a9e453f38906631c18bffd2259520ccc4a",
+                "url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/commits/7e0ce0a9e453f38906631c18bffd2259520ccc4a",
+                "html_url": "https://github.com/CUBigDataClass/Kode-Kallas/commit/7e0ce0a9e453f38906631c18bffd2259520ccc4a"
+            }
+        ],
+        "stats": {
+            "total": 37,
+            "additions": 30,
+            "deletions": 7
+        },
+        "files": [
+            {
+                "sha": "ea825674a4ea96dfc360b8604cf348be17c77862",
+                "filename": "github-crawler/lib/__pycache__/config.cpython-37.pyc",
+                "status": "modified",
+                "additions": 0,
+                "deletions": 0,
+                "changes": 0,
+                "blob_url": "https://github.com/CUBigDataClass/Kode-Kallas/blob/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/__pycache__/config.cpython-37.pyc",
+                "raw_url": "https://github.com/CUBigDataClass/Kode-Kallas/raw/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/__pycache__/config.cpython-37.pyc",
+                "contents_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/contents/github-crawler/lib/__pycache__/config.cpython-37.pyc?ref=8d46f35175b0deac76cfc940d0f37c2d0266feb9"
+            },
+            {
+                "sha": "3d0afa90c8139736e73d85fdfc7a62ecae9e9bb9",
+                "filename": "github-crawler/lib/__pycache__/helper.cpython-37.pyc",
+                "status": "modified",
+                "additions": 0,
+                "deletions": 0,
+                "changes": 0,
+                "blob_url": "https://github.com/CUBigDataClass/Kode-Kallas/blob/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/__pycache__/helper.cpython-37.pyc",
+                "raw_url": "https://github.com/CUBigDataClass/Kode-Kallas/raw/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/__pycache__/helper.cpython-37.pyc",
+                "contents_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/contents/github-crawler/lib/__pycache__/helper.cpython-37.pyc?ref=8d46f35175b0deac76cfc940d0f37c2d0266feb9"
+            },
+            {
+                "sha": "c53f6f839bbf8e1821f46baef596036946a02353",
+                "filename": "github-crawler/lib/config.py",
+                "status": "modified",
+                "additions": 2,
+                "deletions": 2,
+                "changes": 4,
+                "blob_url": "https://github.com/CUBigDataClass/Kode-Kallas/blob/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/config.py",
+                "raw_url": "https://github.com/CUBigDataClass/Kode-Kallas/raw/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/config.py",
+                "contents_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/contents/github-crawler/lib/config.py?ref=8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+                "patch": "@@ -1,5 +1,5 @@\n GITEA_APP_URL = 'YOUR_GITEA_API'\n-GITEA_TOKEN = 'f75b46df7511241ab8481caf80994d4aab7afb68'\n+GITEA_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'\n GITHUB_USERNAME = 'vishwakulkarni'\n-GITHUB_TOKEN = 'f75b46df7511241ab8481caf80994d4aab7afb68'\n+GITHUB_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'\n SQL_ALCHEMY_STRING = ''"
+            },
+            {
+                "sha": "0d6d1134efc800f1e44f14e710929e09e24b9514",
+                "filename": "github-crawler/lib/helper.py",
+                "status": "modified",
+                "additions": 28,
+                "deletions": 5,
+                "changes": 33,
+                "blob_url": "https://github.com/CUBigDataClass/Kode-Kallas/blob/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/helper.py",
+                "raw_url": "https://github.com/CUBigDataClass/Kode-Kallas/raw/8d46f35175b0deac76cfc940d0f37c2d0266feb9/github-crawler/lib/helper.py",
+                "contents_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/contents/github-crawler/lib/helper.py?ref=8d46f35175b0deac76cfc940d0f37c2d0266feb9",
+                "patch": "@@ -12,9 +12,9 @@\n from elasticsearch import Elasticsearch\n \n GITEA_APP_URL = 'YOUR_GITEA_API'\n-GITEA_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'\n+GITEA_TOKEN = 'aff8945f859b696bf05932045f0be7e1b8379ddb'\n GITHUB_USERNAME = 'vishwakulkarni'\n-GITHUB_TOKEN = 'd625eacdf998ccb9b131cf51a7e769358784a546'\n+GITHUB_TOKEN = 'aff8945f859b696bf05932045f0be7e1b8379ddb'\n SQL_ALCHEMY_STRING = ''\n \n \n@@ -78,14 +78,37 @@ def get_org_users(self,owner,api):\n         \n         return members_list\n \n+    #save commits of repos as json\n+    def commits_of_repo_github(self,repo, owner, api):\n+        commits = []\n+        next = True\n+        i = 1\n+        while next == True:\n+            url = api + '/repos/{}/{}/commits?page={}&per_page=100'.format(owner, repo, i)\n+            commit_pg = self.gh_session.get(url = url)\n+            commit_tp = json.loads(commit_pg.content)\n+            for commit in commit_tp:\n+                commits.append(commit) \n+                print(commit)\n+            if 'Link' in commit_pg.headers:\n+                if 'rel=\"next\"' not in commit_pg.headers['Link']:\n+                    next = False\n+            i = i + 1\n+        return commits\n+\n+\n \n \n #testing comment after use\n h = Helper()\n github_api = \"https://api.github.com\"\n h.set_org_name(\"CUBigDataClass\")\n #print(h.get_org_information(\"vishwakulkarni\",github_api))\n-#k=h.get_repositories('vishwakulkarni',github_api)\n+k=h.get_repositories('vishwakulkarni',github_api)\n+commits = h.commits_of_repo_github('kode-kallas','cubigdataclass',github_api)\n+for commit in commits:\n+    h.send_to_elasticInstance(commit,'commit',commit['sha'])\n #print(len(k))\n-#for mem in k:\n-#    print(mem['name'])\n+for mem in k:\n+    print(mem['name'])\n+    #commits = h.commits_of_repo_github(mem['name'],'vishwakulkarni',github_api)\n\\ No newline at end of file"
+            }
+        ]
+    }
