@@ -160,5 +160,7 @@ Link to postman apis: https://www.getpostman.com/collections/034caa33048a99cfb99
 8) Setting up index for elasticsearch in elassandra
 	
 	```curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/repo -d'{"mappings":{"repo":{"discover":".*"}}}'
+	
 	```curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/users -d'{"mappings":{"users":{"discover":".*"}}}'
+	
 	```curl -XPUT -H 'Content-Type: application/json' http://localhost:9200/commit -d'{"mappings":{"commit":{"discover":".*"}}}'
