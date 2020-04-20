@@ -5,9 +5,11 @@
 <head>
     <title>Welcome - GitHub Analyser</title>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
     <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href={% static 'css/stars_style.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href={% static 'fonts/fa/css/all.css' %} rel="stylesheet" />
+    <link href={% static 'css/animate.css' %} rel="stylesheet" />
     <style>
          ::placeholder {
             color: black;
@@ -22,6 +24,10 @@
 
 <body id='body' style="font-family:R; background-color: #00171F;">
 
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    
     <!-- Loader -->
     <div id='loader'></div>
 
@@ -40,7 +46,7 @@
                     <h4 style="font-weight:bold;margin-top:10px;padding:0px;font-size:150%;line-height:30px">
                         <input id='org_input' type="text" placeholder="Type to search" class="center" style="width:40%; color: black; placeholder: black; margin: 10px;">
                         <br>
-                        <btn id='search' type="submit" class="btn-floating btn-large waves-effect waves-light" style="background-color: #00171F;"><i class="material-icons">search</i></btn>
+                        <btn id='search' type="submit" class="btn-floating btn-large waves-effect waves-light" style="background-color: #00171F;"><i class="fa fa-search"></i></btn>
                     </h4>
                 </div>
 
@@ -51,10 +57,6 @@
         <script src={% static 'js/materialize.min.js' %}></script>
         <script src={% static 'js/chart.min.js' %}></script>
         <script type=" text/javascript ">
-            navHeight = $('#nav').height();
-            columnHeight = (window.innerHeight - navHeight);
-            $('#col1').height(columnHeight);
-            $('#col2').height(columnHeight);
 
             $(window).on('load', function() {
                 $('#loader').fadeOut();
@@ -62,10 +64,13 @@
 
             $('#search').click(function() {
                 $.term = $('#org_input').val()
-                if ($.term == '' || $.term == null || $.term == undefined) {
+                if ($.term == '' || $.term == null || $.term == undefined) 
+                {
                     $('#error').text("Please Enter an Organization Name to continue:").css("color", "red");
-                } else {
-                    location.assign('org/' + $.term);
+                }
+                else  
+                {
+                    location.assign('org/' + $.term.toLowerCase());
                 }
             });
 

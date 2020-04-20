@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>{{ user.user_id }} - GitHub Analyser</title>
+    <meta charset="utf-8">
+    <link href={% static 'css/materialize.css' %} type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href={% static 'css/main.css' %} type="text/css" rel="stylesheet" />
+    <link href={% static 'fonts/fa/css/all.css' %} rel="stylesheet" />
+    <link href={% static 'css/animate.css' %} rel="stylesheet" />
+
+    <style>
+        @font-face {
+            font-family: R;
+            src: url({% static 'fonts/HomepageBaukasten-Book.ttf' %});
+        }
+        
+        #chartdiv {
+            max-height: 280px;
+            height: 100vh;
+        }
+        
+        .cjchart {
+            padding: 5px;
+            max-height:250px;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body id='body' style="font-family:R; background-color: #1E1E2D;">
+
+    <!-- Loader  -->
+    <div id='loader3'></div>
+
+    <!-- Navbar goes here -->
+    <nav>
+        <div id='nav' style="background:#050E28" class="nav-wrapper">
+            <a href="#" class="brand-logo center theme-text">GitHub Analyser</a>
+        </div>
+    </nav>
+
+    <!-- Page Layout here -->
+    <div class="row">
+        <div class="col s12 m6 offset-m3 center theme-text">
+            <h4>User: {{ user.user_id }}</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
+            <div class="row" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; padding: 15px;'>
+                <div id="user_pic" class="col m5 ">
+                    <img src="{{ user.user_img }} " style="height: 100%; width: 100%; ">
+                </div>
+                <div id="user_dets" class="m7 theme-text">
+                    {% if user.user_name %}
+                        <h5>{{ user.user_name }}</h5>
+                    {% else %}
+                        <h5>{{ user.user_id }}</h5>
+                    {% endif %}
+                    <span style="font-size:130%">Public Repos: {{ user.user_pub_repos }}</span>
+                </div>
+                <div class="m12 center theme-text" style='font-size:130%'>
+                    {% if user.user_company %}
+                        <span><i class="fas fa-building"></i> {{ user.user_company }}</span> <br>
+                    {% endif %} 
+                    
+                    {% if user.user_location %}
+                        <span><i class="fas fa-map-pin"></i> {{ user.user_location }}</span> <br>
+                    {% endif %} 
+                    
+                    {% if user.user_link %}
+                        <span><a href='{{ user.user_link }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
+                    {% endif %}
+                    
+                    <span>Joined GitHub on {{ user.user_join_date }}</span>
+                </div>
+            </div>
+        </div>
+        <div id='' class="col s12 m6 aniR " style="margin: 0px; padding: 0px; ">
+            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
+                <h5 style='padding: 10px; margin: 0px'> Commits per Quarter </h5>
+                 <canvas class='cjchart' id="chart1" style="max-width:98%"></canvas>
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL " style="margin: 0px; padding: 0px; ">
+            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <h5 style='margin: 0px; padding: 10px'> Languages Used </h5>
+                {% for lang in languages %}
+                    {% autoescape off %} {{ lang }} {% endautoescape %}
+                {% endfor %}
+            </div>
+        </div>
+        <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
+            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ rpl_graph_title }} </h5>
+                <canvas class='cjchart' id="chart2" style="max-width:98%"></canvas>
+            </div>
+        </div>
+        <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
+            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ cpr_graph_title }} </h5>
+                <canvas class='cjchart' id="chart3" style="max-width:98%"></canvas>
+            </div>
+        </div>
+        <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
+            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ cpl_graph_title }} </h5>
+                <canvas class='cjchart' id="chart4" style="max-width:98%"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src={% static 'js/jquery-3.1.1.js' %}></script>
+    <script src={% static 'js/materialize.min.js' %}></script>
+    <script src={% static 'js/chart.min.js' %}></script>
+    <script src={% static 'js/core.js' %}></script>
+    <script src={% static 'js/charts.js' %}></script>
+    <script src={% static 'js/themes/animated.js' %}></script>
+    <script type="text/javascript ">
+        navHeight = $('#nav').height();
+        columnHeight = (window.innerHeight - navHeight);
+        $('#col1').height(columnHeight);
+        $('#col2').height(columnHeight);
+
+        $(window).on('load', function() {
+            $('#loader3').fadeOut();
+            $('.aniL').addClass('animated slideInLeft')
+            $('.aniR').addClass('animated slideInRight')
+            $('#user_dets').css('height', $("#user_pic").height())
+        });
+    </script>
+    <script>
+        
+        var bgColors1 = [
+            "rgba(222, 66, 92, 0.5)",
+            "rgba(238, 104, 86, 0.5)",
+            "rgba(248, 141, 86, 0.5)",
+            "rgba(254, 191, 96, 0.5)",
+            "rgba(255, 210, 116, 0.5)",
+            "rgba(255, 243, 146, 0.5)",
+            "rgba(206, 224, 132, 0.5)",
+            "rgba(160, 203, 124, 0.5)",
+            "rgba(114, 181, 118, 0.5)",
+            "rgba(72, 143, 49, 0.5)"
+        ];
+        var boColors1 = [
+            "rgba(222, 66, 92, 1)",
+            "rgba(238, 104, 86, 1)",
+            "rgba(248, 141, 86, 1)",
+            "rgba(254, 191, 96, 1)",
+            "rgba(255, 210, 116, 1)",
+            "rgba(255, 243, 146, 1)",
+            "rgba(206, 224, 132, 1)",
+            "rgba(160, 203, 124, 1)",
+            "rgba(114, 181, 118, 1)",
+            "rgba(72, 143, 49, 1)",
+        ];
+        
+        var bgColors2 = [
+            "rgba(64, 64, 122, 0.5)",
+            "rgba(113, 111, 211, 0.5)",
+            "rgba(247, 241, 227, 0.5)",
+            "rgba(52, 172, 224, 0.5)",
+            "rgba(51, 217, 178, 0.5)",
+            "rgba(255, 82, 82, 0.5)",
+            "rgba(255, 121, 63, 0.5)",
+            "rgba(209, 204, 192, 0.5)",
+            "rgba(255, 176, 66, 0.5)",
+            "rgba(255, 217, 121, 0.5)"
+        ];
+        var boColors2 = [
+            "rgba(64, 64, 122, 1)",
+            "rgba(113, 111, 211, 1)",
+            "rgba(247, 241, 227, 1)",
+            "rgba(52, 172, 224, 1)",
+            "rgba(51, 217, 178, 1)",
+            "rgba(255, 82, 82, 1)",
+            "rgba(255, 121, 63, 1)",
+            "rgba(209, 204, 192, 1)",
+            "rgba(255, 176, 66, 1)",
+            "rgba(255, 217, 121, 1)",
+        ];
+        
+        var bgColors3 = [
+            "rgba(246, 229, 141, 0.5)",
+            "rgba(255, 191, 118, 0.5)",
+            "rgba(255, 121, 121, 0.5)",
+            "rgba(187, 220, 88, 0.5)",
+            "rgba(223, 249, 251, 0.5)",
+            "rgba(126, 213, 223, 0.5)",
+            "rgba(225, 86, 253, 0.5)",
+            "rgba(104, 108, 224, 0.5)",
+            "rgba(48, 51, 107, 0.5)",
+            "rgba(149, 175, 192, 0.5)"
+        ];
+        var boColors3 = [
+            "rgba(246, 229, 141, 1)",
+            "rgba(255, 191, 118, 1)",
+            "rgba(255, 121, 121, 1)",
+            "rgba(187, 220, 88, 1)",
+            "rgba(223, 249, 251, 1)",
+            "rgba(126, 213, 223, 1)",
+            "rgba(255, 121, 63, 1)",
+            "rgba(104, 108, 224, 1)",
+            "rgba(48, 51, 107, 1)",
+            "rgba(149, 175, 192, 1)",
+        ];
+    
+        var ctx1 = document.getElementById("chart1");
+        var myChart1 = new Chart(ctx1, {
+            type: "line",
+            data: {
+                labels: {% autoescape off %} {{ commit_graph_labels }} {% endautoescape %},
+                datasets: [{
+                    data: {% autoescape off %} {{ commit_graph_values }} {% endautoescape %},
+                    backgroundColor: "rgba(253, 180, 75, 0.2)",
+                    borderColor: "rgba(253, 180, 75, 1)",
+                    lineTension: 0
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                animation: false,
+                scales: {
+                    xAxes: [{
+                        display: true
+                    }],
+                    yAxes: [{
+                        beginAtZero: true
+                    }]
+                },
+                legend: {
+                    display: false,
+                    labels: {
+                        fontColor:"#E5F3FF"
+                    }
+                },
+                tooltips: {
+                    intersect: true,
+                    color: 'gray' 
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            fontColor:"#E5F3FF"
+                        },
+                        gridLines: {
+                            display: true,
+                            color: "#545454"
+                        },
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true,
+                            fontColor:"#E5F3FF"
+                        },
+                        gridLines: {
+                            display: true,
+                            color: "#545454"
+                        },
+                    }]
+                }
+            }
+        });
+        
+        var ctx2 = document.getElementById("chart2");
+        var myChart2 = new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: {% autoescape off %} {{ rpl_graph_values }} {% endautoescape %},
+                    backgroundColor: bgColors1,
+                    borderColor: boColors1
+                }],
+                labels: {% autoescape off %} {{ rpl_graph_labels }} {% endautoescape %},
+            },
+            options: {
+                maintainAspectRatio: false,
+                animation: false,
+                legend: {
+                    position: 'right',   
+                    labels: {
+                        fontColor: '#E5F3FF'
+                    }
+                }
+            }
+        });
+        
+        var ctx3 = document.getElementById("chart3");
+        var myChart3 = new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: {% autoescape off %} {{ cpr_graph_values }} {% endautoescape %},
+                    backgroundColor: bgColors2,
+                    borderColor: boColors2
+                }],
+                labels: {% autoescape off %} {{ cpr_graph_labels }} {% endautoescape %},
+            },
+            options: {
+                maintainAspectRatio: false,
+                animation: false,
+                legend: {
+                    position: 'left', 
+                    labels: {
+                        fontColor: '#E5F3FF'
+                    }
+                }
+            }
+        });
+        
+        var ctx4 = document.getElementById("chart4");
+        var myChart4 = new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: {% autoescape off %} {{ cpl_graph_values }} {% endautoescape %},
+                    backgroundColor: bgColors3,
+                    borderColor: boColors3
+                }],
+                labels: {% autoescape off %} {{ cpl_graph_labels }} {% endautoescape %},
+            },
+            options: {
+                maintainAspectRatio: false,
+                animation: false,
+                legend: {
+                    position: 'left', 
+                    labels: {
+                        fontColor: '#E5F3FF'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+</html>
