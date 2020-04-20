@@ -1,26 +1,107 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from django.contrib.staticfiles.storage import staticfiles_storage
 import requests
 import json
 import datetime
 import pprint
-
+import math
 
 def index(request):
     context = {}
     return render(request, 'bdaProject/index.html', context)
 
 def org(request, org):
+    url = staticfiles_storage.path('sampleJson.json')
+    org_data = None
+    with open(url) as f:
+        org_data = json.load(f)
+    
+    num_org_repos = len(org_data)
+    print("Num Repositories: " + str(num_org_repos))
+
+    languages_temp = set()
+    contributor_ids = set()
+    dict_repo_commits = {}
+    dict_user_commits = {}
+    list_repo_lang = []
+    repo_lang_from = []
+    repo_lang_to = []
+    repo_lang_val = []
+
+    for repo in org_data:
+        for contributor in repo['contributors']:
+            contributor_ids.add(contributor['id'])
+
+        langs = repo['languages']
+        for k in langs.keys():
+            languages_temp.add(k)
+
+        dict_repo_commits[repo['name']] = len(repo['commits'])
+
+        for commit in repo['commits']:
+            try:
+                dict_user_commits[commit['commiter-name']] += 1
+            except:
+                dict_user_commits[commit['commiter-name']] = 1
+
+        langs = repo['languages']
+        for lang, value in langs.items():
+            repo_lang_from.append(repo['name'])
+            repo_lang_to.append(lang)
+            repo_lang_val.append(math.log(value))
+
+    zipped = list(zip(repo_lang_from, repo_lang_to, repo_lang_val))
+    zipped = sorted(zipped, key = lambda i: i[1])
+    
+    for i in zipped:
+        repo_lang_dict = {}
+        repo_lang_dict['from'] = i[0]
+        repo_lang_dict['to'] = i[1]
+        repo_lang_dict['value'] = i[2]
+        list_repo_lang.append(repo_lang_dict)
+    
+    contributor_ids = list(contributor_ids)
+    
+    colors = ['red', 'yellow', 'green', 'blue', 'black', 'orange', \
+              'pink', 'grey', 'purple', 'cyan', 'deep-purple', 'brown', \
+              'teal', 'lime', 'white']
+    
+    languages = []
+    
+    for i, lang in enumerate(languages_temp):
+        languages.append('<div class="chip"><i class="fa fa-circle ' \
+                          +colors[i]+'-text"> </i> '+lang+'</div>')
+
+    dict_repo_commits = sorted(dict_repo_commits.items(), key=lambda x: x[1], reverse=True)
+    dict_user_commits = sorted(dict_user_commits.items(), key=lambda x: x[1], reverse=True)
+    
+    top_repos = []
+    for repo in dict_repo_commits:
+        top_repos.append(repo[0])
+    
+    top_users = []
+    for repo in dict_user_commits:
+        top_users.append(repo[0])
+    
     context = {
-        'org_name' : org
+        'org_name' : org,
+        'num_org_repos': num_org_repos,
+        'num_org_contributors': len(contributor_ids),
+        'languages': languages,
+        'top_repos': top_repos,
+        'top_users': top_users,
+        'repo_lang_graph_data': list_repo_lang
     }
     return render(request, 'bdaProject/organization.html', context)
 
 def user(request, userId):
     pp = pprint.PrettyPrinter(indent=4)        
     req_sesh = requests.Session()
-    req_sesh.auth = ('Pkanugov', '21a196f1b4849ffceaa070c7012b1baa422f54e6')
+    # req_sesh.auth = ('Pkanugov', '21a196f1b4849ffceaa070c7012b1baa422f54e6')
+    req_sesh.auth = ('sish2654', '49c65cbb443823a163de714b8d47b3170698c89e')
+    
     
     req = req_sesh.get("https://api.github.com/users/"+str(userId))
     res = json.loads(req.text)

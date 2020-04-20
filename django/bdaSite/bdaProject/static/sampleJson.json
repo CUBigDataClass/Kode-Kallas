@@ -1,0 +1,1831 @@
+[
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-06-25T17:47:22Z", 
+        "message": "lua demo", 
+        "sha": "e01bc83781c2cd7026aa3564976579c1ae97869a"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-24T19:45:56Z", 
+        "message": "added pong-12", 
+        "sha": "5fd20773bb548e595d2110f3df54a6dca9d7c557"
+      }, 
+      {
+        "commiter-id": 19864447, 
+        "commiter-name": "web-flow", 
+        "date": "2018-01-24T04:46:04Z", 
+        "message": "Merge pull request #1 from games50/malan\n\nminor consistency tweaks", 
+        "sha": "75d5f9296ab9de249fb5f743dc2367edbfdf093c"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-24T04:44:48Z", 
+        "message": "added comment", 
+        "sha": "81bdba7cd9e91a8f93587f90672be64c6db5362b"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:41:14Z", 
+        "message": "pong-final", 
+        "sha": "3777488b23949626fbe2d2d6090a12fbdee68cd3"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:37:55Z", 
+        "message": "pong-11", 
+        "sha": "aaa62d970690a3ccb6b1ca28a4f32e7d98d1e094"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:36:32Z", 
+        "message": "pong-10", 
+        "sha": "8aadda4d0f01bf4ee50eee087ef8967052f1192f"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:36:06Z", 
+        "message": "pong-9", 
+        "sha": "67b31885b6f9f0335d01e6ef64a91ee96d4f7513"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:34:26Z", 
+        "message": "pong-8", 
+        "sha": "13fce324519793ca31d678c89c2fd0366d0fcd72"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:32:49Z", 
+        "message": "pong-7", 
+        "sha": "e195d7f77dd73debf4fed178dce817bf10c74622"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:29:24Z", 
+        "message": "pong-5 table, resizing", 
+        "sha": "e54e783b648bad9f8f12a1b1663570e7876af9cc"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:18:06Z", 
+        "message": "pong-5 table, resizing, typo", 
+        "sha": "75e3855e2aab44a840189b089680fe203236b01b"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:15:37Z", 
+        "message": "pong-4 table, resizing", 
+        "sha": "8a332faab370273ebf1d4e77d0b116678c6cd863"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:10:09Z", 
+        "message": "pong-3 table, resizing", 
+        "sha": "5cd2f06d72635997522e0a0d0048a137091550f5"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:08:41Z", 
+        "message": "reorders table for consistency in pong-2", 
+        "sha": "25b6ac6026d92889f9f6f3ca1e4596c9e97fe013"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:08:05Z", 
+        "message": "avoids resizing issue, orders table to be consistent with pong-0", 
+        "sha": "28d19a485498f9a745c76ef84ff0803f8d46fcd7"
+      }, 
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-24T04:06:48Z", 
+        "message": "avoids resizing issue altogether for now", 
+        "sha": "b7e5fa0ba6f87f062d475dda230d55e03b1b3abc"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-24T03:52:35Z", 
+        "message": "removed empty update functions and made audio static", 
+        "sha": "69c539c7dc192dba9e9de38bde80bd5c7cf3a179"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T12:49:26Z", 
+        "message": "pong-11", 
+        "sha": "c5c7f6c586aa577482a0ae4da426e11b45572309"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T12:27:23Z", 
+        "message": "victory update", 
+        "sha": "276440c6264d2073c4fb493c21c3bd36a4f08211"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T12:17:12Z", 
+        "message": "pong-9", 
+        "sha": "6b34bbbf52cb20043a3685f7c64749ad3daf7a43"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T11:29:17Z", 
+        "message": "pong-7", 
+        "sha": "64e207812deb58fb086eb6c659de762aad290dd0"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T11:03:39Z", 
+        "message": "pong-6", 
+        "sha": "3187d75fd96e8636dfdcbafb91ad5bb87daa841d"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T10:46:50Z", 
+        "message": "pong-5", 
+        "sha": "a7f39702d9f16f16cd1ca360d03b1cc56c504462"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T09:40:03Z", 
+        "message": "pong-4", 
+        "sha": "59d0b96d9f188f8639c66fad333ce5a94f7af961"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T08:28:54Z", 
+        "message": "pong-3", 
+        "sha": "35b367b6ca211f1bfc47c0adc573efbd0ee94bfe"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T06:52:08Z", 
+        "message": "pong-2", 
+        "sha": "638c8454afa5544068bce3f6d23942eef2444676"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T06:43:30Z", 
+        "message": "pong-1", 
+        "sha": "cec81ecaccd189c532913ab51e5a66a6840a0719"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T06:30:39Z", 
+        "message": "pong-0", 
+        "sha": "1751121a1aa7b548849badaea5f534c784a371e4"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-23T06:15:15Z", 
+        "message": "removed complicated dy formula for paddle collision in favor of simple random dy change", 
+        "sha": "82cd9b8af3b3dafa3f5abf9c1b5a973d60a8f77f"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 19, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }, 
+      {
+        "avatar_url": "https://avatars0.githubusercontent.com/u/788678?v=4", 
+        "contributions": 13, 
+        "html_url": "https://github.com/dmalan", 
+        "id": 788678, 
+        "name": "dmalan"
+      }
+    ], 
+    "created_at": "2018-01-22T23:25:12Z", 
+    "description": "Atari's 1972 classic, implemented in Lua with L\u00d6VE", 
+    "forks_count": 284, 
+    "forks_url": "https://api.github.com/repos/games50/pong/forks", 
+    "full_name": "games50/pong", 
+    "html_url": "https://github.com/games50/pong", 
+    "id": 118529007, 
+    "issues": [
+      {
+        "body": "how to run pong 0 after writing code in visual studio code?\r\n", 
+        "closed_at": null, 
+        "created_at": "2020-04-16T14:00:48Z", 
+        "id": 601080464, 
+        "labels": [], 
+        "number": 31, 
+        "state": "open", 
+        "title": "pong 0", 
+        "updated_at": "2020-04-18T17:07:59Z"
+      }, 
+      {
+        "body": "See https://love2d.org/wiki/11.0\r\n\r\nThese two changes allow the repo to be compatible with modern versions\r\n\r\nRenamed love.window.getPixelScale to love.window.getDPIScale\r\n\r\nChanged all color values to be in the range 0-1, rather than 0-255\r\n\r\nIt might be useful to make this another branch, rather than just merge it\r\n\r\n", 
+        "closed_at": null, 
+        "created_at": "2020-04-03T21:47:40Z", 
+        "id": 593658572, 
+        "labels": [], 
+        "number": 28, 
+        "state": "open", 
+        "title": "Fix both compatibility issues", 
+        "updated_at": "2020-04-03T21:47:40Z"
+      }, 
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2020-04-03T16:02:46Z", 
+        "id": 593484898, 
+        "labels": [], 
+        "number": 27, 
+        "state": "open", 
+        "title": "Upgraded to push v0.4 and updated pong examples", 
+        "updated_at": "2020-04-03T16:02:46Z"
+      }, 
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2020-03-15T13:40:14Z", 
+        "id": 581679005, 
+        "labels": [], 
+        "number": 26, 
+        "state": "open", 
+        "title": "LOVE 11.3", 
+        "updated_at": "2020-03-15T13:40:14Z"
+      }, 
+      {
+        "body": "I have received an error on LOVE 11 for Windows 10.  It says that `love.window.getPixelScale` is nil, so I fixed it.", 
+        "closed_at": null, 
+        "created_at": "2019-12-11T22:04:27Z", 
+        "id": 536639625, 
+        "labels": [], 
+        "number": 25, 
+        "state": "open", 
+        "title": "Love 11 Patch", 
+        "updated_at": "2019-12-11T22:04:27Z"
+      }, 
+      {
+        "body": "I have received an error on LOVE 11 for Windows 10.  It says that `love.window.getPixelScale` is nil, so I fixed it.", 
+        "closed_at": null, 
+        "created_at": "2019-12-11T21:53:58Z", 
+        "id": 536635042, 
+        "labels": [], 
+        "number": 24, 
+        "state": "open", 
+        "title": "Fix a bug because of a renamed function for LOVE 11", 
+        "updated_at": "2020-03-22T18:52:32Z"
+      }, 
+      {
+        "body": "For anyone else who is new to this course and is experiencing all of the issues that other users are posting about - please read the Assignment0 text.  \r\n\r\nI was getting frustrated from experiencing all of the same issues that were being described here.  I probably did the same thing all of you did - I started the video and downloaded Love2d, installed it with the video on pause, then came here and clicked download.  Then I had issues.\r\n\r\nHowever, after longer than I would care to admit (couple of hours) I read through the Assignment0 and it says to use Love2D build 0.10.2 and provides a link to download older versions of the software.  I did this, and now everything works exactly as the class intends, with no issues.  \r\n\r\nI don't know if it will upgrade to the newer versions of Love2d as the class progresses or not, but if I can save anyone else the hassle, I hope this helps.", 
+        "closed_at": null, 
+        "created_at": "2019-08-19T13:45:21Z", 
+        "id": 482321727, 
+        "labels": [], 
+        "number": 23, 
+        "state": "open", 
+        "title": "Read the Syllabus - Use Love ver 0.10.2", 
+        "updated_at": "2020-04-15T16:22:38Z"
+      }, 
+      {
+        "body": "I was greeted with the following upon running Pong 2:\r\n\r\nError\r\n\r\npush.lua:101: attempt to call field 'getPixelScale' (a nil value)\r\n\r\n\r\nTraceback\r\n\r\npush.lua:101: in function 'initValues'\r\npush.lua:48: in function 'setupScreen'\r\nmain.lua:49: in function 'load'\r\n[C]: in function 'xpcall'\r\n[C]: in function 'xpcall'\r\n\r\nI ran the other pongs and only pong1 and pong0 are unaffected. It seems to be a problem with getPixelScale, perhaps the system has changed so that this part of the code is less viable?", 
+        "closed_at": null, 
+        "created_at": "2019-06-30T18:07:32Z", 
+        "id": 462431019, 
+        "labels": [], 
+        "number": 22, 
+        "state": "open", 
+        "title": "Problem with Love: Pong 2 and beyond", 
+        "updated_at": "2020-04-18T07:23:29Z"
+      }, 
+      {
+        "body": "Replaced push.lua with up-to-date file 4-6-2019", 
+        "closed_at": null, 
+        "created_at": "2019-04-07T03:42:46Z", 
+        "id": 430101413, 
+        "labels": [], 
+        "number": 21, 
+        "state": "open", 
+        "title": "replaced push.lua with up-to-date file 4-6-2019", 
+        "updated_at": "2019-04-07T03:42:46Z"
+      }, 
+      {
+        "body": "Modifications for Love2D API in version 11+", 
+        "closed_at": null, 
+        "created_at": "2019-03-18T00:15:18Z", 
+        "id": 421992183, 
+        "labels": [], 
+        "number": 20, 
+        "state": "open", 
+        "title": "Changes needed for Love2D 11+", 
+        "updated_at": "2019-03-26T19:52:10Z"
+      }, 
+      {
+        "body": "Can you clarify what licenses source code and `.wav` files are under?", 
+        "closed_at": null, 
+        "created_at": "2019-02-28T20:48:11Z", 
+        "id": 415816308, 
+        "labels": [], 
+        "number": 19, 
+        "state": "open", 
+        "title": "What are licenses for source code and .wav files?", 
+        "updated_at": "2019-02-28T20:48:11Z"
+      }, 
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2018-11-15T23:07:52Z", 
+        "id": 381378086, 
+        "labels": [], 
+        "number": 18, 
+        "state": "open", 
+        "title": "tiny spellcheck", 
+        "updated_at": "2018-11-15T23:07:52Z"
+      }, 
+      {
+        "body": "Fixes #3\r\nFixes #8\r\nFixes #12\r\nFixes #14\r\n\r\nThis PR makes the game compatible with Love version 11, which is what you get if you download the framework now.\r\n\r\nOne thing that does not work anymore is setting RGBA color components with integers between 0 and 255. Relevant methods now require floats between 0 and 1, and that's addressed in 2a4ab88 for `graphics.clear`. Note that the call to `graphics.setColor` should also be modified in the same way, but since Love seems to clip overflowing values to 1, the specific calls used here work as expected (if anyone tries a different color, though, they will likely hit the bug).\r\n\r\nThe other commit makes sure all versions of the game use a love11-aware version of Push (older versions make the game crash). The one in `pong-final` is OK, so I just had all main files import that one.", 
+        "closed_at": null, 
+        "created_at": "2018-11-03T14:17:22Z", 
+        "id": 377058335, 
+        "labels": [], 
+        "number": 17, 
+        "state": "open", 
+        "title": "Fixes for Love 11", 
+        "updated_at": "2018-11-03T14:17:22Z"
+      }, 
+      {
+        "body": "Fix issue #14 and make at least pong-3 love11.1 compatible. This line has to be changed in all main.lua files.", 
+        "closed_at": null, 
+        "created_at": "2018-09-01T14:52:22Z", 
+        "id": 356208228, 
+        "labels": [], 
+        "number": 15, 
+        "state": "open", 
+        "title": "Fix pong-3 to render correctly", 
+        "updated_at": "2018-09-01T14:52:22Z"
+      }, 
+      {
+        "body": "running 'love .' in pong-2 results in a completely white screen. With `love.graphics.clear(40, 45, 52, 255)\r\n` commented out everything works expect the background color is black rather then grey. I'm using love 11.1 on a 32bit Windows 10 machine.", 
+        "closed_at": null, 
+        "created_at": "2018-09-01T05:20:16Z", 
+        "id": 356173577, 
+        "labels": [], 
+        "number": 14, 
+        "state": "open", 
+        "title": "pong-2 renders white screen", 
+        "updated_at": "2018-09-01T14:34:06Z"
+      }, 
+      {
+        "body": "This resolves issue #12 . Since the download link in the lecture points to the most recent version of love the source file should be compatible with it. In love11.1 getPixelScale is now called getDPIScale.", 
+        "closed_at": null, 
+        "created_at": "2018-09-01T04:55:35Z", 
+        "id": 356172291, 
+        "labels": [], 
+        "number": 13, 
+        "state": "open", 
+        "title": "Change all occurences of getPixelScale to getDPIScale", 
+        "updated_at": "2018-09-01T04:55:35Z"
+      }, 
+      {
+        "body": "pong 1 calls love.window.getPixelScale which is now called love.window.getDPIScale.", 
+        "closed_at": null, 
+        "created_at": "2018-09-01T04:29:25Z", 
+        "id": 356171098, 
+        "labels": [], 
+        "number": 12, 
+        "state": "open", 
+        "title": "pong-1 doesn't work with love 11.1", 
+        "updated_at": "2018-09-01T04:29:25Z"
+      }, 
+      {
+        "body": "If you'd like, I can upload the Python script I made for it. Should still work with lower Love versions. ", 
+        "closed_at": null, 
+        "created_at": "2018-08-24T15:44:59Z", 
+        "id": 353835339, 
+        "labels": [], 
+        "number": 11, 
+        "state": "open", 
+        "title": "Updated push.lua for Love2D 11.1. ", 
+        "updated_at": "2018-08-24T15:46:08Z"
+      }, 
+      {
+        "body": "love.window.getPixelScale() changed to love.window.getDPIScale()", 
+        "closed_at": null, 
+        "created_at": "2018-08-07T18:15:33Z", 
+        "id": 348432244, 
+        "labels": [], 
+        "number": 10, 
+        "state": "open", 
+        "title": "Update method for LOVE 11.1", 
+        "updated_at": "2018-08-07T18:15:33Z"
+      }, 
+      {
+        "body": "Hey in Pong-2, calling love.graphics.clear in love.draw makes the whole screen white. Commenting it out fixes it. \r\n\r\nIt's using the color 40, 45, 52, 255.\r\n\r\nFurther testing: moving it to a new push start/end doesn't work. Changing the color to full 255's doesn't work. \r\n\r\nUpdate: Changing alpha to 0 at least makes the screen contents show. Doesn't apply the color though (alpha 0).", 
+        "closed_at": null, 
+        "created_at": "2018-07-08T07:05:36Z", 
+        "id": 339202974, 
+        "labels": [], 
+        "number": 8, 
+        "state": "open", 
+        "title": "Love.graphics.clear white screen. ", 
+        "updated_at": "2020-04-18T14:18:23Z"
+      }, 
+      {
+        "body": "Hi!\r\nIt would be possible to make a issues for all things that do not run as expected with the current version of L\u00f6ve, but an easier path, I think would be to just put a comment in the README.md about the version that was used for this code so that people trying to run it can either use the older version or look for what changed between that and the current one.\r\nThanks for this great course!", 
+        "closed_at": null, 
+        "created_at": "2018-07-04T06:08:41Z", 
+        "id": 338141286, 
+        "labels": [], 
+        "number": 7, 
+        "state": "open", 
+        "title": "L\u00f6ve2D version relevant to run or adjust the code", 
+        "updated_at": "2019-08-26T01:58:34Z"
+      }, 
+      {
+        "body": "Upgrades to push.lua v0.3.\r\nChecks if running LOVE v11 and changes color values accordingly. LOVE v11 uses a 0-1 range instead of the previous 0-255. \r\n\r\ncloses #3 ", 
+        "closed_at": null, 
+        "created_at": "2018-05-11T00:59:50Z", 
+        "id": 322133882, 
+        "labels": [], 
+        "number": 4, 
+        "state": "open", 
+        "title": "Update push.lua to v0.3 and handle LOVE 11 color range change", 
+        "updated_at": "2019-06-08T17:15:58Z"
+      }, 
+      {
+        "body": "LOVE 0.11.0 uses `love.window.getDPIScale` instead of `getPixelScale`, which causes an error in the included version of push.lua. It looks like the newest version of push.lua should handle both cases. I've tested it with LOVE 0.11.1, and it works for me. \r\n\r\nLOVE doc: https://love2d.org/wiki/love.window.getDPIScale\r\npush.lua v0.3: https://raw.githubusercontent.com/Ulydev/push/master/push.lua", 
+        "closed_at": null, 
+        "created_at": "2018-05-11T00:52:09Z", 
+        "id": 322132781, 
+        "labels": [], 
+        "number": 3, 
+        "state": "open", 
+        "title": "Upgrade to push.lua v0.3", 
+        "updated_at": "2018-07-08T06:32:12Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 263013
+    }, 
+    "name": "pong", 
+    "open_issues_count": 23, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/pong/tags", 
+    "updated_at": "2020-04-18T15:57:46Z", 
+    "watchers_count": 239
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-26T13:48:47Z", 
+        "message": "added comments", 
+        "sha": "87d5b7ff5ad8d9d5c8ce0487017f07ed236efb67"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-01-24T19:52:53Z", 
+        "message": "initial commit", 
+        "sha": "7144f36f65bfb0ca5388fbd5270b4a0a3761da55"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 2, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-01-24T18:44:30Z", 
+    "description": "Distro code for assignment 0: Pong", 
+    "forks_count": 8, 
+    "forks_url": "https://api.github.com/repos/games50/assignment0/forks", 
+    "full_name": "games50/assignment0", 
+    "html_url": "https://github.com/games50/assignment0", 
+    "id": 118806919, 
+    "issues": [
+      {
+        "body": "Pong doesn't work with the Love 11", 
+        "closed_at": null, 
+        "created_at": "2018-05-24T13:50:24Z", 
+        "id": 326131302, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Make a note of required Love version (v10.2?)", 
+        "updated_at": "2018-11-05T10:38:57Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 26525
+    }, 
+    "name": "assignment0", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/assignment0/tags", 
+    "updated_at": "2019-07-18T18:57:08Z", 
+    "watchers_count": 3
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 788678, 
+        "commiter-name": "dmalan", 
+        "date": "2018-01-31T22:25:51Z", 
+        "message": "first commit", 
+        "sha": "b40bf6bdbceff0b23b4df346b4378b1e655b839f"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars0.githubusercontent.com/u/788678?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/dmalan", 
+        "id": 788678, 
+        "name": "dmalan"
+      }
+    ], 
+    "created_at": "2018-01-31T22:24:56Z", 
+    "description": null, 
+    "forks_count": 54, 
+    "forks_url": "https://api.github.com/repos/games50/fifty-bird/forks", 
+    "full_name": "games50/fifty-bird", 
+    "html_url": "https://github.com/games50/fifty-bird", 
+    "id": 119751372, 
+    "issues": [
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2020-03-15T12:50:53Z", 
+        "id": 581661463, 
+        "labels": [], 
+        "number": 6, 
+        "state": "open", 
+        "title": "LOVE 11.3", 
+        "updated_at": "2020-03-15T12:50:53Z"
+      }, 
+      {
+        "body": "I can also upload the python script I made for this if you'd like. It was made and run on Python 3, but I'm fairly certain it can also run on 2.7. The only 3 vs. 2.7 thing in there is the print statements, but I used ( ) so it should be okay. \r\n\r\nI'll try to make a Lua script to do it too. Just might take a while, I'm new to Lua and unsure how to do file handling yet. \r\n\r\nSorry if I messed anything up, I'm brand new to Github. ", 
+        "closed_at": null, 
+        "created_at": "2018-08-24T15:57:20Z", 
+        "id": 353839677, 
+        "labels": [], 
+        "number": 3, 
+        "state": "open", 
+        "title": "Updated push.lua for 11.1", 
+        "updated_at": "2019-08-20T13:33:24Z"
+      }, 
+      {
+        "body": "Hi, I'm not sure what's going on, but it seems that when I play my completed game on crappy systems, it's significantly easier because it seems like the bird doesn't jump as high or fall as fast. I'm assuming this is an issue with framerate and deltatime.\r\n\r\nI noticed this while testing on a Dell Inspiron laptop. ( parents' computer )\r\n\r\nI got scores higher than 30 several times, and only died because I made the bird fall to end the test. It really could have gone on indefinitely. \r\n\r\nThe narrowed \"jump / fall range\" makes it very easy to slip through small pipe gaps. Is it a known phenomenon for framerate to affect a game this way, or is this just all a fluke? \r\n\r\nIs there a way to compensate for low framerates in the gravity code?", 
+        "closed_at": null, 
+        "created_at": "2018-08-09T19:27:48Z", 
+        "id": 349259045, 
+        "labels": [], 
+        "number": 2, 
+        "state": "open", 
+        "title": "Framerate Difficulty Problem", 
+        "updated_at": "2020-02-11T22:37:18Z"
+      }, 
+      {
+        "body": "The game allows to score points when the bird flies way up the top edge of the screen.\r\n", 
+        "closed_at": null, 
+        "created_at": "2018-02-18T23:12:27Z", 
+        "id": 298128319, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Scoring and Collision detection ", 
+        "updated_at": "2018-02-18T23:12:27Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 255490
+    }, 
+    "name": "fifty-bird", 
+    "open_issues_count": 4, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/fifty-bird/tags", 
+    "updated_at": "2020-04-02T21:17:43Z", 
+    "watchers_count": 24
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 28765, 
+        "commiter-name": "barnettech", 
+        "date": "2019-02-07T22:11:55Z", 
+        "message": "meaningless but fun change", 
+        "sha": "92a6f0ffd4ec28b6c89c9f77113dcd2ba8402fd9"
+      }, 
+      {
+        "commiter-id": 28765, 
+        "commiter-name": "barnettech", 
+        "date": "2019-02-07T22:10:25Z", 
+        "message": "change #2 for you", 
+        "sha": "8020c8be149572f106a179be479d1525c9761a20"
+      }, 
+      {
+        "commiter-id": 28765, 
+        "commiter-name": "barnettech", 
+        "date": "2019-02-07T22:09:51Z", 
+        "message": "adding hello.txt", 
+        "sha": "0f68ace0a905a564118f6b04ebec12b1bf44a31d"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-01T05:31:05Z", 
+        "message": "tweaks", 
+        "sha": "33b391f94c9de1ba2378893f528aac5888b6dc85"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-01T05:19:14Z", 
+        "message": "initial commit", 
+        "sha": "7657b783939721df24a1120f3c036115015d95d8"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars2.githubusercontent.com/u/28765?v=4", 
+        "contributions": 3, 
+        "html_url": "https://github.com/barnettech", 
+        "id": 28765, 
+        "name": "barnettech"
+      }, 
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 2, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-02-01T04:55:43Z", 
+    "description": "Distro code for Assignment 1: Flappy Bird", 
+    "forks_count": 9, 
+    "forks_url": "https://api.github.com/repos/games50/assignment1/forks", 
+    "full_name": "games50/assignment1", 
+    "html_url": "https://github.com/games50/assignment1", 
+    "id": 119784876, 
+    "issues": [
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2019-07-08T03:25:54Z", 
+        "id": 465036988, 
+        "labels": [], 
+        "number": 2, 
+        "state": "open", 
+        "title": "Assignment 1 Required Alterations", 
+        "updated_at": "2019-07-08T03:25:54Z"
+      }, 
+      {
+        "body": "In the PlayState:exit scrolling is set to false.  However, the actual functionality doesn't seem to have been implemented.  I achieved the effect by declaring scrolling in the Main and implementing it as a conditional to backgroundScroll and groundScroll in Main's love.update().  ", 
+        "closed_at": null, 
+        "created_at": "2018-07-23T20:14:49Z", 
+        "id": 343779060, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "background scrolling", 
+        "updated_at": "2018-07-23T20:14:49Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 29238
+    }, 
+    "name": "assignment1", 
+    "open_issues_count": 2, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/assignment1/tags", 
+    "updated_at": "2019-08-16T05:59:43Z", 
+    "watchers_count": 4
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 19864447, 
+        "commiter-name": "web-flow", 
+        "date": "2018-02-04T18:02:26Z", 
+        "message": "Update README.md", 
+        "sha": "573611bb5608d8efcb78faa653f59443b7626248"
+      }, 
+      {
+        "commiter-id": 20494558, 
+        "commiter-name": "BenjaminDoran", 
+        "date": "2018-02-04T02:33:05Z", 
+        "message": "added readme", 
+        "sha": "49f08ddfe10aca357a2e85e6eaaaa20ce36e6b6b"
+      }, 
+      {
+        "commiter-id": 20494558, 
+        "commiter-name": "BenjaminDoran", 
+        "date": "2018-02-04T01:52:56Z", 
+        "message": "statemachine initial commit", 
+        "sha": "3839a30344d380b469fa5c26e24e9897e2781d0f"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars1.githubusercontent.com/u/20494558?v=4", 
+        "contributions": 3, 
+        "html_url": "https://github.com/BenjaminDoran", 
+        "id": 20494558, 
+        "name": "BenjaminDoran"
+      }
+    ], 
+    "created_at": "2018-02-04T02:17:22Z", 
+    "description": "Section Demos for GD50", 
+    "forks_count": 3, 
+    "forks_url": "https://api.github.com/repos/games50/section-demos/forks", 
+    "full_name": "games50/section-demos", 
+    "html_url": "https://github.com/games50/section-demos", 
+    "id": 120147833, 
+    "issues": [
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2018-08-27T09:59:47Z", 
+        "id": 354256467, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "resize fix", 
+        "updated_at": "2018-08-27T09:59:47Z"
+      }
+    ], 
+    "languages": {}, 
+    "name": "section-demos", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/section-demos/tags", 
+    "updated_at": "2018-02-04T02:39:41Z", 
+    "watchers_count": 0
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-05T19:00:39Z", 
+        "message": "initial commit", 
+        "sha": "18b9f3c4ee3a98dd9c8a249c276a53c20e58a4fd"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-02-05T19:00:23Z", 
+    "description": "Distro code for Project 0: Space Invaders", 
+    "forks_count": 5, 
+    "forks_url": "https://api.github.com/repos/games50/project0/forks", 
+    "full_name": "games50/project0", 
+    "html_url": "https://github.com/games50/project0", 
+    "id": 120347942, 
+    "issues": [
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2018-02-20T15:29:26Z", 
+        "id": 298636796, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "turn in", 
+        "updated_at": "2018-05-16T04:30:31Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 18678
+    }, 
+    "name": "project0", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/project0/tags", 
+    "updated_at": "2019-02-01T22:20:44Z", 
+    "watchers_count": 1
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-08T02:57:00Z", 
+        "message": "high score bug fix", 
+        "sha": "d9b65b96eafb90067f8cd4b47e3f6799bee88493"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T16:28:29Z", 
+        "message": "final version?", 
+        "sha": "91cc8716ef15e0958e16bc2a0d6fba717f33329b"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T16:06:35Z", 
+        "message": "minor high score bug", 
+        "sha": "53c6e995e27717449dce9639da01a14a61cd0c60"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T15:27:09Z", 
+        "message": "tweaked and simplified particle systems", 
+        "sha": "227270c53f8d9842677c9b165ccfc69634b54371"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T15:03:40Z", 
+        "message": "missed an iteration", 
+        "sha": "49e39f4eca536cf3c736a1b971554598e3993bd2"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T15:03:31Z", 
+        "message": "missed an iteration", 
+        "sha": "52bd6c34fdde0f8e25619e5a6958665f1d305a0f"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T14:50:36Z", 
+        "message": "better levelmaker documentation", 
+        "sha": "01e1d66bee7babf06635a6d1bc3118f354e619cd"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T14:19:27Z", 
+        "message": "commenting", 
+        "sha": "ed3b596aa43ffa9f2132f7f68aa3e80d34e18f54"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T14:01:36Z", 
+        "message": "collision revision", 
+        "sha": "acaff08839ec75fbdd471766e37d4f34b794c4ea"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T12:07:24Z", 
+        "message": "simplified brick collision", 
+        "sha": "ced66995c23bcbb1694c217daf1fa63c1f01bb69"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T11:11:05Z", 
+        "message": "redundant code", 
+        "sha": "c5d3954b2c7e9d0a6e1ac1b0335c0a9f9b7c141b"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T10:34:17Z", 
+        "message": "level generator bug", 
+        "sha": "a0c364c5add901f09b4b6f2be8cfe06e59985278"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T10:13:53Z", 
+        "message": "comments, recovery", 
+        "sha": "f28d7a6b7844b5937060b3aff79ee40b8da91fd9"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-07T00:07:27Z", 
+        "message": "all code finished", 
+        "sha": "86758627d584407777c15983dfb55d6cfb243a1f"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T23:42:23Z", 
+        "message": "breakout10", 
+        "sha": "ff84e1cd2b8a8cba6bc3e086c0d697107b18ab2b"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T23:08:35Z", 
+        "message": "breakout9", 
+        "sha": "75dd340dc1270e390f9e45a98a1faddb557e0521"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T22:48:24Z", 
+        "message": "breakout8", 
+        "sha": "100b9931b2e2664aef6d61738586d457e0e4c286"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T18:58:26Z", 
+        "message": "breakout7", 
+        "sha": "3a320f3da99910a17c4c7023aa7921333f7704d1"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T18:34:34Z", 
+        "message": "breakout6", 
+        "sha": "34eb0d3e48027b878212ddfe98c6f0aa398d6ab1"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T18:11:31Z", 
+        "message": "breakout5", 
+        "sha": "83368ddcc60a5c58cecba67e0b61c5cadf89a4ff"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T18:03:16Z", 
+        "message": "breakout5", 
+        "sha": "41524eef25c7c62cb517b31db43d942afa09a87a"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T17:20:36Z", 
+        "message": "breakout3 and 4", 
+        "sha": "7f1704ef5d9780578261da29e972e0389b43ac8e"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T14:57:25Z", 
+        "message": "breakout2", 
+        "sha": "f41f2f837900f7e6c3251965737b51136f84e003"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T14:14:43Z", 
+        "message": "breakout1", 
+        "sha": "b8a2050c5c626182695c0b5d1ff324ad1ee5a9a7"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-06T10:33:36Z", 
+        "message": "breakout0", 
+        "sha": "24c3958e9de9b8e82be10e24ea3fcb9c358d4a89"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 25, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-02-06T10:33:14Z", 
+    "description": "Remake of the classic Atari game Breakout!", 
+    "forks_count": 23, 
+    "forks_url": "https://api.github.com/repos/games50/breakout/forks", 
+    "full_name": "games50/breakout", 
+    "html_url": "https://github.com/games50/breakout", 
+    "id": 120439248, 
+    "issues": [
+      {
+        "body": "```\r\n-- Takes a table of user-defined colors and adapts them for version checking.\r\nfunction colorLoader(colorTable)\r\n\r\n\t-- Is Love2D running at version 11? Return true then, otherwise, false.\r\n\tlocal love11 = love.getVersion() == 11\r\n\t-- Pop the table in a var.\r\n\tlocal colors = colorTable\r\n\r\n\t-- For every color you put in the table, \r\n\t--it should equal the first value you entered \r\n\t--(the Love2D version 11 value) or else the\r\n\t-- second value you entered (the alternate, old value)\r\n\tfor k, v in pairs(colors) do\r\n\t\tcolors[k] = love11 and v[1] or v[2]\r\n\tend\r\n\r\n\t-- Gimme my table back so I can use it!\r\n\treturn colors\r\n\r\nend\r\n\r\nfunction love.load()\r\n\r\n\t-- global color table, gColors (shortened to make using it easier)\r\n\tgc = {\r\n\t\t-- Shortened, gColors{}\r\n\t\twhite = {1, 255},\r\n\t\tdarkgrey = {40/255, 40},\r\n\t\tblue = {103/255, 103},\r\n\r\n\t\topaque = {1, 255},\r\n\t\thalfalpha = {0.5, 128}\r\n\t}\r\n\r\n\t-- take the color table gColors and adapt it for\r\n\t-- version checking, and reassign its values\r\n\t-- to its adapted ones.\r\n\tgc = colorLoader(gc)\r\n\r\nend\r\n```", 
+        "closed_at": null, 
+        "created_at": "2018-08-25T23:06:43Z", 
+        "id": 354049941, 
+        "labels": [], 
+        "number": 5, 
+        "state": "open", 
+        "title": "colors still borked, I have a fix, will work on pull.", 
+        "updated_at": "2018-08-25T23:06:43Z"
+      }, 
+      {
+        "body": "Updated push.lua for Love 11.1, still works with previous versions.\r\n\r\nI made a python script to automate it that I can share if you want. Let me know if you do. Works on 3.0 and should work on python 2.7 as well (not tested). \r\n\r\nSorry for any mistakes, I'm new to GitHub", 
+        "closed_at": null, 
+        "created_at": "2018-08-24T16:16:58Z", 
+        "id": 353845830, 
+        "labels": [], 
+        "number": 4, 
+        "state": "open", 
+        "title": "Updated push.lua for Love2D 11.1 - Works with prev. versions.", 
+        "updated_at": "2020-04-18T04:45:02Z"
+      }, 
+      {
+        "body": "https://github.com/games50/breakout/blob/d9b65b96eafb90067f8cd4b47e3f6799bee88493/breakout13/src/states/PlayState.lua#L32", 
+        "closed_at": null, 
+        "created_at": "2018-02-11T22:36:30Z", 
+        "id": 296233086, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "I'm getting a bug where recoverPoints resets to 5000 everytime I die.", 
+        "updated_at": "2019-01-29T09:04:20Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 659678
+    }, 
+    "name": "breakout", 
+    "open_issues_count": 3, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/breakout/tags", 
+    "updated_at": "2020-03-21T18:21:24Z", 
+    "watchers_count": 9
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-13T16:07:52Z", 
+        "message": "fixed bounds checking bug", 
+        "sha": "3fe5da55c9bfa6e2c7abf02a1dcbebfad2b543eb"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-09T20:15:53Z", 
+        "message": "commenting style", 
+        "sha": "995491fb135773252a6cf724dc339d4b4d50e43c"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-09T20:12:47Z", 
+        "message": "removed unnecessary code", 
+        "sha": "3326e03492158824eab599e0e8c97d6396ebb8c5"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-09T19:21:35Z", 
+        "message": "quads examples", 
+        "sha": "34c4a098d49f39bdc0a3a12bf28166f16a613ed8"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-09T19:21:10Z", 
+        "message": "quads examples", 
+        "sha": "7ba9b2e71a142efab84c722daa656b6fcdd5dc6b"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-21T21:14:21Z", 
+        "message": "sound effect for victory", 
+        "sha": "66cb3b96e1bee288f713b7600999c8ccd9fdec9a"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-21T19:52:21Z", 
+        "message": "turned color text in startstate into timer", 
+        "sha": "52717876b87abc500190e6edd087fd23f3316279"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-21T19:04:10Z", 
+        "message": "removed timer tickdown to stdout", 
+        "sha": "9aafeb9bbc3720a4511a386aedfe5f086640bb3f"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-21T18:53:36Z", 
+        "message": "initial commit", 
+        "sha": "3add65d67598a32d32aa54c67a47bedf6ef0772d"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 9, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-02-21T18:52:02Z", 
+    "description": "GD50 Match-3 Examples and Distro", 
+    "forks_count": 12, 
+    "forks_url": "https://api.github.com/repos/games50/match3/forks", 
+    "full_name": "games50/match3", 
+    "html_url": "https://github.com/games50/match3", 
+    "id": 122378654, 
+    "issues": [
+      {
+        "body": "https://github.com/games50/match3/blob/995491fb135773252a6cf724dc339d4b4d50e43c/match-3/src/Board.lua#L149\r\n\r\nShould be:\r\n\r\n``` lua\r\nfor y = 8, 8 - matchNum + 1, -1 do\r\n```", 
+        "closed_at": null, 
+        "created_at": "2018-07-10T12:47:38Z", 
+        "id": 339826828, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Small Issue with Clearing Tiles", 
+        "updated_at": "2018-07-10T12:47:38Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 326746
+    }, 
+    "name": "match3", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/match3/tags", 
+    "updated_at": "2019-02-01T22:20:30Z", 
+    "watchers_count": 3
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-16T21:36:21Z", 
+        "message": "extra comments", 
+        "sha": "5de950983f981b92e740aabc0803609d3d5013ac"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-02-28T21:23:21Z", 
+        "message": "initial commit", 
+        "sha": "7a96da9eb1c88d59e5e85d2677442d267aa62863"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 2, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-02-28T21:23:06Z", 
+    "description": "Lecture examples for Lecture 4: Super Mario Bros.", 
+    "forks_count": 14, 
+    "forks_url": "https://api.github.com/repos/games50/mario/forks", 
+    "full_name": "games50/mario", 
+    "html_url": "https://github.com/games50/mario", 
+    "id": 123344121, 
+    "issues": [
+      {
+        "body": "Fixes window title for the tiles1 lesson of the Mario Bros. game.", 
+        "closed_at": null, 
+        "created_at": "2018-10-02T03:31:27Z", 
+        "id": 365726994, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Fixes window title", 
+        "updated_at": "2018-10-02T03:31:27Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 237327
+    }, 
+    "name": "mario", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/mario/tags", 
+    "updated_at": "2020-02-05T18:22:03Z", 
+    "watchers_count": 20
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-23T21:11:17Z", 
+        "message": "stencil debugging and cleaner object creation", 
+        "sha": "3d940019994d3e4301bb40c789eef120a4ba5d90"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-23T20:16:46Z", 
+        "message": "add python script for adding numbers to tile sheets", 
+        "sha": "595e07e1d447d991b21ba24f1c01b38aaf577865"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-23T07:05:11Z", 
+        "message": "commenting", 
+        "sha": "d5b7b9040a10af71c792578809c6732acbd4b1c6"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-08T02:19:08Z", 
+        "message": "changed hurtbox to hitbox", 
+        "sha": "10fb4d014bb0cee38c9ee457afddaa8dc30f4142"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-08T02:18:52Z", 
+        "message": "changed hurtbox to hitbox", 
+        "sha": "58215ef5bbd7b6ccfa8d59250cf67907d265a6cf"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-07T20:40:03Z", 
+        "message": "initial commit", 
+        "sha": "687b149b6d9df8c79de95a422d5342df17a39571"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 6, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-03-07T20:38:39Z", 
+    "description": "Lecture examples for Lecture 5: Legend of Zelda", 
+    "forks_count": 12, 
+    "forks_url": "https://api.github.com/repos/games50/zelda/forks", 
+    "full_name": "games50/zelda", 
+    "html_url": "https://github.com/games50/zelda", 
+    "id": 124291688, 
+    "issues": [], 
+    "languages": {
+      "Lua": 90339, 
+      "Python": 1030
+    }, 
+    "name": "zelda", 
+    "open_issues_count": 0, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/zelda/tags", 
+    "updated_at": "2019-06-07T15:41:44Z", 
+    "watchers_count": 15
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-07-30T18:33:57Z", 
+        "message": "changes to comments and code refactoring", 
+        "sha": "51e3694327a73bc7443fe1653c397adfd3444320"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-21T19:34:36Z", 
+        "message": "start state", 
+        "sha": "209c3dbc15c17ddd098ff42a9a41bd31494445b4"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-21T18:50:51Z", 
+        "message": "turned music back on", 
+        "sha": "2cdf9ad5fc6066f574e238dfee25e9c499f77284"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-21T17:02:56Z", 
+        "message": "initial commit", 
+        "sha": "09822b51b765b304bd6053e2e00cdf94c5ac936f"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 4, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-03-21T17:01:40Z", 
+    "description": "Lecture examples for Lecture 6: Angry Birds", 
+    "forks_count": 9, 
+    "forks_url": "https://api.github.com/repos/games50/angrybirds/forks", 
+    "full_name": "games50/angrybirds", 
+    "html_url": "https://github.com/games50/angrybirds", 
+    "id": 126212991, 
+    "issues": [], 
+    "languages": {
+      "Lua": 807059
+    }, 
+    "name": "angrybirds", 
+    "open_issues_count": 0, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/angrybirds/tags", 
+    "updated_at": "2019-11-27T17:39:45Z", 
+    "watchers_count": 7
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-03-28T16:54:05Z", 
+        "message": "initial commit", 
+        "sha": "1fa934961ea443ab47127e230a83dfa29f0e282a"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-03-28T16:53:12Z", 
+    "description": "Lecture distro for Lecture 7: Pok\u00e9mon", 
+    "forks_count": 14, 
+    "forks_url": "https://api.github.com/repos/games50/pokemon/forks", 
+    "full_name": "games50/pokemon", 
+    "html_url": "https://github.com/games50/pokemon", 
+    "id": 127171213, 
+    "issues": [
+      {
+        "body": "", 
+        "closed_at": null, 
+        "created_at": "2018-05-11T20:45:53Z", 
+        "id": 322429116, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Updated the code to work with the newest version of L\u00d6VE2d", 
+        "updated_at": "2018-05-11T20:45:53Z"
+      }
+    ], 
+    "languages": {
+      "Lua": 91105
+    }, 
+    "name": "pokemon", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/pokemon/tags", 
+    "updated_at": "2020-04-15T14:08:15Z", 
+    "watchers_count": 27
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-04-04T19:02:42Z", 
+        "message": "comments", 
+        "sha": "cf32dd0a8ba2f2a6f65cb08d03a90bf9de8e9992"
+      }, 
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-04-04T17:18:51Z", 
+        "message": "initial commit", 
+        "sha": "58ff386d263ed9f206659ab6eace7d767f960796"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 2, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-04-04T17:18:19Z", 
+    "description": "Lecture examples for Lecture 8: Helicopter Game 3D!", 
+    "forks_count": 5, 
+    "forks_url": "https://api.github.com/repos/games50/helicopter/forks", 
+    "full_name": "games50/helicopter", 
+    "html_url": "https://github.com/games50/helicopter", 
+    "id": 128095677, 
+    "issues": [], 
+    "languages": {
+      "C#": 11200
+    }, 
+    "name": "helicopter", 
+    "open_issues_count": 0, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/helicopter/tags", 
+    "updated_at": "2019-09-14T12:11:36Z", 
+    "watchers_count": 3
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-04-18T19:07:15Z", 
+        "message": "initial commit", 
+        "sha": "1b6b4c2fb06e8c938681c911467eedeb1f8c71f6"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-04-18T19:06:51Z", 
+    "description": "Examples for Lecture 9: Dreadhalls", 
+    "forks_count": 6, 
+    "forks_url": "https://api.github.com/repos/games50/dreadhalls/forks", 
+    "full_name": "games50/dreadhalls", 
+    "html_url": "https://github.com/games50/dreadhalls", 
+    "id": 130109631, 
+    "issues": [
+      {
+        "body": "Hi, I'm completely unfamiliar with C#, and despite watching the lectures, I still not sure how to work with it, and I would like some assistance, as nothing seems to be working. I'm probably overthinking the solutions, could someone please help?\r\n", 
+        "closed_at": null, 
+        "created_at": "2019-08-14T17:21:06Z", 
+        "id": 480796107, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "I'm still lost", 
+        "updated_at": "2019-08-14T17:21:06Z"
+      }
+    ], 
+    "languages": {
+      "C#": 157109, 
+      "ShaderLab": 1013
+    }, 
+    "name": "dreadhalls", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/dreadhalls/tags", 
+    "updated_at": "2019-04-02T10:59:55Z", 
+    "watchers_count": 1
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-04-25T18:17:12Z", 
+        "message": "initial commit", 
+        "sha": "cea09307bfc2f13c23162a95f1d71eca1b2bb5fd"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-04-25T18:16:31Z", 
+    "description": "Lecture examples for Lecture 10: Portal", 
+    "forks_count": 3, 
+    "forks_url": "https://api.github.com/repos/games50/portal/forks", 
+    "full_name": "games50/portal", 
+    "html_url": "https://github.com/games50/portal", 
+    "id": 131046507, 
+    "issues": [
+      {
+        "body": "Assets\\PostProcessing\\Editor\\PropertyDrawers\\MinDrawer.cs(11,66): error CS0104: 'MinAttribute' is an ambiguous reference between 'UnityEngine.PostProcessing.MinAttribute' and 'UnityEngine.MinAttribute'", 
+        "closed_at": null, 
+        "created_at": "2019-10-19T19:24:52Z", 
+        "id": 509498686, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "This error happens in unity 2019 which version is the code made for?", 
+        "updated_at": "2019-10-19T19:24:52Z"
+      }
+    ], 
+    "languages": {
+      "C#": 408338, 
+      "ShaderLab": 43680, 
+      "Smalltalk": 116
+    }, 
+    "name": "portal", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/portal/tags", 
+    "updated_at": "2019-09-01T17:54:06Z", 
+    "watchers_count": 3
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 20494558, 
+        "commiter-name": "BenjaminDoran", 
+        "date": "2018-05-06T18:34:55Z", 
+        "message": "build game in docs folder", 
+        "sha": "a411ca0d9cd87ab61c04ee71bea7e78001d993d5"
+      }, 
+      {
+        "commiter-id": 20494558, 
+        "commiter-name": "BenjaminDoran", 
+        "date": "2018-05-06T18:26:22Z", 
+        "message": "initial commit", 
+        "sha": "9a0a910f4d83ad4ff1cb926e278c9464dcf87954"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars1.githubusercontent.com/u/20494558?v=4", 
+        "contributions": 2, 
+        "html_url": "https://github.com/BenjaminDoran", 
+        "id": 20494558, 
+        "name": "BenjaminDoran"
+      }
+    ], 
+    "created_at": "2018-05-06T18:28:05Z", 
+    "description": "Demo game showing use of github pages to host game", 
+    "forks_count": 3, 
+    "forks_url": "https://api.github.com/repos/games50/WebGl-Demo/forks", 
+    "full_name": "games50/WebGl-Demo", 
+    "html_url": "https://github.com/games50/WebGl-Demo", 
+    "id": 132365166, 
+    "issues": [], 
+    "languages": {
+      "C#": 360825, 
+      "GLSL": 7913, 
+      "HLSL": 7611, 
+      "ShaderLab": 55119
+    }, 
+    "name": "WebGl-Demo", 
+    "open_issues_count": 0, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/WebGl-Demo/tags", 
+    "updated_at": "2018-05-21T19:43:23Z", 
+    "watchers_count": 1
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 3724177, 
+        "commiter-name": "coltonoscopy", 
+        "date": "2018-06-27T20:29:38Z", 
+        "message": "initial commit", 
+        "sha": "04d6ba47a711bce8f5d8ded156516b6c49efe32f"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4", 
+        "contributions": 1, 
+        "html_url": "https://github.com/coltonoscopy", 
+        "id": 3724177, 
+        "name": "coltonoscopy"
+      }
+    ], 
+    "created_at": "2018-06-27T20:16:19Z", 
+    "description": "Lab 0 for GD50 Summer 2018", 
+    "forks_count": 4, 
+    "forks_url": "https://api.github.com/repos/games50/lab0/forks", 
+    "full_name": "games50/lab0", 
+    "html_url": "https://github.com/games50/lab0", 
+    "id": 138928651, 
+    "issues": [], 
+    "languages": {
+      "Lua": 27524
+    }, 
+    "name": "lab0", 
+    "open_issues_count": 0, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/lab0/tags", 
+    "updated_at": "2019-02-01T22:20:37Z", 
+    "watchers_count": 1
+  }, 
+  {
+    "commits": [
+      {
+        "commiter-id": 12766040, 
+        "commiter-name": "dlloyd09", 
+        "date": "2019-07-26T20:47:13Z", 
+        "message": "YAML fix", 
+        "sha": "47a65ffb6e657add5129fa4a48645802834f1798"
+      }, 
+      {
+        "commiter-id": 12766040, 
+        "commiter-name": "dlloyd09", 
+        "date": "2019-07-26T19:30:33Z", 
+        "message": "style50", 
+        "sha": "c0266a63342ba874cb61d8a5f40ef5a9fa87c67e"
+      }, 
+      {
+        "commiter-id": 12766040, 
+        "commiter-name": "dlloyd09", 
+        "date": "2019-07-26T19:26:01Z", 
+        "message": "create for 2019 submit50 update", 
+        "sha": "2bc1e08a0844e93b7883e2f7efe4d8bb2c62d2b5"
+      }, 
+      {
+        "commiter-id": 19864447, 
+        "commiter-name": "web-flow", 
+        "date": "2019-07-26T19:18:41Z", 
+        "message": "Initial commit", 
+        "sha": "f21c8d0dcd1b7a49358a7d230e0d727ffa722458"
+      }
+    ], 
+    "contributors": [
+      {
+        "avatar_url": "https://avatars0.githubusercontent.com/u/12766040?v=4", 
+        "contributions": 4, 
+        "html_url": "https://github.com/dlloyd09", 
+        "id": 12766040, 
+        "name": "dlloyd09"
+      }
+    ], 
+    "created_at": "2019-07-26T19:18:40Z", 
+    "description": null, 
+    "forks_count": 1, 
+    "forks_url": "https://api.github.com/repos/games50/assignments/forks", 
+    "full_name": "games50/assignments", 
+    "html_url": "https://github.com/games50/assignments", 
+    "id": 199068826, 
+    "issues": [
+      {
+        "body": "This link is giving a 404:  https://cs50.github.io/games", 
+        "closed_at": null, 
+        "created_at": "2020-03-17T16:43:28Z", 
+        "id": 583149254, 
+        "labels": [], 
+        "number": 1, 
+        "state": "open", 
+        "title": "Linked Website on games50 org gives 404", 
+        "updated_at": "2020-03-17T16:43:57Z"
+      }
+    ], 
+    "languages": {}, 
+    "name": "assignments", 
+    "open_issues_count": 1, 
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4", 
+      "html_url": "https://github.com/games50", 
+      "id": 35604499, 
+      "name": "games50", 
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    }, 
+    "tags_url": "https://api.github.com/repos/games50/assignments/tags", 
+    "updated_at": "2019-07-26T20:47:19Z", 
+    "watchers_count": 0
+  }
+]
