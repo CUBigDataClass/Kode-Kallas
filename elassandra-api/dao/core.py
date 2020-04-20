@@ -1,8 +1,9 @@
 import json
+import time
 
 from cassandra.cluster import Cluster
 from cassandra.cqlengine import connection
-from cassandra.query import SimpleStatement
+from cassandra.query import SimpleStatement, BatchStatement
 
 from .config import CASSANDRA_HOSTS
 from flask import jsonify
@@ -18,7 +19,7 @@ USERS = "users"
 
 
 # TODO: Enable quorum
-def insert_repo(request):
+def insert(request):
     # TODO: Data Validation should be done?
     content = request.get_json()
     #connection.setup(CASSANDRA_HOSTS, content[ORG])
@@ -26,16 +27,21 @@ def insert_repo(request):
     # TODO: Avoid using eval() because
     # TODO: this requires me to import all models
     obj_list = content[BODY]
+    cluster = Cluster()
+    session = cluster.connect(content[TABLE])
+    start_time = time.time()
+    batch = BatchStatement()
     for obj in obj_list:
         #obj["permissions"] = json.loads(perm(admin=obj["permissions"]["admin"], push=obj["permissions"]["push"], pull=obj["permissions"]["pull"]))
         #obj["permissions"] = jsonify(**obj["permissions"])
-        cluster = Cluster()
-        session = cluster.connect('org')
         ans = json.dumps(obj)
-        query = SimpleStatement("INSERT INTO JSON \'" + ans + "\';")
+        query = SimpleStatement("INSERT INTO " + content[TABLE] + " JSON \'" + ans + "\';")
+        #batch.add(query)
         session.execute(query)
-        session.shutdown()
-        #Repo.create(obj)
+    end_time = time.time()
+    print(end_time-start_time)
+    session.shutdown()
+    # Repo.create(obj)
     return obj
 
 def insert_commit(request):
@@ -46,15 +52,20 @@ def insert_commit(request):
     # TODO: Avoid using eval() because
     # TODO: this requires me to import all models
     obj_list = content[BODY]
+    cluster = Cluster()
+    session = cluster.connect(content[ORG])
+    start_time = time.time()
+    batch = BatchStatement()
     for obj in obj_list:
         #obj["permissions"] = json.loads(perm(admin=obj["permissions"]["admin"], push=obj["permissions"]["push"], pull=obj["permissions"]["pull"]))
         #obj["permissions"] = jsonify(**obj["permissions"])
-        cluster = Cluster()
-        session = cluster.connect(content[ORG])
         ans = json.dumps(obj)
         query = SimpleStatement("INSERT INTO " + content[TABLE] + " JSON \'" + ans + "\';")
+        #batch.add(query)
         session.execute(query)
-        session.shutdown()
+    end_time = time.time()
+    print(end_time-start_time)
+    session.shutdown()
         #Repo.create(obj)
     return obj
 
