@@ -83,7 +83,8 @@ def org(request, org):
     
     top_users = []
     for repo in dict_user_commits:
-        top_users.append(repo[0])
+        if repo[0] != 'web-flow':
+            top_users.append(repo[0])
     
     context = {
         'org_name' : org,
@@ -120,7 +121,6 @@ def repo(request, org, repoName):
                         "%Y-%m-%dT%H:%M:%SZ").strftime('%d %b %Y')
 
     commits_time = []
-
     for commit in current_repo['commits']:
         c = {}
         # c['sha'] = commit['sha']
@@ -128,6 +128,20 @@ def repo(request, org, repoName):
 
         if len(c) != 0:
             commits_time.append(c)
+    
+    commits = []
+
+    for i, commit in enumerate(reversed(current_repo['commits'])):
+        commit_temp = {}
+        commit_temp['number'] = i+1
+        commit_temp['commiter_name'] = commit['commiter_name']
+        commit_temp['body'] = commit['message']
+        commit_temp['additions'] = commit['stats']['additions']
+        commit_temp['deletions'] = commit['stats']['deletions']
+        commit_temp['commited_at'] = datetime.datetime.strptime(commit['date'],"%Y-%m-%dT%H:%M:%SZ").strftime('%b %d %Y')
+        commits.append(commit_temp)
+
+    commits.reverse()
 
     commits_time = sorted(commits_time, key = lambda i:i['date'])
     starting_year = datetime.datetime.strptime(commits_time[0]['date'], "%Y-%m-%d").year
@@ -203,7 +217,9 @@ def repo(request, org, repoName):
         
     contributors = []
     for contributor in current_repo['contributors']:
-        contributors.append(contributor['name'])
+        if contributor['name'] != 'web-flow':
+            contributors.append(contributor['name'])
+    
     
     context = {
         'org_name' : org,
@@ -214,6 +230,7 @@ def repo(request, org, repoName):
         'repo_link': repo_link,
         'repo_created_date': repo_created_date,
         'watchers_count': watchers_count,
+        'commits': commits,
         'commit_graph_labels': commit_graph_labels,
         'commit_graph_values': commit_graph_values,
         'issues_list': issues_list[:50],
