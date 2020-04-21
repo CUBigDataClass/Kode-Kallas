@@ -42,7 +42,7 @@
 <body id='body' style="font-family:R; background-color: #1E1E2D;">
 
     <!-- Loader  -->
-    <div id='loader3'></div>
+    <div id='loader'></div>
 
     <!-- Navbar goes here -->
     <nav>
@@ -88,7 +88,33 @@
         <div id='' class="col s12 m3 aniL " style="margin: 0px; padding: 0px; ">
             <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
                 <div class='col m12 theme-text' style="margin-top:5px">
-                    <span style="font-size: 150%;"> Top Commits </span>
+                    <span style="font-size: 150%;"> Commits Information </span>
+                    {% if commits %}
+                        <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class='center blue-text'>Commit #</th>
+                                        <th class='center green-text'><i class="fa fa-code"></i> + </th>
+                                        <th class='center red-text'><i class="fa fa-code"></i> - </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for commit in commits %}
+                                        <tr>
+                                            <td class="center"> <a href="#commit_modal{{ commit.number }}" class="modal-trigger">{% autoescape off %} {{ commit.number }} {% endautoescape %} <i class="fas fa-external-link-alt" style="font-size: 90%"></i> </a> </td>
+                                            <td class="center green-text"> {% autoescape off %} {{ commit.additions }} {% endautoescape %} </td>
+                                            <td class="center red-text"> {% autoescape off %} {{ commit.deletions }} {% endautoescape %} </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                            <br><h3 class="orange-text">No Commits so far.. <i class="fa fa-frown"></i></h3>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -115,17 +141,18 @@
                                     <tr>
                                         <th class='center bold'>#</th>
                                         <th class='center'>Title</th>
-                                        <th class='center' style='width: 25%'>Created On</th>
-                                        <th class='center' style='width: 20%'>State</th>
+                                        <th class='center' style='width: 20%'>Created On</th>
+                                        <th class='center' style='width: 15%'>State</th>
+                                        <th class='center' style=''>Recommended Solver</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {% for issue in issues_list %}
                                         <tr>
                                             <td> {% autoescape off %} {{ issue.number }} {% endautoescape %} </td>
-                                            <td> <a href="#modal{{ issue.number }}" class="modal-trigger"> {% autoescape off %} {{ issue.title }} {% endautoescape %} </a> </td>
-                                            <td> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
-                                            <td> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
+                                            <td> <a href="#issue_modal{{ issue.number }}" class="modal-trigger"> {% autoescape off %} {{ issue.title }} {% endautoescape %} </a> </td>
+                                            <td class='center'> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
+                                            <td class='center'> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
@@ -148,7 +175,7 @@
                     {% if contributors %}
                         {% for user in contributors %}
                         <a class='loaderIn' href="../../../user/{{ user }}"> 
-                                <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
+                                <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6> <br>
                         </a>
                         {% endfor %}
                     {% endif %}
@@ -157,30 +184,56 @@
         </div>
     </div>
     
-    {% for issue in issues_list %}
-        <div id="modal{{issue.number}}" class="modal">
-            <div class="modal-content">
-                <h4 class="center">
-                    {% autoescape off %} #{{ issue.number }} - {{ issue.title }} {% endautoescape %}
-                     - 
-                    {% autoescape off %} {{ issue.state }} {% endautoescape %}
-                </h4>
-                <p class="center"> 
-                    Created on: {% autoescape off %} {{ issue.created_on }} {% endautoescape %}
-                    <br>
-                    <span style="font-size: 150%">Description</span>
-                    <br>
-                    {% autoescape off %} {{ issue.body }} {% endautoescape %}
-                    <br><br>
-                    <span style="font-size: 130%"><a href='https://www.github.com/{{ org_name }}/{{ repo_name }}/issues/{{ issue.number }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
-                </p>
+    {% if issues_list %}
+        {% for issue in issues_list %}
+            <div id="issue_modal{{issue.number}}" class="modal">
+                <div class="modal-content">
+                    <h4 class="center">
+                        {% autoescape off %} #{{ issue.number }} - {{ issue.title }} {% endautoescape %}
+                        - 
+                        {% autoescape off %} {{ issue.state }} {% endautoescape %}
+                    </h4>
+                    <p class="center"> 
+                        Created on: {% autoescape off %} {{ issue.created_on }} {% endautoescape %}
+                        <br>
+                        <span style="font-size: 150%">Description</span>
+                        <br>
+                        {% autoescape off %} {{ issue.body }} {% endautoescape %}
+                        <br><br>
+                        <span style="font-size: 130%"><a href='https://www.github.com/{{ org_name }}/{{ repo_name }}/issues/{{ issue.number }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Close</a>
+                </div>
             </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Close</a>
+        {% endfor %}
+    {% endif %}
+    
+    {% if commits %}
+        {% for commit in commits %}
+            <div id="commit_modal{{commit.number}}" class="modal">
+                <div class="modal-content">
+                    <h4 class="center">
+                        {% autoescape off %} Commit #{{ commit.number }} {% endautoescape %}
+                    </h4>
+                    <p class="center"> 
+                        Commited on: {% autoescape off %} {{ commit.commited_on }} {% endautoescape %}
+                        <br>
+                        <span style="font-size: 150%">Description</span>
+                        <br>
+                        {% autoescape off %} {{ commit.body }} {% endautoescape %}
+                        <br><br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Close</a>
+                </div>
             </div>
-        </div>
-    {% endfor %}
-
+        {% endfor %}
+    {% endif %}
+    
+    
     <script src={% static 'js/jquery-3.1.1.js' %}></script>
     <script src={% static 'js/materialize.min.js' %}></script>
     <script src={% static 'js/chart.min.js' %}></script>
@@ -198,10 +251,14 @@
         });
     
         $(window).on('load', function() {
-            $('#loader3').fadeOut();
+            $('#loader').fadeOut();
             $('.aniL').addClass('animated slideInLeft')
             $('.aniR').addClass('animated slideInRight')
             $('#user_dets').css('height', $("#user_pic").height())
+        });
+        
+        $('.loaderIn').click(function () {
+            $('#loader').fadeIn();
         });
     </script>
     <script>
