@@ -22,7 +22,7 @@ def org_parser(orgname):
     org_data = helper.get_org_information(OWNER,github_api)
     print("Got Org Info!!!")
     print("sending Org Info to elastic search!!!")
-    #print(org_data)
+    print(org_data)
     helper.send_to_elasticInstance(org_data,'org1',org_data['id'])
     print("Getting Repos for "+orgname)
     repo_list = helper.get_repositories(OWNER,github_api)
@@ -35,7 +35,9 @@ def org_parser(orgname):
     member_list = helper.get_org_users(OWNER,github_api)
     print("sending user info to elasticsearch")
     for member in member_list:
-        helper.send_to_elasticInstance(member,'users',member['id'])
+        user = helper.get_single_user(member['url'],orgname,github_api)
+        user['org_name']=orgname
+        helper.send_to_elasticInstance(user,'users',user['id'])
     print("Getting Commits from each repository")
     for repo in repo_list:
         commits = helper.commits_of_repo_github(repo['name'],orgname,github_api)

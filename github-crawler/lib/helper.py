@@ -14,7 +14,7 @@ from elasticsearch import Elasticsearch
 GITEA_APP_URL = 'YOUR_GITEA_API'
 GITEA_TOKEN = 'a3020c009c6d46783158b5ffb0d1a7c55735bcc4'
 GITHUB_USERNAME = 'karthiks1995'
-GITHUB_TOKEN = 'a3020c009c6d46783158b5ffb0d1a7c55735bcc4'
+GITHUB_TOKEN = '548e0dfe81ed597415acb3047486402b15e181cd'
 SQL_ALCHEMY_STRING = ''
 
 
@@ -24,7 +24,7 @@ class Helper():
         self.orgname = ""
         #set config working
         self.res = requests.get('http://localhost:9200')
-        self.es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
+        self.es = Elasticsearch([{'host': '104.198.255.128', 'port': '9200'}])
         #below setup for github
         self.github_api = "https://api.github.com"
         self.gh_session = requests.Session()
@@ -48,7 +48,7 @@ class Helper():
         next = True
         i=1
         while next == True:
-            url = api + '/orgs/{}/repos?page={}&per_page=20'.format(self.orgname,i)
+            url = api + '/orgs/{}/repos?page={}&per_page=300'.format(self.orgname,i)
             original_data = self.gh_session.get(url=url)
             repos = json.loads(original_data.content)
             for repo in repos:
@@ -65,7 +65,7 @@ class Helper():
         next = True
         i=1
         while next == True:
-            url = api + '/orgs/{}/members?page={}&per_page=100'.format(self.orgname,i)
+            url = api + '/orgs/{}/members?page={}&per_page=1000'.format(self.orgname,i)
             original_data = self.gh_session.get(url=url)
             members = json.loads(original_data.content)
             for member in members:
@@ -75,8 +75,15 @@ class Helper():
                     print(i)
                     next = False
             i = i + 1
+        with open("users_microsoft.json", "w") as outfile: 
+            outfile.write(json.dumps(members_list,indent=4)) 
         
         return members_list
+
+    def get_single_user(self,url,owner,api):
+        original_data = self.gh_session.get(url=url)
+        user = json.loads(original_data.content)
+        return user
 
     #save commits of repos as json
     def commits_of_repo_github(self,repo, owner, api):
@@ -116,9 +123,14 @@ print(h.get_org_information("vishwakulkarni",github_api))
 users = h.get_org_users('CUBigDataClass',github_api)
 ls = {}
 for user in users:
-    print(user)
+    #print(user)
     url = user['url']
-    ls[user['login']]=user['name']
+    usr = h.get_single_user(url,'vishwakulkarni',github_api)
+    print(usr['name'],usr['location'])
+    usr['orgname'] = 'CUBigDataClass'
+    print(usr)
+    break
+
 print(ls)
 
 csvwriter = csv.writer(open('data/balancedData4.csv', 'w'))
