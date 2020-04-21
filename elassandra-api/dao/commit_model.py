@@ -48,6 +48,18 @@ class files_model(UserType):
     raw_url = Text(required=False)
     contents_url = Text(required=False)
 
+class small_author(UserType):
+    name = Text(required=False)
+    email = Text(required=False)
+    date = Text(required=False)
+
+class small_commit(UserType):
+    message = Text(required=False)
+    committer = UserDefinedType(small_author)
+    author = UserDefinedType(small_author)
+    url = Text(required=False)
+    comment_count = Integer(required=False)
+
 
 class Commit(Model):
     sha = Text(primary_key=True, required=False)
@@ -60,6 +72,9 @@ class Commit(Model):
     parents = List(value_type=UserDefinedType(parent_model))
     #files = List(value_type=UserDefinedType(files_model))
     stats = UserDefinedType(stats_model)
+    commit = UserDefinedType(small_commit)
+    org_name = Text(required=False)
+    repo_name = Text(required=False)
 
 
 

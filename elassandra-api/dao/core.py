@@ -37,7 +37,13 @@ def insert(request):
         ans = json.dumps(obj)
         query = SimpleStatement("INSERT INTO " + content[TABLE] + " JSON \'" + ans + "\';")
         #batch.add(query)
-        session.execute(query)
+        try:
+            session.execute(query)
+        except Exception as e:
+            print("failed to insert")
+            print(e)
+            pass
+        print("insert into"+content[TABLE]+" 1")
     end_time = time.time()
     print(end_time-start_time)
     session.shutdown()
