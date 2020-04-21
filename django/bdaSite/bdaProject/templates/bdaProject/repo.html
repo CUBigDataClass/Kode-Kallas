@@ -26,6 +26,16 @@
             max-height:250px;
             height: 100vh;
         }
+        
+        div.scroll { 
+            margin:4px, 4px; 
+            padding:4px; 
+            width: 95%;
+            overflow-x: hidden; 
+            overflow-y: auto; 
+            text-align:justify; 
+            color: white
+        }
     </style>
 </head>
 
@@ -82,10 +92,40 @@
             </div>
         </div>
         <div id='' class="col s12 m3 aniL " style="margin: 0px; padding: 0px; ">
-            
+            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
+                <div class='col m12 theme-text' style="margin-top:5px">
+                    <span style="font-size: 150%;"> Top Commits </span>
+                </div>
+            </div>
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            
+            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
+                <div class='col m12 theme-text' style="margin-top:5px">
+                    <span style="font-size: 150%;"> Latest Issues </span>
+                    <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class='center bold'>#</th>
+                                    <th class='center'>Title</th>
+                                    <th class='center' style='width: 25%'>Created On</th>
+                                    <th class='center' style='width: 20%'>State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for issue in issues_list %}
+                                    <tr>
+                                        <td> {% autoescape off %} {{ issue.number }} {% endautoescape %} </td>
+                                        <td> {% autoescape off %} {{ issue.title }} {% endautoescape %} </td>
+                                        <td> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
+                                        <td> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
             

@@ -169,6 +169,21 @@ def repo(request, org, repoName):
     for k,v in quarters.items():
         commit_graph_labels.append(k)
         commit_graph_values.append(v)
+        
+
+    issues_list = []
+    for issue in current_repo['issues']:
+        issue_temp = {}
+        issue_temp['number'] = issue['number']
+        issue_temp['title'] = issue['title']
+        issue_temp['created_on'] = datetime.datetime.strptime(issue['created_at'],"%Y-%m-%dT%H:%M:%SZ").strftime('%b %d %Y')
+        if issue['state'] == 'open':
+            issue_temp['state'] = "<i class='fa fa-exclamation-circle red-text'> Open</i>"
+        elif issue['state'] == 'closed':
+            issue_temp['state'] = "<i class='fa fa-check-circle green-text'> Closed</i>"
+        issue_temp['body'] = issue['body']
+
+        issues_list.append(issue_temp)
     
     context = {
         'org_name' : org,
@@ -181,6 +196,7 @@ def repo(request, org, repoName):
         'watchers_count': watchers_count,
         'commit_graph_labels': commit_graph_labels,
         'commit_graph_values': commit_graph_values,
+        'issues_list': issues_list[:50],
     }
     return render(request, 'bdaProject/repo.html', context)
 
@@ -188,7 +204,6 @@ def user(request, userId):
     pp = pprint.PrettyPrinter(indent=4)        
     req_sesh = requests.Session()
     req_sesh.auth = ('', '')
-    
     
     req = req_sesh.get("https://api.github.com/users/"+str(userId))
     res = json.loads(req.text)
