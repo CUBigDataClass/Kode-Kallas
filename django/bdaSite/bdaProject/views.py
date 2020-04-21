@@ -185,6 +185,25 @@ def repo(request, org, repoName):
 
         issues_list.append(issue_temp)
     
+    contributor_commits = {}
+
+    for contributor in current_repo['contributors']:
+        contributor_commits[contributor['name']] = 0
+
+    for commit in current_repo['commits']:
+        try:
+            contributor_commits[commit['commiter-name']] += 1
+        except:
+            pass
+            
+    cpc_graph_title = "Commits per Contributor"
+    cpc_graph_labels = []
+    cpc_graph_values = []
+    
+    for k,v in contributor_commits.items():
+        cpc_graph_labels.append(k)
+        cpc_graph_values.append(v)
+    
     context = {
         'org_name' : org,
         'repo_name' : repoName,
@@ -197,6 +216,9 @@ def repo(request, org, repoName):
         'commit_graph_labels': commit_graph_labels,
         'commit_graph_values': commit_graph_values,
         'issues_list': issues_list[:50],
+        'cpc_graph_title': cpc_graph_title,
+        'cpc_graph_labels': cpc_graph_labels,
+        'cpc_graph_values': cpc_graph_values,
     }
     return render(request, 'bdaProject/repo.html', context)
 
