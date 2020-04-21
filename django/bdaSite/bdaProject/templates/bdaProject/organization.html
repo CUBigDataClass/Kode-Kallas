@@ -113,22 +113,6 @@
                 </div>
             </div>
         </div>
-        {% comment %} <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
-            <div style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <div class="col s12 m12 l12 theme-text center">
-                    <h4>Top Users</h4>
-                </div>
-                <div class='scroll' style="text-align: center">
-                    {% if top_users %}
-                        {% for user in top_users %}
-                           <a class='loaderIn' href="../../user/{{ user }}"> 
-                                <h6 style='margin-bottom: 4px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
-                           </a>
-                        {% endfor %}
-                    {% endif %}
-                </div>
-            </div>
-        </div> {% endcomment %}
         
         <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
         <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>

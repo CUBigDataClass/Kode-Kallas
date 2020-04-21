@@ -97,13 +97,13 @@ def org(request, org):
     return render(request, 'bdaProject/organization.html', context)
 
 def repo(request, org, repoName):
-    url = staticfiles_storage.path('sampleJson.json')
+    url = staticfiles_storage.path('sampleLatest.json')
     org_data = None
     with open(url) as f:
         org_data = json.load(f)
     
     for repo in org_data:
-        if repo['name'] == 'pong':
+        if repo['name'] == repoName:
             current_repo = repo
             break
             
@@ -123,7 +123,7 @@ def repo(request, org, repoName):
 
     for commit in current_repo['commits']:
         c = {}
-        c['sha'] = commit['sha']
+        # c['sha'] = commit['sha']
         c['date'] = datetime.datetime.strptime(commit['date'],"%Y-%m-%dT%H:%M:%SZ").strftime('%Y-%m-%d')
 
         if len(c) != 0:
@@ -188,13 +188,10 @@ def repo(request, org, repoName):
     contributor_commits = {}
 
     for contributor in current_repo['contributors']:
-        contributor_commits[contributor['name']] = 0
-
-    for commit in current_repo['commits']:
         try:
-            contributor_commits[commit['commiter-name']] += 1
+            contributor_commits[contributor['name']] = contributor['contributions']
         except:
-            pass
+            contributor_commits[contributor['name']] = 0
             
     cpc_graph_title = "Commits per Contributor"
     cpc_graph_labels = []
@@ -203,6 +200,10 @@ def repo(request, org, repoName):
     for k,v in contributor_commits.items():
         cpc_graph_labels.append(k)
         cpc_graph_values.append(v)
+        
+    contributors = []
+    for contributor in current_repo['contributors']:
+        contributors.append(contributor['name'])
     
     context = {
         'org_name' : org,
@@ -217,8 +218,10 @@ def repo(request, org, repoName):
         'commit_graph_values': commit_graph_values,
         'issues_list': issues_list[:50],
         'cpc_graph_title': cpc_graph_title,
-        'cpc_graph_labels': cpc_graph_labels,
-        'cpc_graph_values': cpc_graph_values,
+        'cpc_graph_labels': cpc_graph_labels[:10],
+        'cpc_graph_values': cpc_graph_values[:10],
+        'contributors': contributors,
+        
     }
     return render(request, 'bdaProject/repo.html', context)
 

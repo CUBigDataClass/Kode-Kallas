@@ -1,0 +1,1394 @@
+[
+  {
+    "commits": [
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-06-25T17:47:22Z",
+        "message": "lua demo",
+        "stats": {
+          "additions": 381,
+          "deletions": 35,
+          "total": 416
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-24T19:45:56Z",
+        "message": "added pong-12",
+        "stats": {
+          "additions": 803,
+          "deletions": 2,
+          "total": 805
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2018-01-24T04:46:04Z",
+        "message": "Merge pull request #1 from games50/malan\n\nminor consistency tweaks",
+        "stats": {
+          "additions": 39,
+          "deletions": 39,
+          "total": 78
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-24T04:44:48Z",
+        "message": "added comment",
+        "stats": {
+          "additions": 4,
+          "deletions": 0,
+          "total": 4
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:41:14Z",
+        "message": "pong-final",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:37:55Z",
+        "message": "pong-11",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:36:32Z",
+        "message": "pong-10",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:36:06Z",
+        "message": "pong-9",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:34:26Z",
+        "message": "pong-8",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:32:49Z",
+        "message": "pong-7",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:29:24Z",
+        "message": "pong-5 table, resizing",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:18:06Z",
+        "message": "pong-5 table, resizing, typo",
+        "stats": {
+          "additions": 4,
+          "deletions": 4,
+          "total": 8
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:15:37Z",
+        "message": "pong-4 table, resizing",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:10:09Z",
+        "message": "pong-3 table, resizing",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:08:41Z",
+        "message": "reorders table for consistency in pong-2",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:08:05Z",
+        "message": "avoids resizing issue, orders table to be consistent with pong-0",
+        "stats": {
+          "additions": 3,
+          "deletions": 3,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 788678,
+        "commiter_name": "dmalan",
+        "date": "2018-01-24T04:06:48Z",
+        "message": "avoids resizing issue altogether for now",
+        "stats": {
+          "additions": 2,
+          "deletions": 2,
+          "total": 4
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-24T03:52:35Z",
+        "message": "removed empty update functions and made audio static",
+        "stats": {
+          "additions": 10,
+          "deletions": 34,
+          "total": 44
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T12:49:26Z",
+        "message": "pong-11",
+        "stats": {
+          "additions": 838,
+          "deletions": 71,
+          "total": 909
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T12:27:23Z",
+        "message": "victory update",
+        "stats": {
+          "additions": 71,
+          "deletions": 64,
+          "total": 135
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T12:17:12Z",
+        "message": "pong-9",
+        "stats": {
+          "additions": 2259,
+          "deletions": 32,
+          "total": 2291
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T11:29:17Z",
+        "message": "pong-7",
+        "stats": {
+          "additions": 1383,
+          "deletions": 0,
+          "total": 1383
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T11:03:39Z",
+        "message": "pong-6",
+        "stats": {
+          "additions": 3,
+          "deletions": 0,
+          "total": 3
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T10:46:50Z",
+        "message": "pong-5",
+        "stats": {
+          "additions": 632,
+          "deletions": 0,
+          "total": 632
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T09:40:03Z",
+        "message": "pong-4",
+        "stats": {
+          "additions": 423,
+          "deletions": 4,
+          "total": 427
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T08:28:54Z",
+        "message": "pong-3",
+        "stats": {
+          "additions": 378,
+          "deletions": 3,
+          "total": 381
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T06:52:08Z",
+        "message": "pong-2",
+        "stats": {
+          "additions": 23,
+          "deletions": 8,
+          "total": 31
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T06:43:30Z",
+        "message": "pong-1",
+        "stats": {
+          "additions": 634,
+          "deletions": 0,
+          "total": 634
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T06:30:39Z",
+        "message": "pong-0",
+        "stats": {
+          "additions": 52,
+          "deletions": 0,
+          "total": 52
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T06:15:15Z",
+        "message": "removed complicated dy formula for paddle collision in favor of simple random dy change",
+        "stats": {
+          "additions": 2,
+          "deletions": 0,
+          "total": 2
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-23T06:14:17Z",
+        "message": "removed complicated dy formula for paddle collision in favor of simple random dy change",
+        "stats": {
+          "additions": 6,
+          "deletions": 15,
+          "total": 21
+        }
+      },
+      {
+        "commiter_id": 3724177,
+        "commiter_name": "coltonoscopy",
+        "date": "2018-01-22T23:26:24Z",
+        "message": "initial commit",
+        "stats": {
+          "additions": 853,
+          "deletions": 0,
+          "total": 853
+        }
+      }
+    ],
+    "contributors": [
+      {
+        "avatar_url": "https://avatars3.githubusercontent.com/u/3724177?v=4",
+        "contributions": 19,
+        "html_url": "https://github.com/coltonoscopy",
+        "id": 3724177,
+        "name": "coltonoscopy"
+      },
+      {
+        "avatar_url": "https://avatars0.githubusercontent.com/u/788678?v=4",
+        "contributions": 13,
+        "html_url": "https://github.com/dmalan",
+        "id": 788678,
+        "name": "dmalan"
+      }
+    ],
+    "created_at": "2018-01-22T23:25:12Z",
+    "description": "Atari's 1972 classic, implemented in Lua with L\u00d6VE",
+    "forks_count": 289,
+    "forks_url": "https://api.github.com/repos/games50/pong/forks",
+    "full_name": "games50/pong",
+    "html_url": "https://github.com/games50/pong",
+    "id": 118529007,
+    "issues": [
+      {
+        "body": "love v11.0 and further has a change in color component.\r\nCan be checked at - https://love2d.org/wiki/love.graphics.clear",
+        "closed_at": null,
+        "created_at": "2020-04-19T13:37:23Z",
+        "id": 602716931,
+        "labels": [],
+        "number": 34,
+        "state": "open",
+        "title": "Pong 2 white screen issue",
+        "updated_at": "2020-04-19T13:37:23Z"
+      },
+      {
+        "body": "Fix #12 ",
+        "closed_at": null,
+        "created_at": "2020-04-19T10:46:50Z",
+        "id": 602683095,
+        "labels": [],
+        "number": 33,
+        "state": "open",
+        "title": "Fix Pong-1 gePixelScale() issue with love versions >= 11.0",
+        "updated_at": "2020-04-19T10:47:32Z"
+      },
+      {
+        "body": "how to run pong 0 after writing code in visual studio code?\r\n",
+        "closed_at": null,
+        "created_at": "2020-04-16T14:00:48Z",
+        "id": 601080464,
+        "labels": [],
+        "number": 31,
+        "state": "open",
+        "title": "pong 0",
+        "updated_at": "2020-04-20T20:59:28Z"
+      },
+      {
+        "body": "See https://love2d.org/wiki/11.0\r\n\r\nThese two changes allow the repo to be compatible with modern versions\r\n\r\nRenamed love.window.getPixelScale to love.window.getDPIScale\r\n\r\nChanged all color values to be in the range 0-1, rather than 0-255\r\n\r\nIt might be useful to make this another branch, rather than just merge it\r\n\r\n",
+        "closed_at": null,
+        "created_at": "2020-04-03T21:47:40Z",
+        "id": 593658572,
+        "labels": [],
+        "number": 28,
+        "state": "open",
+        "title": "Fix both compatibility issues",
+        "updated_at": "2020-04-03T21:47:40Z"
+      },
+      {
+        "body": "",
+        "closed_at": null,
+        "created_at": "2020-04-03T16:02:46Z",
+        "id": 593484898,
+        "labels": [],
+        "number": 27,
+        "state": "open",
+        "title": "Upgraded to push v0.4 and updated pong examples",
+        "updated_at": "2020-04-03T16:02:46Z"
+      },
+      {
+        "body": "",
+        "closed_at": null,
+        "created_at": "2020-03-15T13:40:14Z",
+        "id": 581679005,
+        "labels": [],
+        "number": 26,
+        "state": "open",
+        "title": "LOVE 11.3",
+        "updated_at": "2020-03-15T13:40:14Z"
+      },
+      {
+        "body": "I have received an error on LOVE 11 for Windows 10.  It says that `love.window.getPixelScale` is nil, so I fixed it.",
+        "closed_at": null,
+        "created_at": "2019-12-11T22:04:27Z",
+        "id": 536639625,
+        "labels": [],
+        "number": 25,
+        "state": "open",
+        "title": "Love 11 Patch",
+        "updated_at": "2019-12-11T22:04:27Z"
+      },
+      {
+        "body": "I have received an error on LOVE 11 for Windows 10.  It says that `love.window.getPixelScale` is nil, so I fixed it.",
+        "closed_at": null,
+        "created_at": "2019-12-11T21:53:58Z",
+        "id": 536635042,
+        "labels": [],
+        "number": 24,
+        "state": "open",
+        "title": "Fix a bug because of a renamed function for LOVE 11",
+        "updated_at": "2020-03-22T18:52:32Z"
+      },
+      {
+        "body": "For anyone else who is new to this course and is experiencing all of the issues that other users are posting about - please read the Assignment0 text.  \r\n\r\nI was getting frustrated from experiencing all of the same issues that were being described here.  I probably did the same thing all of you did - I started the video and downloaded Love2d, installed it with the video on pause, then came here and clicked download.  Then I had issues.\r\n\r\nHowever, after longer than I would care to admit (couple of hours) I read through the Assignment0 and it says to use Love2D build 0.10.2 and provides a link to download older versions of the software.  I did this, and now everything works exactly as the class intends, with no issues.  \r\n\r\nI don't know if it will upgrade to the newer versions of Love2d as the class progresses or not, but if I can save anyone else the hassle, I hope this helps.",
+        "closed_at": null,
+        "created_at": "2019-08-19T13:45:21Z",
+        "id": 482321727,
+        "labels": [],
+        "number": 23,
+        "state": "open",
+        "title": "Read the Syllabus - Use Love ver 0.10.2",
+        "updated_at": "2020-04-15T16:22:38Z"
+      },
+      {
+        "body": "I was greeted with the following upon running Pong 2:\r\n\r\nError\r\n\r\npush.lua:101: attempt to call field 'getPixelScale' (a nil value)\r\n\r\n\r\nTraceback\r\n\r\npush.lua:101: in function 'initValues'\r\npush.lua:48: in function 'setupScreen'\r\nmain.lua:49: in function 'load'\r\n[C]: in function 'xpcall'\r\n[C]: in function 'xpcall'\r\n\r\nI ran the other pongs and only pong1 and pong0 are unaffected. It seems to be a problem with getPixelScale, perhaps the system has changed so that this part of the code is less viable?",
+        "closed_at": null,
+        "created_at": "2019-06-30T18:07:32Z",
+        "id": 462431019,
+        "labels": [],
+        "number": 22,
+        "state": "open",
+        "title": "Problem with Love: Pong 2 and beyond",
+        "updated_at": "2020-04-18T07:23:29Z"
+      },
+      {
+        "body": "Replaced push.lua with up-to-date file 4-6-2019",
+        "closed_at": null,
+        "created_at": "2019-04-07T03:42:46Z",
+        "id": 430101413,
+        "labels": [],
+        "number": 21,
+        "state": "open",
+        "title": "replaced push.lua with up-to-date file 4-6-2019",
+        "updated_at": "2019-04-07T03:42:46Z"
+      },
+      {
+        "body": "Modifications for Love2D API in version 11+",
+        "closed_at": null,
+        "created_at": "2019-03-18T00:15:18Z",
+        "id": 421992183,
+        "labels": [],
+        "number": 20,
+        "state": "open",
+        "title": "Changes needed for Love2D 11+",
+        "updated_at": "2019-03-26T19:52:10Z"
+      },
+      {
+        "body": "Can you clarify what licenses source code and `.wav` files are under?",
+        "closed_at": null,
+        "created_at": "2019-02-28T20:48:11Z",
+        "id": 415816308,
+        "labels": [],
+        "number": 19,
+        "state": "open",
+        "title": "What are licenses for source code and .wav files?",
+        "updated_at": "2019-02-28T20:48:11Z"
+      },
+      {
+        "body": "",
+        "closed_at": null,
+        "created_at": "2018-11-15T23:07:52Z",
+        "id": 381378086,
+        "labels": [],
+        "number": 18,
+        "state": "open",
+        "title": "tiny spellcheck",
+        "updated_at": "2018-11-15T23:07:52Z"
+      },
+      {
+        "body": "Fixes #3\r\nFixes #8\r\nFixes #12\r\nFixes #14\r\n\r\nThis PR makes the game compatible with Love version 11, which is what you get if you download the framework now.\r\n\r\nOne thing that does not work anymore is setting RGBA color components with integers between 0 and 255. Relevant methods now require floats between 0 and 1, and that's addressed in 2a4ab88 for `graphics.clear`. Note that the call to `graphics.setColor` should also be modified in the same way, but since Love seems to clip overflowing values to 1, the specific calls used here work as expected (if anyone tries a different color, though, they will likely hit the bug).\r\n\r\nThe other commit makes sure all versions of the game use a love11-aware version of Push (older versions make the game crash). The one in `pong-final` is OK, so I just had all main files import that one.",
+        "closed_at": null,
+        "created_at": "2018-11-03T14:17:22Z",
+        "id": 377058335,
+        "labels": [],
+        "number": 17,
+        "state": "open",
+        "title": "Fixes for Love 11",
+        "updated_at": "2020-04-19T10:21:28Z"
+      },
+      {
+        "body": "Fix issue #14 and make at least pong-3 love11.1 compatible. This line has to be changed in all main.lua files.",
+        "closed_at": null,
+        "created_at": "2018-09-01T14:52:22Z",
+        "id": 356208228,
+        "labels": [],
+        "number": 15,
+        "state": "open",
+        "title": "Fix pong-3 to render correctly",
+        "updated_at": "2020-04-19T04:22:45Z"
+      },
+      {
+        "body": "running 'love .' in pong-2 results in a completely white screen. With `love.graphics.clear(40, 45, 52, 255)\r\n` commented out everything works expect the background color is black rather then grey. I'm using love 11.1 on a 32bit Windows 10 machine.",
+        "closed_at": null,
+        "created_at": "2018-09-01T05:20:16Z",
+        "id": 356173577,
+        "labels": [],
+        "number": 14,
+        "state": "open",
+        "title": "pong-2 renders white screen",
+        "updated_at": "2018-09-01T14:34:06Z"
+      },
+      {
+        "body": "This resolves issue #12 . Since the download link in the lecture points to the most recent version of love the source file should be compatible with it. In love11.1 getPixelScale is now called getDPIScale.",
+        "closed_at": null,
+        "created_at": "2018-09-01T04:55:35Z",
+        "id": 356172291,
+        "labels": [],
+        "number": 13,
+        "state": "open",
+        "title": "Change all occurences of getPixelScale to getDPIScale",
+        "updated_at": "2020-04-19T10:22:29Z"
+      },
+      {
+        "body": "pong 1 calls love.window.getPixelScale which is now called love.window.getDPIScale.",
+        "closed_at": null,
+        "created_at": "2018-09-01T04:29:25Z",
+        "id": 356171098,
+        "labels": [],
+        "number": 12,
+        "state": "open",
+        "title": "pong-1 doesn't work with love 11.1",
+        "updated_at": "2018-09-01T04:29:25Z"
+      },
+      {
+        "body": "If you'd like, I can upload the Python script I made for it. Should still work with lower Love versions. ",
+        "closed_at": null,
+        "created_at": "2018-08-24T15:44:59Z",
+        "id": 353835339,
+        "labels": [],
+        "number": 11,
+        "state": "open",
+        "title": "Updated push.lua for Love2D 11.1. ",
+        "updated_at": "2018-08-24T15:46:08Z"
+      },
+      {
+        "body": "love.window.getPixelScale() changed to love.window.getDPIScale()",
+        "closed_at": null,
+        "created_at": "2018-08-07T18:15:33Z",
+        "id": 348432244,
+        "labels": [],
+        "number": 10,
+        "state": "open",
+        "title": "Update method for LOVE 11.1",
+        "updated_at": "2018-08-07T18:15:33Z"
+      },
+      {
+        "body": "Hey in Pong-2, calling love.graphics.clear in love.draw makes the whole screen white. Commenting it out fixes it. \r\n\r\nIt's using the color 40, 45, 52, 255.\r\n\r\nFurther testing: moving it to a new push start/end doesn't work. Changing the color to full 255's doesn't work. \r\n\r\nUpdate: Changing alpha to 0 at least makes the screen contents show. Doesn't apply the color though (alpha 0).",
+        "closed_at": null,
+        "created_at": "2018-07-08T07:05:36Z",
+        "id": 339202974,
+        "labels": [],
+        "number": 8,
+        "state": "open",
+        "title": "Love.graphics.clear white screen. ",
+        "updated_at": "2020-04-20T18:03:58Z"
+      },
+      {
+        "body": "Hi!\r\nIt would be possible to make a issues for all things that do not run as expected with the current version of L\u00f6ve, but an easier path, I think would be to just put a comment in the README.md about the version that was used for this code so that people trying to run it can either use the older version or look for what changed between that and the current one.\r\nThanks for this great course!",
+        "closed_at": null,
+        "created_at": "2018-07-04T06:08:41Z",
+        "id": 338141286,
+        "labels": [],
+        "number": 7,
+        "state": "open",
+        "title": "L\u00f6ve2D version relevant to run or adjust the code",
+        "updated_at": "2020-04-19T16:23:38Z"
+      },
+      {
+        "body": "Upgrades to push.lua v0.3.\r\nChecks if running LOVE v11 and changes color values accordingly. LOVE v11 uses a 0-1 range instead of the previous 0-255. \r\n\r\ncloses #3 ",
+        "closed_at": null,
+        "created_at": "2018-05-11T00:59:50Z",
+        "id": 322133882,
+        "labels": [],
+        "number": 4,
+        "state": "open",
+        "title": "Update push.lua to v0.3 and handle LOVE 11 color range change",
+        "updated_at": "2019-06-08T17:15:58Z"
+      },
+      {
+        "body": "LOVE 0.11.0 uses `love.window.getDPIScale` instead of `getPixelScale`, which causes an error in the included version of push.lua. It looks like the newest version of push.lua should handle both cases. I've tested it with LOVE 0.11.1, and it works for me. \r\n\r\nLOVE doc: https://love2d.org/wiki/love.window.getDPIScale\r\npush.lua v0.3: https://raw.githubusercontent.com/Ulydev/push/master/push.lua",
+        "closed_at": null,
+        "created_at": "2018-05-11T00:52:09Z",
+        "id": 322132781,
+        "labels": [],
+        "number": 3,
+        "state": "open",
+        "title": "Upgrade to push.lua v0.3",
+        "updated_at": "2018-07-08T06:32:12Z"
+      }
+    ],
+    "languages": {
+      "Lua": 263013
+    },
+    "name": "pong",
+    "open_issues_count": 23,
+    "owner": {
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35604499?v=4",
+      "html_url": "https://github.com/games50",
+      "id": 35604499,
+      "name": "games50",
+      "organizations_url": "https://api.github.com/users/games50/orgs"
+    },
+    "tags_url": "https://api.github.com/repos/games50/pong/tags",
+    "updated_at": "2020-04-19T01:19:49Z",
+    "watchers_count": 252
+  },
+  {
+    "commits": [
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-19T00:29:09Z",
+        "message": "Adding Try Catch for commits issue",
+        "stats": {
+          "additions": 2883,
+          "deletions": 12,
+          "total": 2895
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-19T00:14:59Z",
+        "message": "Create sampleJson.json",
+        "stats": {
+          "additions": 1831,
+          "deletions": 0,
+          "total": 1831
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-18T19:27:05Z",
+        "message": "Delete setup.py",
+        "stats": {
+          "additions": 0,
+          "deletions": 66,
+          "total": 66
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-18T19:26:53Z",
+        "message": "Delete setup.py",
+        "stats": {
+          "additions": 0,
+          "deletions": 39,
+          "total": 39
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-18T19:22:29Z",
+        "message": "Updated missing thread count information",
+        "stats": {
+          "additions": 6,
+          "deletions": 2993,
+          "total": 2999
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-18T19:13:43Z",
+        "message": "Merge pull request #2 from CUBigDataClass/shreyas\n\nAnalytics on collaborators, issues, languages and contributions with multithreading.",
+        "stats": {
+          "additions": 14169,
+          "deletions": 18,
+          "total": 14187
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-18T19:06:25Z",
+        "message": "Merge remote-tracking branch 'origin/master' into shreyas",
+        "stats": {
+          "additions": 7960,
+          "deletions": 6,
+          "total": 7966
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-18T19:04:50Z",
+        "message": "Analytics on collaborators, issues, languages and commits. Used multithreading for faster processing.",
+        "stats": {
+          "additions": 14078,
+          "deletions": 33,
+          "total": 14111
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-18T18:51:49Z",
+        "message": "Removing .pyc files",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-18T18:49:19Z",
+        "message": "Updating commits with addition and deletion",
+        "stats": {
+          "additions": 7960,
+          "deletions": 6,
+          "total": 7966
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-18T09:41:22Z",
+        "message": "Merge remote-tracking branch 'origin/master' into shreyas",
+        "stats": {
+          "additions": 36,
+          "deletions": 7,
+          "total": 43
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-18T09:37:58Z",
+        "message": "Creating Repo data with contributors list",
+        "stats": {
+          "additions": 124,
+          "deletions": 18,
+          "total": 142
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-17T23:43:52Z",
+        "message": "sending each commit to commit elastic search with server",
+        "stats": {
+          "additions": 6,
+          "deletions": 0,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-17T23:43:52Z",
+        "message": "sending each commit to commit elastic search",
+        "stats": {
+          "additions": 30,
+          "deletions": 7,
+          "total": 37
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-17T06:56:43Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-17T06:56:27Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-17T05:52:25Z",
+        "message": "Merge remote-tracking branch 'origin/master'",
+        "stats": {
+          "additions": 259,
+          "deletions": 30,
+          "total": 289
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-17T05:51:34Z",
+        "message": "Insert data to Cassandra using CassandraHelper",
+        "stats": {
+          "additions": 24,
+          "deletions": 7,
+          "total": 31
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-17T03:43:01Z",
+        "message": "Merge pull request #1 from CUBigDataClass/karthik\n\nAdded get_all with index specs: Updated postman apis can be found in the readme link",
+        "stats": {
+          "additions": 37,
+          "deletions": 3,
+          "total": 40
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-17T03:40:56Z",
+        "message": "Added get_all with index specs",
+        "stats": {
+          "additions": 37,
+          "deletions": 3,
+          "total": 40
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-16T22:56:23Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-16T22:56:09Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-16T22:56:00Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T22:55:31Z",
+        "message": "UI 4",
+        "stats": {
+          "additions": 39,
+          "deletions": 23,
+          "total": 62
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T22:18:12Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Kode-Kallas",
+        "stats": {
+          "additions": 28,
+          "deletions": 7,
+          "total": 35
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T22:13:29Z",
+        "message": "UI 3",
+        "stats": {
+          "additions": 205,
+          "deletions": 26,
+          "total": 231
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-16T07:50:05Z",
+        "message": "Merge remote-tracking branch 'refs/remotes/origin/master'",
+        "stats": {
+          "additions": 40,
+          "deletions": 378,
+          "total": 418
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-16T07:49:46Z",
+        "message": "Retrieving data from Elastic search",
+        "stats": {
+          "additions": 28,
+          "deletions": 7,
+          "total": 35
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-16T06:15:45Z",
+        "message": "Delete .DS_Store",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T06:14:34Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Kode-Kallas",
+        "stats": {
+          "additions": 63,
+          "deletions": 4,
+          "total": 67
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T06:14:22Z",
+        "message": "UI 2",
+        "stats": {
+          "additions": 40,
+          "deletions": 378,
+          "total": 418
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-16T05:33:23Z",
+        "message": "Github analytics flask app layout",
+        "stats": {
+          "additions": 45,
+          "deletions": 0,
+          "total": 45
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-16T05:20:51Z",
+        "message": "Update README.md",
+        "stats": {
+          "additions": 3,
+          "deletions": 0,
+          "total": 3
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T05:15:15Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Kode-Kallas",
+        "stats": {
+          "additions": 28719,
+          "deletions": 26,
+          "total": 28745
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T05:14:42Z",
+        "message": "Updated primary keys in models, added get_data api",
+        "stats": {
+          "additions": 15,
+          "deletions": 4,
+          "total": 19
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T04:14:34Z",
+        "message": "Frontend 1",
+        "stats": {
+          "additions": 28291,
+          "deletions": 0,
+          "total": 28291
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T04:10:04Z",
+        "message": "Test",
+        "stats": {
+          "additions": 5,
+          "deletions": 1,
+          "total": 6
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T04:05:32Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Koe-Kallas",
+        "stats": {
+          "additions": 550,
+          "deletions": 26,
+          "total": 576
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-16T04:05:03Z",
+        "message": "UI First",
+        "stats": {
+          "additions": 222,
+          "deletions": 0,
+          "total": 222
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-15T16:49:50Z",
+        "message": "Updating key",
+        "stats": {
+          "additions": 3,
+          "deletions": 2,
+          "total": 5
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-15T15:28:09Z",
+        "message": "Adding Users info to ealstic search along with user cammand",
+        "stats": {
+          "additions": 112,
+          "deletions": 8,
+          "total": 120
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-15T13:29:25Z",
+        "message": "Fixing Org issue",
+        "stats": {
+          "additions": 11,
+          "deletions": 17,
+          "total": 28
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-15T12:34:23Z",
+        "message": "Fixing ReadMe errors",
+        "stats": {
+          "additions": 76,
+          "deletions": 9,
+          "total": 85
+        }
+      },
+      {
+        "commiter_id": 11889130,
+        "commiter_name": "shreyas-gopalakrishna",
+        "date": "2020-04-15T05:40:08Z",
+        "message": "Added Architecture Diagram",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-15T05:12:37Z",
+        "message": "Update readme with cassandra setup",
+        "stats": {
+          "additions": 12,
+          "deletions": 2,
+          "total": 14
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-15T05:06:56Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Kode-Kallas",
+        "stats": {
+          "additions": 223,
+          "deletions": 6,
+          "total": 229
+        }
+      },
+      {
+        "commiter_id": null,
+        "commiter_name": null,
+        "date": "2020-04-15T05:05:24Z",
+        "message": "Adding Cassandra db apis",
+        "stats": {
+          "additions": 348,
+          "deletions": 0,
+          "total": 348
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-14T02:14:45Z",
+        "message": "Fixing missed commands",
+        "stats": {
+          "additions": 11,
+          "deletions": 1,
+          "total": 12
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-14T01:55:12Z",
+        "message": "Updated Documentation\n\nUpdated Documentation to include missing commands for elastic search and kibana setup in Docker.",
+        "stats": {
+          "additions": 13,
+          "deletions": 15,
+          "total": 28
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-14T01:44:46Z",
+        "message": "Merge branch 'master' of https://github.com/CUBigDataClass/Kode-Kallas",
+        "stats": {
+          "additions": 19,
+          "deletions": 0,
+          "total": 19
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-14T01:44:42Z",
+        "message": "adding put command",
+        "stats": {
+          "additions": 199,
+          "deletions": 0,
+          "total": 199
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-14T01:39:49Z",
+        "message": "Commands for starting and stopping docker images",
+        "stats": {
+          "additions": 10,
+          "deletions": 0,
+          "total": 10
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-12T05:08:36Z",
+        "message": "Adding Documentation for ElasticSearch instance setup",
+        "stats": {
+          "additions": 9,
+          "deletions": 0,
+          "total": 9
+        }
+      },
+      {
+        "commiter_id": 19864447,
+        "commiter_name": "web-flow",
+        "date": "2020-04-12T04:40:06Z",
+        "message": "Added documentation for local setup",
+        "stats": {
+          "additions": 48,
+          "deletions": 1,
+          "total": 49
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-12T04:12:45Z",
+        "message": "Creating Flask server to automate everythig along with helper file",
+        "stats": {
+          "additions": 103,
+          "deletions": 4,
+          "total": 107
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-11T23:31:47Z",
+        "message": " adding comments to elastic search",
+        "stats": {
+          "additions": 8152,
+          "deletions": 5,
+          "total": 8157
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-11T18:52:44Z",
+        "message": "Adding org information to elastic search",
+        "stats": {
+          "additions": 66,
+          "deletions": 5,
+          "total": 71
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-11T13:53:20Z",
+        "message": "Adding ReadMe to main Folder",
+        "stats": {
+          "additions": 0,
+          "deletions": 0,
+          "total": 0
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-11T13:52:44Z",
+        "message": "Adding ReadMe",
+        "stats": {
+          "additions": 1,
+          "deletions": 0,
+          "total": 1
+        }
+      },
+      {
+        "commiter_id": 5782419,
+        "commiter_name": "vishwakulkarni",
+        "date": "2020-04-11T13:50:45Z",
+        "message": "Gitup data crawler",
+        "stats": {
+          "additions": 195329,
+          "deletions": 0,
+          "total": 195329
+        }
+      }
+    ],
+    "contributors": [
+      {
+        "avatar_url": "https://avatars2.githubusercontent.com/u/11889130?v=4",
+        "contributions": 25,
+        "html_url": "https://github.com/shreyas-gopalakrishna",
+        "id": 11889130,
+        "name": "shreyas-gopalakrishna"
+      },
+      {
+        "avatar_url": "https://avatars2.githubusercontent.com/u/5782419?v=4",
+        "contributions": 22,
+        "html_url": "https://github.com/vishwakulkarni",
+        "id": 5782419,
+        "name": "vishwakulkarni"
+      },
+      {
+        "avatar_url": "https://avatars2.githubusercontent.com/u/7661540?v=4",
+        "contributions": 12,
+        "html_url": "https://github.com/karthiks1995",
+        "id": 7661540,
+        "name": "karthiks1995"
+      },
+      {
+        "avatar_url": "https://avatars1.githubusercontent.com/u/55568643?v=4",
+        "contributions": 4,
+        "html_url": "https://github.com/sish2654",
+        "id": 55568643,
+        "name": "sish2654"
+      }
+    ],
+    "created_at": "2020-02-09T21:02:35Z",
+    "description": "Github Analytics and Dashboard",
+    "forks_count": 0,
+    "forks_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/forks",
+    "full_name": "CUBigDataClass/Kode-Kallas",
+    "html_url": "https://github.com/CUBigDataClass/Kode-Kallas",
+    "id": 239373791,
+    "issues": [],
+    "languages": {
+      "CSS": 559626,
+      "HTML": 40790,
+      "JavaScript": 119441,
+      "Jupyter Notebook": 485025,
+      "Python": 505064
+    },
+    "name": "Kode-Kallas",
+    "open_issues_count": 0,
+    "owner": {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6345918?v=4",
+      "html_url": "https://github.com/CUBigDataClass",
+      "id": 6345918,
+      "name": "CUBigDataClass",
+      "organizations_url": "https://api.github.com/users/CUBigDataClass/orgs"
+    },
+    "tags_url": "https://api.github.com/repos/CUBigDataClass/Kode-Kallas/tags",
+    "updated_at": "2020-04-19T00:29:19Z",
+    "watchers_count": 0
+  }
+]

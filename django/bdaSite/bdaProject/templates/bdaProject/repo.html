@@ -99,42 +99,61 @@
             </div>
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
-                <div class='col m12 theme-text' style="margin-top:5px">
-                    <span style="font-size: 150%;"> Latest Issues </span>
-                    <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th class='center bold'>#</th>
-                                    <th class='center'>Title</th>
-                                    <th class='center' style='width: 25%'>Created On</th>
-                                    <th class='center' style='width: 20%'>State</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for issue in issues_list %}
-                                    <tr>
-                                        <td> {% autoescape off %} {{ issue.number }} {% endautoescape %} </td>
-                                        <td> <a href="#modal{{ issue.number }}" class="modal-trigger"> {% autoescape off %} {{ issue.title }} {% endautoescape %} </a> </td>
-                                        <td> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
-                                        <td> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
             <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
-                <h5 style='padding-top: 10px; margin-bottom: 0px'> {{ cpc_graph_title }} </h5>
+                <h5 style='padding-top: 10px; margin: 0px'> {{ cpc_graph_title }} </h5>
                 <canvas class='cjchart' id="chart2" style="max-width:98%"></canvas>
             </div>
         </div>
-        <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
-            
+        <div id='' class="col s12 m5 aniL " style="margin: 0px; padding: 0px; ">
+            <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
+                <div class='col m12 theme-text' style="margin-top:5px">
+                    <span style="font-size: 150%;"> Latest Issues </span>
+                    {% if issues_list %}
+                        <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class='center bold'>#</th>
+                                        <th class='center'>Title</th>
+                                        <th class='center' style='width: 25%'>Created On</th>
+                                        <th class='center' style='width: 20%'>State</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for issue in issues_list %}
+                                        <tr>
+                                            <td> {% autoescape off %} {{ issue.number }} {% endautoescape %} </td>
+                                            <td> <a href="#modal{{ issue.number }}" class="modal-trigger"> {% autoescape off %} {{ issue.title }} {% endautoescape %} </a> </td>
+                                            <td> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
+                                            <td> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                            <br><h3 class="green-text">No Issues reported so far! <i class="fa fa-laugh"></i></h3>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div id='' class="col s12 m3 aniL " style="margin: 0px; padding: 0px; ">
+            <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
+                <div class="col s12 m12 l12 theme-text center">
+                    <h4 style="margin-bottom:0px">Contributors</h4>
+                </div>
+                <div class='scroll' style="text-align: center; height: 230px; width: 100%;">
+                    {% if contributors %}
+                        {% for user in contributors %}
+                        <a class='loaderIn' href="../../../user/{{ user }}"> 
+                                <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
+                        </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
     
