@@ -7,6 +7,7 @@ from dao.config import CASSANDRA_HOSTS
 from .models import Repo
 from .commit_model import Commit
 from .user_model import Users
+from .org_model import org
 
 
 def get_session(keyspace=None):
@@ -55,6 +56,20 @@ def create_userspace():
     connection.setup(CASSANDRA_HOSTS, "users", protocol_version=3)
     # session = get_session(orgname)
     sync_table(Users)
+    connection.unregister_connection('default')
+    return
+
+
+def create_orgspace():
+    session = get_session()
+    # TODO: Replication strategy should be updated to 3
+    query = SimpleStatement(
+        "CREATE KEYSPACE IF NOT EXISTS %s WITH REPLICATION = {'class': 'NetworkTopologyStrategy', 'DC1': 1};" % ("org",))
+    session.execute(query)
+    session.shutdown()
+    connection.setup(CASSANDRA_HOSTS, "org", protocol_version=3)
+    # session = get_session(orgname)
+    sync_table(org)
     connection.unregister_connection('default')
     return
 
