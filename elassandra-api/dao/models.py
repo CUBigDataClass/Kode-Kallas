@@ -117,7 +117,7 @@ class Repo(Model):
     archived = Boolean(required=False)
     disabled = Boolean(required=False)
     open_issues_count = Integer(required=False)
-    license = UserDefinedType(license_model)
+    license = Text(required=False)
     forks = Integer(required=False)
     open_issues = Integer(required=False)
     watchers = Integer(required=False)
