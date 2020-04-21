@@ -63,8 +63,14 @@ def processCommitData(data):
         commitData = data[i]['_source']
         commit = dict()
         commit['message'] = commitData['commit']['message']
-        commit['date'] = commitData['commit']['committer']['date']
-        commit['commiter_name'] = commitData['committer']['login']
+        try:
+            commit['date'] = commitData['commit']['committer']['date']
+        except:
+            commit['date'] = None
+        try:
+            commit['commiter_name'] = commitData['committer']['login']
+        except:
+            commit['commiter_name'] = None
         commit['stats'] = {
             "additions": commitData['stats']['additions'],
             "deletions": commitData['stats']['deletions'],

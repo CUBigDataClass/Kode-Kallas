@@ -38,9 +38,9 @@ def repoRetrieve(orgname):
     return jsonify(cassandraRepoData.data)
 
 @app.route('/repo/<orgname>/<reponame>')
-def repoRetrieveTry(orgname, reponame):
-    elasticRepoData = elasticSearchHelper.getCommitData(orgname,reponame)
-    return jsonify(utils.processCommitData(elasticRepoData))
+def repoRetrieveSingleOrg(orgname, reponame):
+    elasticRepoData = elasticSearchHelper.getOrgSpecificRepoData(orgname,reponame)
+    # return jsonify(utils.processCommitData(elasticRepoData))
     cassandraRepoData = crd.CassandraRepoData(elasticRepoData)
     print("Done Done!")
     return jsonify(cassandraRepoData.data)
