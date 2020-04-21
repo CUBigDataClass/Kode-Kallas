@@ -137,14 +137,14 @@
                 getAreasFromMap : true,
                 areas :
                 [
-                    {
-                        "id": "IN",
-                        "showAsSelected": true
-                    },
-                    {
-                        "id": "CH",
-                        "showAsSelected": true
-                    }
+                    {% if countries %}
+                        {% for country in countries %}
+                            {
+                                "id": "{{ country }}",
+                                "showAsSelected": true
+                            },   
+                        {% endfor %}
+                    {% endif %}
                 ]
                 },
                 areasSettings : {

@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'bdaProject/index.html', context)
 
 def org(request, org):
-    url = staticfiles_storage.path('sampleJson.json')
+    url = staticfiles_storage.path('sampleLatest.json')
     org_data = None
     with open(url) as f:
         org_data = json.load(f)
@@ -23,6 +23,7 @@ def org(request, org):
 
     languages_temp = set()
     contributor_ids = set()
+    contributor_names = set()
     dict_repo_commits = {}
     dict_user_commits = {}
     list_repo_lang = []
@@ -33,6 +34,8 @@ def org(request, org):
     for repo in org_data:
         for contributor in repo['contributors']:
             contributor_ids.add(contributor['id'])
+            contributor_names.add(contributor['name'])
+            
 
         langs = repo['languages']
         for k in langs.keys():
@@ -42,9 +45,9 @@ def org(request, org):
 
         for commit in repo['commits']:
             try:
-                dict_user_commits[commit['commiter-name']] += 1
+                dict_user_commits[commit['commiter_name']] += 1
             except:
-                dict_user_commits[commit['commiter-name']] = 1
+                dict_user_commits[commit['commiter_name']] = 1
 
         langs = repo['languages']
         for lang, value in langs.items():
@@ -82,9 +85,25 @@ def org(request, org):
         top_repos.append(repo[0])
     
     top_users = []
-    for repo in dict_user_commits:
-        if repo[0] != 'web-flow':
-            top_users.append(repo[0])
+    for contributor in contributor_names:
+        if contributor != 'web-flow' and contributor != None:
+            top_users.append(contributor)
+            
+    req_sesh = requests.Session()
+    req_sesh.auth = ('', '')
+    
+    locations_src = []
+    for user in top_users:
+        req = req_sesh.get("https://api.github.com/users/"+str(user))
+        locations_src.append(json.loads(req.text)['location'])
+    
+    countries = set()
+    for loc in locations_src:
+        res = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(loc)+'&key=')
+        res = json.loads(res.text)    
+        for adr in res['results'][0]['address_components']:
+            if adr['types'][0] == 'country':
+                countries.add(adr['short_name'])
     
     context = {
         'org_name' : org,
@@ -93,7 +112,8 @@ def org(request, org):
         'languages': languages,
         'top_repos': top_repos,
         'top_users': top_users,
-        'repo_lang_graph_data': list_repo_lang
+        'repo_lang_graph_data': list_repo_lang,
+        'countries': countries
     }
     return render(request, 'bdaProject/organization.html', context)
 
