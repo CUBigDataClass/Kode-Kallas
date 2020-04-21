@@ -44,13 +44,35 @@
     <!-- Page Layout here -->
     <div class="row" style="margin: 0px; padding:0px">
         <div class="col s12 m6 offset-m3 center theme-text">
-            <h4 style="margin: 5px; padding:0px">Repo: {{ repo_name }}</h4>
+            <h4 style="margin: 7px; padding:0px">Repo: {{ repo_name }}</h4>
+            <h5 style="margin: 7px; padding:0px">{{ repo_desc }}</h5>
         </div>
     </div>
 
     <div class="row">
         <div id='' class="col s12 m3 aniL" style="margin: 0px; padding: 0px;">
             <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
+                <div class='col m12 theme-text' style="margin-top:5px">
+                    <span style="font-size: 150%;"> Owner: {{ org_name }} </span>
+                </div>
+                <div class='col m6 theme-text' style="">
+                    <span style="font-size: 250%;"> <i class="fa fa-code-branch"></i> {{ forks_count }} </span>
+                </div>
+                <div class='col m6 theme-text' style="">
+                    <span style="font-size: 250%;"> <i class="fa fa-eye"></i> {{ watchers_count }} </span>
+                </div>
+                <hr class="theme-text" style="width: 95%;"></hr>
+                <div class='col m12 theme-text' style="">
+                    <span style="font-size: 150%;"> Languages Used </span> <br>
+                    {% for lang in languages %}
+                        {% autoescape off %} {{ lang }} {% endautoescape %}
+                    {% endfor %}
+                </div>
+                <hr class="theme-text" style="width: 95%;"></hr>
+                
+                <span style="font-size: 130%"><a href='{{ repo_link }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
+                
+                <span style="font-size: 130%">Created on {{ repo_created_date }}</span>
             </div>
         </div>
         <div id='' class="col s12 m6 aniR" style="margin: 0px; padding: 0px; ">
