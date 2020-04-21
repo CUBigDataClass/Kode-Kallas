@@ -27,6 +27,7 @@ def insert():
 setup.create_commitspace()
 setup.create_repospace()
 setup.create_userspace()
+setup.create_orgspace()
 print("done creating keyspaces")
 
 if __name__ == '__main__':
