@@ -13,13 +13,10 @@ def index(request):
     return render(request, 'bdaProject/index.html', context)
 
 def org(request, org):
-    url = staticfiles_storage.path('sampleLatest.json')
-    org_data = None
-    with open(url) as f:
-        org_data = json.load(f)
-    
+    res = requests.get("http://localhost:4000/repo/"+str(org))
+    org_data = json.loads(res.text)
+
     num_org_repos = len(org_data)
-    print("Num Repositories: " + str(num_org_repos))
 
     languages_temp = set()
     contributor_ids = set()
@@ -75,7 +72,7 @@ def org(request, org):
     
     for i, lang in enumerate(languages_temp):
         languages.append('<div class="chip"><i class="fa fa-circle ' \
-                          +colors[i]+'-text"> </i> '+lang+'</div>')
+                          +colors[(i%15)]+'-text"> </i> '+lang+'</div>')
 
     dict_repo_commits = sorted(dict_repo_commits.items(), key=lambda x: x[1], reverse=True)
     dict_user_commits = sorted(dict_user_commits.items(), key=lambda x: x[1], reverse=True)
@@ -94,13 +91,15 @@ def org(request, org):
     
     locations_src = []
     for user in top_users:
-        req = req_sesh.get("https://api.github.com/users/"+str(user))
-        locations_src.append(json.loads(req.text)['location'])
+        res = req_sesh.get("https://api.github.com/users/"+str(user))
+        print (res.text)
+        locations_src.append(json.loads(res.text)['location'])
     
     countries = set()
     for loc in locations_src:
         res = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(loc)+'&key=')
-        res = json.loads(res.text)    
+        res = json.loads(res.text)
+        
         for adr in res['results'][0]['address_components']:
             if adr['types'][0] == 'country':
                 countries.add(adr['short_name'])
@@ -112,21 +111,14 @@ def org(request, org):
         'languages': languages,
         'top_repos': top_repos,
         'top_users': top_users,
-        'repo_lang_graph_data': list_repo_lang,
+        'repo_lang_graph_data': list_repo_lang[:25],
         'countries': countries
     }
     return render(request, 'bdaProject/organization.html', context)
 
 def repo(request, org, repoName):
-    url = staticfiles_storage.path('sampleLatest.json')
-    org_data = None
-    with open(url) as f:
-        org_data = json.load(f)
-    
-    for repo in org_data:
-        if repo['name'] == repoName:
-            current_repo = repo
-            break
+    res = requests.get("http://localhost:4000/repo/"+str(org)+"/"+str(repoName))
+    current_repo = json.loads(res.text)[0]
             
     repo_desc = current_repo['description']
     languages = []
@@ -183,7 +175,7 @@ def repo(request, org, repoName):
     
     for i, lang in enumerate(languages_temp):
         languages.append('<div class="chip"><i class="fa fa-circle ' \
-                          +colors[i]+'-text"> </i> '+lang+'</div>')
+                          +colors[(i%15)]+'-text"> </i> '+lang+'</div>')
 
     for date in commits_time:
         year = datetime.datetime.strptime(date['date'], "%Y-%m-%d").year
@@ -429,7 +421,7 @@ def user(request, userId):
     
     for i, lang in enumerate(languages_temp):
         languages.append('<div class="chip"><i class="fa fa-circle ' \
-                          +colors[i]+'-text"> </i> '+lang+'</div>')
+                          +colors[(i%15)]+'-text"> </i> '+lang+'</div>')
         
     context = {
         'user' : user,
