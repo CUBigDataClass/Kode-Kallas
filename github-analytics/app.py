@@ -64,11 +64,11 @@ def userRetrieveSingleOrg(orgname, reponame):
 
 @app.route('/username/<username>')
 def userRetrieveByUsername(username):
-    return elasticSearchHelper.getUserData(username)
-
-@app.route('/userId/<userId>')
-def userRetrieveByUsername(username):
-    return elasticSearchHelper.getUserData(username)
+    elasticUserData = elasticSearchHelper.getUserDataByUsername(username)
+    # return elasticUserData
+    cassandraUserData = cud.CassandraUserData(elasticUserData)
+    print("Done Done!")
+    return jsonify(cassandraUserData.data)
 
 if __name__ == '__main__':
     app.run(host=config.FLASK_HOST, port=config.FLASK_PORT, debug=True)
