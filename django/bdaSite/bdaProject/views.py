@@ -103,9 +103,21 @@ def repo(request, org, repoName):
         org_data = json.load(f)
     
     for repo in org_data:
-        if repo['name'] == 'zelda':
+        if repo['name'] == 'pong':
             current_repo = repo
             break
+            
+    repo_desc = current_repo['description']
+    languages = []
+    for lang in current_repo['languages'].keys():
+        languages.append(lang)
+
+    forks_count = current_repo['forks_count']
+    watchers_count = current_repo['watchers_count']
+    
+    repo_link = current_repo['html_url']
+    repo_created_date = datetime.datetime.strptime(current_repo['created_at'], \
+                        "%Y-%m-%dT%H:%M:%SZ").strftime('%d %b %Y')
 
     commits_time = []
 
@@ -125,6 +137,19 @@ def repo(request, org, repoName):
     for i in range(starting_year, ending_year+1):
         for j in range(4):
             quarters[str(i)+"-Q"+str(j+1)] = 0
+    
+    colors = ['red', 'yellow', 'green', 'blue', 'black', 'orange', \
+              'pink', 'grey', 'purple', 'cyan', 'deep-purple', 'brown', \
+              'teal', 'lime', 'white']
+    
+    languages = []
+    languages_temp = []
+    for lang in current_repo['languages'].keys():
+        languages_temp.append(lang)
+    
+    for i, lang in enumerate(languages_temp):
+        languages.append('<div class="chip"><i class="fa fa-circle ' \
+                          +colors[i]+'-text"> </i> '+lang+'</div>')
 
     for date in commits_time:
         year = datetime.datetime.strptime(date['date'], "%Y-%m-%d").year
@@ -148,6 +173,12 @@ def repo(request, org, repoName):
     context = {
         'org_name' : org,
         'repo_name' : repoName,
+        'repo_desc': repo_desc,
+        'forks_count': forks_count,
+        'languages': languages,
+        'repo_link': repo_link,
+        'repo_created_date': repo_created_date,
+        'watchers_count': watchers_count,
         'commit_graph_labels': commit_graph_labels,
         'commit_graph_values': commit_graph_values,
     }
