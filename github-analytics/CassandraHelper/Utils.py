@@ -82,3 +82,11 @@ def processCommitData(data):
             commit['commiter_id'] = None
         commitsList.append(commit)
     return commitsList
+
+# Elastic search utils
+def getFromElastic(function, url, query):
+    try:
+        r = requests.post(url, json=query)
+        return function(r.json())
+    except:
+        return {'error': 'Error retrieving data from Elastic'}
