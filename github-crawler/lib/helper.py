@@ -42,8 +42,8 @@ class Helper():
         self.github_api = "https://api.github.com"
         self.gh_session = requests.Session()
         self.gh_session.auth = (GITHUB_USERNAME, GITHUB_TOKEN)
-        #self.ellasandra_api = "http://34.66.21.21:5000"
-        self.ellasandra_api = "http://localhost:5000"
+        self.ellasandra_api = "http://34.66.21.21:5000"
+        #self.ellasandra_api = "http://localhost:5000"
         self.headers = {
                     'content-type': "application/json",
                     'cache-control': "no-cache",

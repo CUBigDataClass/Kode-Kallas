@@ -25,7 +25,7 @@ def org_parser(orgname):
     print("sending Org Info to elastic search!!!")
     print(json.dumps(org_data))
     #send data to ellasandra
-    #helper.send_org_data_to_ellasandra(org_data)
+    helper.send_org_data_to_ellasandra(org_data)
     #helper.send_to_elasticInstance(org_data,'org1',org_data['id'])
     print("Getting Repos for "+orgname)
     repo_list = helper.get_repositories(OWNER,github_api)
@@ -35,6 +35,7 @@ def org_parser(orgname):
         repo['license']="test"
         repo_list[i]['license'] = "test" 
         #helper.send_to_elasticInstance(repo,'repos',repo['id'])
+        i=i+1
         print("repo sent "+ repo['name'] )
     # sending repo list to ellasandra
     helper.send_repo_data_to_ellasandra(repo_list)
@@ -71,4 +72,4 @@ def org_parser(orgname):
 
     
 if __name__ == "__main__":
-    app.run(debug=True, port=4000)
+    app.run(debug=True, host='0.0.0.0',port=5000)
