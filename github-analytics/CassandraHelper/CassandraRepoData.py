@@ -18,11 +18,11 @@ class CassandraRepoData():
         print(repoDataItem)
         elasticSearchHelper = esh.ElasticSearchHelper()
         repoData = {
-            "contributors": utils.get(utils.getContributorsList, repoDataItem['contributors_url']),
+            "contributors": repoDataItem["contributors_list"], #utils.get(utils.getContributorsList, repoDataItem['contributors_url']),
             "name": repoDataItem['name'],
             "commits": utils.processCommitData(elasticSearchHelper.getCommitData(repoDataItem['owner']['login'], repoDataItem['name'])), #utils.get(utils.getCommitsList, repoDataItem['commits_url'][:-6]),
             "created_at": repoDataItem['created_at'],
-            "issues": utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]),
+            "issues": repoDataItem["issues_list"],#utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]),
             "id": repoDataItem['id'],
             "watchers_count": repoDataItem['watchers_count'],
             # "description": repoDataItem['description'],
@@ -30,7 +30,7 @@ class CassandraRepoData():
             "forks_url": repoDataItem['forks_url'],
             "full_name": repoDataItem['full_name'],
             "html_url": repoDataItem['html_url'],
-            "languages": utils.get(utils.getLanguages, repoDataItem['languages_url'], False),
+            "languages": repoDataItem["languages_list"], #utils.get(utils.getLanguages, repoDataItem['languages_url'], False),
             "owner": {
                 "name": repoDataItem['owner']['login'],
                 "avatar_url": repoDataItem['owner']['avatar_url'],
