@@ -34,13 +34,18 @@ def insert(request):
     for obj in obj_list:
         #obj["permissions"] = json.loads(perm(admin=obj["permissions"]["admin"], push=obj["permissions"]["push"], pull=obj["permissions"]["pull"]))
         #obj["permissions"] = jsonify(**obj["permissions"])
+        if content[TABLE] == "org":
+            for i in range(len(content[BODY])):
+                for keys in content[BODY][i].keys():
+                        if isinstance(content[BODY][i][keys], str):
+                            content[BODY][i][keys] = content[BODY][i][keys].replace('\'', "")
         ans = json.dumps(obj)
         query = SimpleStatement("INSERT INTO " + content[TABLE] + " JSON \'" + ans + "\';")
         #batch.add(query)
         try:
             session.execute(query)
         except Exception as e:
-            print("failed to insert")
+            print("failed to insert "+content[TABLE])
             print(e)
             pass
         print("insert into"+content[TABLE]+" 1")
