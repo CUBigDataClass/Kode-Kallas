@@ -7,13 +7,14 @@ import json
 import datetime
 import pprint
 import math
+import random
 
 def index(request):
     context = {}
     return render(request, 'bdaProject/index.html', context)
 
 def org(request, org):
-    res = requests.get("http://localhost:4000/repo/"+str(org))
+    res = requests.get("http://localhost:4002/repo/"+str(org))
     org_data = json.loads(res.text)
 
     num_org_repos = len(org_data)
@@ -28,12 +29,12 @@ def org(request, org):
     repo_lang_to = []
     repo_lang_val = []
 
+    i = 1
     for repo in org_data:
         for contributor in repo['contributors']:
             contributor_ids.add(contributor['id'])
             contributor_names.add(contributor['name'])
             
-
         langs = repo['languages']
         for k in langs.keys():
             languages_temp.add(k)
@@ -46,11 +47,12 @@ def org(request, org):
             except:
                 dict_user_commits[commit['commiter_name']] = 1
 
+    for repo in org_data[:25]:
         langs = repo['languages']
         for lang, value in langs.items():
-            repo_lang_from.append(repo['name'])
-            repo_lang_to.append(lang)
-            repo_lang_val.append(math.log(value))
+                repo_lang_from.append(repo['name'])
+                repo_lang_to.append(lang)
+                repo_lang_val.append(math.log(value))
 
     zipped = list(zip(repo_lang_from, repo_lang_to, repo_lang_val))
     zipped = sorted(zipped, key = lambda i: i[1])
@@ -76,7 +78,7 @@ def org(request, org):
 
     dict_repo_commits = sorted(dict_repo_commits.items(), key=lambda x: x[1], reverse=True)
     dict_user_commits = sorted(dict_user_commits.items(), key=lambda x: x[1], reverse=True)
-    
+     
     top_repos = []
     for repo in dict_repo_commits:
         top_repos.append(repo[0])
@@ -90,10 +92,11 @@ def org(request, org):
     req_sesh.auth = ('', '')
     
     locations_src = []
-    for user in top_users:
-        res = req_sesh.get("https://api.github.com/users/"+str(user))
-        print (res.text)
-        locations_src.append(json.loads(res.text)['location'])
+    res = req_sesh.get("http://localhost:4002/users/"+str(org))
+    res = json.loads(res.text)
+    
+    for user in res:
+        locations_src.append(user['location'])
     
     countries = set()
     for loc in locations_src:
@@ -111,16 +114,22 @@ def org(request, org):
         'languages': languages,
         'top_repos': top_repos,
         'top_users': top_users,
-        'repo_lang_graph_data': list_repo_lang[:25],
+        'repo_lang_graph_data': list_repo_lang[:30],
         'countries': countries
     }
     return render(request, 'bdaProject/organization.html', context)
 
 def repo(request, org, repoName):
-    res = requests.get("http://localhost:4000/repo/"+str(org)+"/"+str(repoName))
+    res = requests.get("http://localhost:4002/repo/"+str(org)+"/"+str(repoName))
     current_repo = json.loads(res.text)[0]
             
     repo_desc = current_repo['description']
+    
+    contributors = []
+    for contributor in current_repo['contributors']:
+        if contributor['name'] != 'web-flow':
+            contributors.append(contributor['name'])
+    
     languages = []
     for lang in current_repo['languages'].keys():
         languages.append(lang)
@@ -196,7 +205,8 @@ def repo(request, org, repoName):
         commit_graph_labels.append(k)
         commit_graph_values.append(v)
         
-
+    random.seed(1)
+    
     issues_list = []
     for issue in current_repo['issues']:
         issue_temp = {}
@@ -208,6 +218,7 @@ def repo(request, org, repoName):
         elif issue['state'] == 'closed':
             issue_temp['state'] = "<i class='fa fa-check-circle green-text'> Closed</i>"
         issue_temp['body'] = issue['body']
+        issue_temp['resolver'] = contributors[random.randint(0, len(contributors)-1)]
 
         issues_list.append(issue_temp)
     
@@ -226,11 +237,6 @@ def repo(request, org, repoName):
     for k,v in contributor_commits.items():
         cpc_graph_labels.append(k)
         cpc_graph_values.append(v)
-        
-    contributors = []
-    for contributor in current_repo['contributors']:
-        if contributor['name'] != 'web-flow':
-            contributors.append(contributor['name'])
     
     
     context = {

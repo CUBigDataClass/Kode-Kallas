@@ -68,11 +68,13 @@
                     </div>
                 </div>
                 <div style='background-color: #272A3C; border-radius: 10px;'>
-                    <div class="col s12 m12 l12 theme-text center">
-                        <h4>Top Languages</h4>
-                        {% for lang in languages %}
-                            {% autoescape off %} {{ lang }} {% endautoescape %}
-                        {% endfor %}
+                    <div class="scroll col s12 m12 l12 theme-text center" style="height: 140px; ">
+                        <h4 class="center">Top Languages</h4>
+                        <div class="center">
+                            {% for lang in languages %}
+                                {% autoescape off %} {{ lang }} {% endautoescape %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +144,7 @@
                             {
                                 "id": "{{ country }}",
                                 "showAsSelected": true
-                            },   
+                            },
                         {% endfor %}
                     {% endif %}
                 ]

@@ -153,6 +153,7 @@
                                             <td> <a href="#issue_modal{{ issue.number }}" class="modal-trigger"> {% autoescape off %} {{ issue.title }} {% endautoescape %} </a> </td>
                                             <td class='center'> {% autoescape off %} {{ issue.created_on }} {% endautoescape %} </td>
                                             <td class='center'> {% autoescape off %} {{ issue.state }} {% endautoescape %} </td>
+                                            <td class='center green-text'> {% autoescape off %} {{ issue.resolver }} {% endautoescape %} </td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
@@ -199,8 +200,11 @@
                         <span style="font-size: 150%">Description</span>
                         <br>
                         {% autoescape off %} {{ issue.body }} {% endautoescape %}
+                        <br>
+                        <span style="font-size: 150%; color: green">Recommended Resolver: {% autoescape off %} {{ issue.resolver }} {% endautoescape %} </span>
                         <br><br>
                         <span style="font-size: 130%"><a href='https://www.github.com/{{ org_name }}/{{ repo_name }}/issues/{{ issue.number }}' target='_blank' >View on GitHub <i class="fab fa-github-alt"></i></a></span> <br>
+                        <span style="font-size: 130%"><a href='https://stackoverflow.com/search?q={{ issue.title }}' target='_blank' >View probable solution on StackOverflow <i class="fab fa-stack-overflow"></i></a></span> <br>
                     </p>
                 </div>
                 <div class="modal-footer">
