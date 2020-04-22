@@ -119,3 +119,13 @@ Done With Dashboard Backend setup
 |Github-Analytics|Used to serve dashboard with elastic data |Docker and Python3|
 |Django|FrontEnd Tool for Github visualization  |Django and Python3|
 
+
+11) ScreenShot of Kode - Kallas Dashboard
+
+![alt text](Images/1.png?raw=true)
+![alt text](Images/2.png?raw=true)
+![alt text](Images/3.png?raw=true)
+![alt text](Images/4.png?raw=true)
+![alt text](Images/5.png?raw=true)
+![alt text](Images/6.png?raw=true)
+
