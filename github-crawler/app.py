@@ -3,6 +3,7 @@ app = Flask(__name__)
 import lib.helper as helpp
 import csv
 import json
+import lib.Utils as utils
 
 #constants below
 OWNER = 'vishwakulkarni'
@@ -30,10 +31,12 @@ def org_parser(orgname):
     print("Getting Repos for "+orgname)
     repo_list = helper.get_repositories(OWNER,github_api)
     print("sending repo info to elasticsearch")
+    repo_list = utils.addExtraData(repo_list)
     i=0
     for repo in repo_list:
         repo['license']="test"
-        repo_list[i]['license'] = "test" 
+        repo_list[i]['license'] = "test"
+        i = i + 1
         #helper.send_to_elasticInstance(repo,'repos',repo['id'])
         i=i+1
         print("repo sent "+ repo['name'] )
