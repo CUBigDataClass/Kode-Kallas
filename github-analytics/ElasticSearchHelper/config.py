@@ -1,4 +1,4 @@
-ELASTIC_HOST = '104.198.255.128'
+ELASTIC_HOST = 'http://34.66.21.21'
 ELASTIC_PORT = 9200
 
 ELASTIC_ORG_DATA_FIELDS = ["_id","avatar_url","description","email","followers","following","html_url","id","issues_url","location","members_url","name","node_id","login","url","updated_at","repos_url","public_repos","public_members_url","type"]

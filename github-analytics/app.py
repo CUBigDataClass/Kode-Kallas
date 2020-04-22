@@ -54,13 +54,13 @@ def userRetrieve(orgname):
     print("Done Done!")
     return jsonify(cassandraUserData.data)
 
-@app.route('/users/<orgname>/<reponame>')
-def userRetrieveSingleOrg(orgname, reponame):
-    elasticUserData = elasticSearchHelper.getUserData(orgname, reponame)
-    # return elasticUserData
-    cassandraUserData = cud.CassandraUserData(elasticUserData)
-    print("Done Done!")
-    return jsonify(cassandraUserData.data)
+# @app.route('/users/<orgname>/<reponame>')
+# def userRetrieveSingleOrg(orgname, reponame):
+#     elasticUserData = elasticSearchHelper.getUserData(orgname, reponame)
+#     # return elasticUserData
+#     cassandraUserData = cud.CassandraUserData(elasticUserData)
+#     print("Done Done!")
+#     return jsonify(cassandraUserData.data)
 
 @app.route('/username/<username>')
 def userRetrieveByUsername(username):

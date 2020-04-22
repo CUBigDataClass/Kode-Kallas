@@ -14,9 +14,20 @@ def getFromElastic(url, query):
     #     pass
         # return {'error': 'Error retrieving data from Elastic'}
 
-
 def getOrgQuery(orgname):
     orgQuery = {
+        "query": {
+            "match": {
+                "login": "games50"
+            }
+          },
+        # "_source": config.ELASTIC_ORG_DATA_FIELDS,
+        "size": 1000
+    }
+    return orgQuery
+
+def getReposQuery(orgname):
+    repoQuery = {
         "query": {
             "nested": {
                 "path": "owner",
@@ -32,28 +43,58 @@ def getOrgQuery(orgname):
         "_source": config.ELASTIC_REPO_DATA_FIELDS,
         "size": 1000
     }
-    return orgQuery
+    return repoQuery
 
+def getSingleRepoOrgQuery(orgname, reponame):
+    orgQuery = {
+        "query": {
+            "dis_max": {
+              "queries": [
+                { "match": { "owner.login": orgname } },
+                { "match": { "name": reponame } }
+              ],
+              "tie_breaker": 0.3
+            }
+          }
+        ,
+        "_source": config.ELASTIC_REPO_DATA_FIELDS,
+        "size": 1000
+    }
+    return orgQuery
 
 def getCommitQuery(orgname, reponame):
     commitQuery = {
         "query": {
-            "bool": {
-                "must": [
-                    {
-                        "match": {
-                            "comments_url": orgname
-                        }
-                    },
-                    {
-                        "match": {
-                            "comments_url": reponame
-                        }
-                    }
-                ]
+            "dis_max": {
+              "queries": [
+                { "match": { "org_name": orgname } },
+                { "match": { "repo_name": reponame } }
+              ],
+              "tie_breaker": 0.3
             }
-        },
+          }
+        ,
         "_source": config.ELASTIC_COMMIT_DATA_FIELDS,
         "size": 1000
     }
     return commitQuery
+
+def getUsersQuery(orgname):
+    usersQuery = {
+        "query":
+            {"match": {"org_name": orgname} }
+        ,
+        "_source": config.ELASTIC_USER_DATA_FIELDS,
+        "size": 1000
+    }
+    return usersQuery
+
+def getUserByUsernameQuery(username):
+    usersQuery = {
+        "query":
+            {"match": {"login": username} }
+        ,
+        "_source": config.ELASTIC_USER_DATA_FIELDS,
+        "size": 1000
+    }
+    return usersQuery

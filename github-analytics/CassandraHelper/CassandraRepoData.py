@@ -25,7 +25,7 @@ class CassandraRepoData():
             "issues": utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]),
             "id": repoDataItem['id'],
             "watchers_count": repoDataItem['watchers_count'],
-            "description": repoDataItem['description'],
+            # "description": repoDataItem['description'],
             "forks_count": repoDataItem['forks_count'],
             "forks_url": repoDataItem['forks_url'],
             "full_name": repoDataItem['full_name'],
