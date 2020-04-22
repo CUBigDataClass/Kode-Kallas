@@ -89,7 +89,7 @@
             <div class='theme-text center' style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px;'>
                 <h5 style='margin: 0px; padding: 10px'> Languages Used </h5>
                 {% for lang in languages %}
-                    {% autoescape off %} {{ lang }} {% endautoescape %}
+                    <a href="https://www.linkedin.com/jobs/search?keywords={{ language }}&location={{ user.user_location }}" target="_blank">{% autoescape off %} {{ lang }} {% endautoescape %}</a>
                 {% endfor %}
             </div>
         </div>

@@ -36,7 +36,11 @@
 <body id='body' style="font-family:R; background-color: #1E1E2D;">
 
     <!-- Loader  -->
-    <div id='loader2'></div>
+    <div id='loader'>
+        <center>
+            <span class='blue-text center' style='font-size:300%; width: 100%'>Gathering Information. Thank yor for your patience! </span>
+        </center>
+    </div>
 
     <!-- Navbar goes here -->
     <nav>
@@ -92,8 +96,8 @@
                         {% if top_repos %}
                             {% for repo in top_repos %}
                             <!-- <a href="https://www.github.com/{{ org_name }}/{{ repo }}" target="_blank"> -->
-                            <a href="repo/{{ repo }}" target="_blank">
-                                    <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ repo }} {% endautoescape %} </h6>
+                            <a class='loaderIn' href="repo/{{ repo }}">
+                                <h6 class="btn blue loaderIn" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ repo }} {% endautoescape %} </h6>
                             </a>
                             {% endfor %}
                         {% endif %}
@@ -107,7 +111,7 @@
                         {% if top_users %}
                             {% for user in top_users %}
                             <a class='loaderIn' href="../../user/{{ user }}"> 
-                                    <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
+                                <h6 class="btn blue loaderIn2" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6>
                             </a>
                             {% endfor %}
                         {% endif %}
@@ -172,13 +176,13 @@
     <script src={% static 'js/themes/animated.js' %}></script>
     <script type="text/javascript">
         $(window).on('load', function() {
-            $('#loader2').fadeOut();
+            $('#loader').fadeOut();
             $('.aniL').addClass('animated slideInLeft')
             $('.aniR').addClass('animated slideInRight')
         });
         
         $('.loaderIn').click(function () {
-            $('#loader2').fadeIn();
+            $('#loader').fadeIn();
         });
     </script>
     <script>

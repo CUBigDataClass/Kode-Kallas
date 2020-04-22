@@ -9,15 +9,35 @@ import pprint
 import math
 import random
 
+API_HOST = '10.0.0.172'
+API_PORT = 4002
+
+AK = 'AIzaSyBIwV5cs3QljMHkmRqVh9ogIeqesjXFlUk'
+
+GITHUB_USERNAME = ''
+GITHUB_PAT = ''
+
+
 def index(request):
     context = {}
     return render(request, 'bdaProject/index.html', context)
 
 def org(request, org):
-    res = requests.get("http://localhost:4002/repo/"+str(org))
+    res = requests.get("http://"+API_HOST+":"+str(API_PORT)+"/repo/"+str(org))
     org_data = json.loads(res.text)
-
-    num_org_repos = len(org_data)
+    
+    # url = staticfiles_storage.path('mozilla.json')
+    # with open(url) as f:
+    #     org_data = json.load(f)
+    
+    req_sesh = requests.Session()
+    req_sesh.auth = (GITHUB_USERNAME, GITHUB_PAT)
+    
+    num_org_repos = None
+    if len(org_data) < 1000:
+        num_org_repos = len(org_data)
+    else:
+        num_org_repos = str(len(org_data))+"+"
 
     languages_temp = set()
     contributor_ids = set()
@@ -50,9 +70,12 @@ def org(request, org):
     for repo in org_data[:25]:
         langs = repo['languages']
         for lang, value in langs.items():
+            try:
                 repo_lang_from.append(repo['name'])
                 repo_lang_to.append(lang)
                 repo_lang_val.append(math.log(value))
+            except:
+                pass
 
     zipped = list(zip(repo_lang_from, repo_lang_to, repo_lang_val))
     zipped = sorted(zipped, key = lambda i: i[1])
@@ -88,11 +111,8 @@ def org(request, org):
         if contributor != 'web-flow' and contributor != None:
             top_users.append(contributor)
             
-    req_sesh = requests.Session()
-    req_sesh.auth = ('', '')
-    
     locations_src = []
-    res = req_sesh.get("http://localhost:4002/users/"+str(org))
+    res = req_sesh.get("http://"+API_HOST+":"+str(API_PORT)+"/users/"+str(org))
     res = json.loads(res.text)
     
     for user in res:
@@ -100,12 +120,13 @@ def org(request, org):
     
     countries = set()
     for loc in locations_src:
-        res = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(loc)+'&key=')
+        res = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(loc)+'&key='+AK)
         res = json.loads(res.text)
         
-        for adr in res['results'][0]['address_components']:
-            if adr['types'][0] == 'country':
-                countries.add(adr['short_name'])
+        if res['results']:
+            for adr in res['results'][0]['address_components']:
+                if adr['types'][0] == 'country':
+                    countries.add(adr['short_name'])
     
     context = {
         'org_name' : org,
@@ -120,10 +141,19 @@ def org(request, org):
     return render(request, 'bdaProject/organization.html', context)
 
 def repo(request, org, repoName):
-    res = requests.get("http://localhost:4002/repo/"+str(org)+"/"+str(repoName))
+    res = requests.get("http://"+API_HOST+":"+str(API_PORT)+"/repo/"+str(org)+"/"+str(repoName))
+    org_data = json.loads(res.text)
+    
+    # url = staticfiles_storage.path('mozilla.json')
+    # with open(url) as f:
+    #     org_data = json.load(f)
+    
+    for repo in org_data:
+        if repo['name'] == repoName:
+            current_repo = repo
     current_repo = json.loads(res.text)[0]
             
-    repo_desc = current_repo['description']
+    # repo_desc = current_repo['description']
     
     contributors = []
     for contributor in current_repo['contributors']:
@@ -164,14 +194,37 @@ def repo(request, org, repoName):
 
     commits.reverse()
 
-    commits_time = sorted(commits_time, key = lambda i:i['date'])
-    starting_year = datetime.datetime.strptime(commits_time[0]['date'], "%Y-%m-%d").year
-    ending_year = datetime.datetime.strptime(commits_time[-1]['date'], "%Y-%m-%d").year
-
     quarters = {}
-    for i in range(starting_year, ending_year+1):
-        for j in range(4):
-            quarters[str(i)+"-Q"+str(j+1)] = 0
+    commit_graph_labels = []
+    commit_graph_values = []
+    commits_time = sorted(commits_time, key = lambda i:i['date'])
+    if commits_time:
+        commit_graph_status = 1
+        starting_year = datetime.datetime.strptime(commits_time[0]['date'], "%Y-%m-%d").year
+        ending_year = datetime.datetime.strptime(commits_time[-1]['date'], "%Y-%m-%d").year
+        
+        for i in range(starting_year, ending_year+1):
+            for j in range(4):
+                quarters[str(i)+"-Q"+str(j+1)] = 0
+        
+        for date in commits_time:
+            year = datetime.datetime.strptime(date['date'], "%Y-%m-%d").year
+            month = datetime.datetime.strptime(date['date'], "%Y-%m-%d").month
+            if month == 1 or month == 2 or month == 3:
+                quarters[str(year)+"-Q1"] += 1
+            elif month == 4 or month == 5 or month == 6:
+                quarters[str(year)+"-Q2"] += 1
+            elif month == 7 or month == 8 or month == 9:
+                quarters[str(year)+"-Q3"] += 1
+            elif month == 10 or month == 11 or month == 12:
+                quarters[str(year)+"-Q4"] += 1
+
+        for k,v in quarters.items():
+            commit_graph_labels.append(k)
+            commit_graph_values.append(v)
+    else:
+        commit_graph_status = None
+
     
     colors = ['red', 'yellow', 'green', 'blue', 'black', 'orange', \
               'pink', 'grey', 'purple', 'cyan', 'deep-purple', 'brown', \
@@ -185,25 +238,6 @@ def repo(request, org, repoName):
     for i, lang in enumerate(languages_temp):
         languages.append('<div class="chip"><i class="fa fa-circle ' \
                           +colors[(i%15)]+'-text"> </i> '+lang+'</div>')
-
-    for date in commits_time:
-        year = datetime.datetime.strptime(date['date'], "%Y-%m-%d").year
-        month = datetime.datetime.strptime(date['date'], "%Y-%m-%d").month
-        if month == 1 or month == 2 or month == 3:
-            quarters[str(year)+"-Q1"] += 1
-        elif month == 4 or month == 5 or month == 6:
-            quarters[str(year)+"-Q2"] += 1
-        elif month == 7 or month == 8 or month == 9:
-            quarters[str(year)+"-Q3"] += 1
-        elif month == 10 or month == 11 or month == 12:
-            quarters[str(year)+"-Q4"] += 1
-
-    commit_graph_labels = []
-    commit_graph_values = []
-
-    for k,v in quarters.items():
-        commit_graph_labels.append(k)
-        commit_graph_values.append(v)
         
     random.seed(1)
     
@@ -218,8 +252,11 @@ def repo(request, org, repoName):
         elif issue['state'] == 'closed':
             issue_temp['state'] = "<i class='fa fa-check-circle green-text'> Closed</i>"
         issue_temp['body'] = issue['body']
-        issue_temp['resolver'] = contributors[random.randint(0, len(contributors)-1)]
-
+        if len(contributors) != 0:
+            issue_temp['resolver'] = contributors[random.randint(0, len(contributors)-1)]
+        else:
+            issue_temp['resolver'] = ""
+            
         issues_list.append(issue_temp)
     
     contributor_commits = {}
@@ -242,13 +279,14 @@ def repo(request, org, repoName):
     context = {
         'org_name' : org,
         'repo_name' : repoName,
-        'repo_desc': repo_desc,
+        # 'repo_desc': repo_desc,
         'forks_count': forks_count,
         'languages': languages,
         'repo_link': repo_link,
         'repo_created_date': repo_created_date,
         'watchers_count': watchers_count,
         'commits': commits,
+        'commit_graph_status': commit_graph_status,
         'commit_graph_labels': commit_graph_labels,
         'commit_graph_values': commit_graph_values,
         'issues_list': issues_list[:50],
@@ -263,7 +301,7 @@ def repo(request, org, repoName):
 def user(request, userId):
     pp = pprint.PrettyPrinter(indent=4)        
     req_sesh = requests.Session()
-    req_sesh.auth = ('', '')
+    req_sesh.auth = (GITHUB_USERNAME, GITHUB_PAT)
     
     req = req_sesh.get("https://api.github.com/users/"+str(userId))
     res = json.loads(req.text)
@@ -443,5 +481,6 @@ def user(request, userId):
         'cpl_graph_title': cpl_title,
         'cpl_graph_labels': cpl_labels,
         'cpl_graph_values': cpl_values,
+        'languages_list': languages_temp
     }
     return render(request, 'bdaProject/user.html', context)

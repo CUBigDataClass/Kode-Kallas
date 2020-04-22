@@ -5,6 +5,7 @@ from ElasticSearchHelper import ElasticSearchHelper as esh
 
 class CassandraRepoData():
     def __init__(self, elasticOrgData):
+        print(elasticOrgData)
         dataList = elasticOrgData['hits']['hits']
         self.data = list()
         threadPool = Pool(config.THREAD_COUNT)
@@ -18,11 +19,11 @@ class CassandraRepoData():
         print(repoDataItem)
         elasticSearchHelper = esh.ElasticSearchHelper()
         repoData = {
-            "contributors": repoDataItem["contributors_list"], #utils.get(utils.getContributorsList, repoDataItem['contributors_url']),
+            "contributors": utils.get(utils.getContributorsList, repoDataItem['contributors_url']), #repoDataItem["contributors_list"], #
             "name": repoDataItem['name'],
             "commits": utils.processCommitData(elasticSearchHelper.getCommitData(repoDataItem['owner']['login'], repoDataItem['name'])), #utils.get(utils.getCommitsList, repoDataItem['commits_url'][:-6]),
             "created_at": repoDataItem['created_at'],
-            "issues": repoDataItem["issues_list"],#utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]),
+            "issues": utils.get(utils.getIssuesList, repoDataItem['issues_url'][:-9]), # repoDataItem["issues_list"],
             "id": repoDataItem['id'],
             "watchers_count": repoDataItem['watchers_count'],
             # "description": repoDataItem['description'],
@@ -30,7 +31,7 @@ class CassandraRepoData():
             "forks_url": repoDataItem['forks_url'],
             "full_name": repoDataItem['full_name'],
             "html_url": repoDataItem['html_url'],
-            "languages": repoDataItem["languages_list"], #utils.get(utils.getLanguages, repoDataItem['languages_url'], False),
+            "languages": utils.get(utils.getLanguages, repoDataItem['languages_url'], False), #repoDataItem["languages_list"], 
             "owner": {
                 "name": repoDataItem['owner']['login'],
                 "avatar_url": repoDataItem['owner']['avatar_url'],

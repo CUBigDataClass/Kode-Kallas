@@ -46,7 +46,7 @@
                     <h4 style="font-weight:bold;margin-top:10px;padding:0px;font-size:150%;line-height:30px">
                         <input id='org_input' type="text" placeholder="Type to search" class="center" style="width:40%; color: black; placeholder: black; margin: 10px;">
                         <br>
-                        <btn id='search' type="submit" class="btn-floating btn-large waves-effect waves-light" style="background-color: #00171F;"><i class="fa fa-search"></i></btn>
+                        <btn id='search' type="submit" class="btn-floating btn-large waves-effect waves-light loaderIn" style="background-color: #00171F;"><i class="fa fa-search"></i></btn>
                     </h4>
                 </div>
 
@@ -78,6 +78,10 @@
                 if (event.keyCode === 13) {
                     $("#search").click();
                 }
+            });
+            
+            $('.loaderIn').click(function () {
+                $('#loader').fadeIn();
             });
         </script>
 </body>

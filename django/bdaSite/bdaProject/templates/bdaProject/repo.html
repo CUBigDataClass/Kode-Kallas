@@ -42,7 +42,11 @@
 <body id='body' style="font-family:R; background-color: #1E1E2D;">
 
     <!-- Loader  -->
-    <div id='loader'></div>
+    <div id='loader'>
+        <center>
+            <span class='blue-text center' style='font-size:300%; width: 100%'>Gathering Information. Thank yor for your patience! </span>
+        </center>
+    </div>
 
     <!-- Navbar goes here -->
     <nav>
@@ -120,8 +124,14 @@
         </div>
         <div id='' class="col s12 m6 aniR" style="margin: 0px; padding: 0px; ">
             <div id='' class="theme-text center" style='background-color: #272A3C; margin: 7px; height: 293px; border-radius: 10px; justify-content: center'>
-                <h5 style='padding: 10px; margin: 0px'> Commits per Quarter </h5>
-                <canvas class='cjchart' id="chart1" style="max-width:98%"></canvas>
+                {% if commit_graph_status %}
+                    <h5 style='padding: 10px; margin: 0px'> Commits per Quarter </h5>
+                    <canvas class='cjchart' id="chart1" style="max-width:98%"></canvas>
+                {% else %}
+                    <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
+                        <br><br><h3 class="orange-text">No Commits so far.. <i class="fa fa-frown"></i></h3>
+                    </div>
+                {% endif %}
             </div>
         </div>
         <div id='' class="col s12 m4 aniL " style="margin: 0px; padding: 0px; ">
@@ -161,7 +171,7 @@
                         </div>
                     {% else %}
                         <div class='scroll' style="text-align: center; height: 250px; width: 100%;">
-                            <br><h3 class="green-text">No Issues reported so far! <i class="fa fa-laugh"></i></h3>
+                            <br><br><h3 class="green-text">No Issues reported so far! <i class="fa fa-laugh"></i></h3>
                         </div>
                     {% endif %}
                 </div>
@@ -176,7 +186,7 @@
                     {% if contributors %}
                         {% for user in contributors %}
                         <a class='loaderIn' href="../../../user/{{ user }}"> 
-                                <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6> <br>
+                            <h6 class="btn blue" style='margin-bottom: 0px; border-radius: 10px;'> {% autoescape off %} {{ user }} {% endautoescape %} </h6> <br>
                         </a>
                         {% endfor %}
                     {% endif %}
@@ -249,10 +259,6 @@
         columnHeight = (window.innerHeight - navHeight);
         $('#col1').height(columnHeight);
         $('#col2').height(columnHeight);
-    
-        $(document).ready(function(){
-            $('.modal').modal();
-        });
     
         $(window).on('load', function() {
             $('#loader').fadeOut();
