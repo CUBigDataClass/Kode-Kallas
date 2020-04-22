@@ -26,6 +26,27 @@ class license_model(UserType):
     spdx_id = Text(required=False)
     url = Text(required=False)
     node_id = Text(required=False)
+
+
+class issue_model(UserType):
+     body = Text(required=False)
+     closed_at = Text(required=False)
+     created_at = Text(required=False)
+     id = Integer(required=False)
+     labels =  List(value_type=Text)
+     number = Integer(required=False)
+     state = Text(required=False)
+     title = Text(required=False)
+     updated_at = Text(required=False)
+
+
+class contrib_model(UserType):
+     avatar_url = Text(required=False)
+     contributions = Integer(required=False)
+     html_url = Text(required=False)
+     id = Integer(required=False)
+     name = Text(required=False)
+
     
     
 class owner_model(UserType):
@@ -124,5 +145,7 @@ class Repo(Model):
     default_branch = Text(required=False)
     permissions = UserDefinedType(perm_model)
     owner = UserDefinedType(owner_model)
-
+    languages_list = Map(key_type=Text(), value_type=Integer())
+    contributors_list = List(value_type=UserDefinedType(contrib_model))
+    issues_list = List(value_type=UserDefinedType(issue_model))
 
