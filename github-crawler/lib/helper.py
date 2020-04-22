@@ -13,8 +13,8 @@ from elasticsearch import Elasticsearch
 
 GITEA_APP_URL = 'YOUR_GITEA_API'
 GITEA_TOKEN = 'a3020c009c6d46783158b5ffb0d1a7c55735bcc4'
-GITHUB_USERNAME = 'vishwakulkarni'
-GITHUB_TOKEN = ''
+GITHUB_USERNAME = 'karthiks1995'
+GITHUB_TOKEN = 'a5a8eeee34f3879255448c77d9324ef49fd01f0b'
 SQL_ALCHEMY_STRING = ''
 
 import requests
@@ -42,7 +42,8 @@ class Helper():
         self.github_api = "https://api.github.com"
         self.gh_session = requests.Session()
         self.gh_session.auth = (GITHUB_USERNAME, GITHUB_TOKEN)
-        self.ellasandra_api = "http://34.66.21.21:5000"
+        #self.ellasandra_api = "http://34.66.21.21:5000"
+        self.ellasandra_api = "http://localhost:5000"
         self.headers = {
                     'content-type': "application/json",
                     'cache-control': "no-cache",
@@ -91,9 +92,17 @@ class Helper():
     
     def send_commits_to_ellasandra(self,payload):
         data = {}
+        for i in range(len(payload)):
+            del payload[i]['files']
+            del payload[i]['commit']['tree']
+            del payload[i]['commit']['verification']
+            url = payload[i]['url'].split('/')
+            payload[i]["org_name"] = url[4]
+            payload[i]["repo_name"] = url[5]
+
         data['org']=self.orgname
         data['body'] = payload
-        data['table'] = 'commits'
+        data['table'] = 'commit'
         url = self.ellasandra_api + '/insert'
         response = requests.request("POST", url, data=json.dumps(data), headers=self.headers)
         return response.status_code
