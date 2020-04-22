@@ -1,6 +1,6 @@
 import requests
 from requests.auth import HTTPBasicAuth
-from CassandraHelper import config
+import config
 import json
 from multiprocessing import Pool
 

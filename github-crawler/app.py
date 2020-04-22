@@ -30,15 +30,16 @@ def org_parser(orgname):
     #helper.send_to_elasticInstance(org_data,'org1',org_data['id'])
     print("Getting Repos for "+orgname)
     repo_list = helper.get_repositories(OWNER,github_api)
+    print(len(repo_list))
     print("sending repo info to elasticsearch")
     repo_list = utils.addExtraData(repo_list)
+    print(len(repo_list))
     i=0
     for repo in repo_list:
         repo['license']="test"
         repo_list[i]['license'] = "test"
         i = i + 1
         #helper.send_to_elasticInstance(repo,'repos',repo['id'])
-        i=i+1
         print("repo sent "+ repo['name'] )
     # sending repo list to ellasandra
     helper.send_repo_data_to_ellasandra(repo_list)
